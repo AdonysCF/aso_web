@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Catálogo de obras de la Asociación Cultural Colores en el viento."
+    >
+
+    <title>Obras | Colores en el viento</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/branding/favicon.png"
+    >
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     HEADER
+======================================================= -->
+
+<header class="header header--scrolled" id="header">
+
+    <div class="header__container">
+
+        <a
+            href="index.html"
+            class="header__brand"
+        >
+
+            <img
+                src="assets/branding/logo.png"
+                alt="Colores en el viento"
+                class="header__logo"
+            >
+
+        </a>
+
+
+        <nav
+            class="desktop-nav"
+            aria-label="Navegación principal"
+        >
+
+            <a
+                href="obras.html"
+                class="desktop-nav__link active"
+            >
+                Obras
+            </a>
+
+            <a
+                href="artistas.html"
+                class="desktop-nav__link"
+            >
+                Artistas
+            </a>
+
+            <a
+                href="exposiciones.html"
+                class="desktop-nav__link"
+            >
+                Exposiciones
+            </a>
+
+            <a
+                href="asociacion.html"
+                class="desktop-nav__link"
+            >
+                Asociación
+            </a>
+
+            <a
+                href="contacto.html"
+                class="desktop-nav__link"
+            >
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ======================================================
+     MENÚ MÓVIL
+======================================================= -->
+
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+>
+
+    <div
+        class="mobile-menu__glow mobile-menu__glow--one"
+    ></div>
+
+    <div
+        class="mobile-menu__glow mobile-menu__glow--two"
+    ></div>
+
+
+    <nav
+        class="mobile-menu__nav"
+        aria-label="Menú móvil"
+    >
+
+        <a
+            href="index.html"
+            class="mobile-menu__link"
+        >
+            <span class="mobile-menu__number">01</span>
+            <span>Inicio</span>
+        </a>
+
+        <a
+            href="obras.html"
+            class="mobile-menu__link"
+        >
+            <span class="mobile-menu__number">02</span>
+            <span>Obras</span>
+        </a>
+
+        <a
+            href="artistas.html"
+            class="mobile-menu__link"
+        >
+            <span class="mobile-menu__number">03</span>
+            <span>Artistas</span>
+        </a>
+
+        <a
+            href="exposiciones.html"
+            class="mobile-menu__link"
+        >
+            <span class="mobile-menu__number">04</span>
+            <span>Exposiciones</span>
+        </a>
+
+        <a
+            href="asociacion.html"
+            class="mobile-menu__link"
+        >
+            <span class="mobile-menu__number">05</span>
+            <span>La Asociación</span>
+        </a>
+
+        <a
+            href="contacto.html"
+            class="mobile-menu__link"
+        >
+            <span class="mobile-menu__number">06</span>
+            <span>Contacto</span>
+        </a>
+
+    </nav>
+
+
+    <div class="mobile-menu__footer">
+
+        <p>Asociación Cultural</p>
+
+        <span>
+            Arte · Cultura · Comunidad
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- ======================================================
+     CATÁLOGO
+======================================================= -->
+
+<main class="catalog-page">
+
+
+    <!-- CABECERA -->
+
+    <section class="catalog-hero">
+
+        <!-- Pincelada decorativa -->
+
+        <img
+            src="assets/decoracion/pincelada-03.png"
+            alt=""
+            class="catalog-hero__brush"
+            aria-hidden="true"
+        >
+
+
+        <div class="container">
+
+            <div class="catalog-hero__content">
+
+                <div>
+
+                    <span class="eyebrow">
+                        Archivo artístico
+                    </span>
+
+                    <h1 class="catalog-hero__title">
+                        Catálogo
+                        <em>de obras</em>
+                    </h1>
+
+                </div>
+
+
+                <p class="catalog-hero__description">
+
+                    Explora las obras que forman parte
+                    del recorrido artístico y cultural
+                    de Colores en el viento.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         BUSCADOR Y FILTROS
+    =================================================== -->
+
+    <section class="catalog-content">
+
+        <div class="container">
+
+
+            <!-- Buscador -->
+
+            <div class="catalog-search">
+
+                <span class="catalog-search__icon">
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar obra, artista o técnica..."
+                    autocomplete="off"
+                    aria-label="Buscar obras"
+                >
+
+            </div>
+
+
+            <!-- Filtros -->
+
+            <div class="catalog-filters">
+
+
+                <div class="filter-group">
+
+                    <label for="exhibitionFilter">
+                        Exposición
+                    </label>
+
+                    <select id="exhibitionFilter">
+
+                        <option value="">
+                            Todas las exposiciones
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="artistFilter">
+                        Artista
+                    </label>
+
+                    <select id="artistFilter">
+
+                        <option value="">
+                            Todos los artistas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="techniqueFilter">
+                        Técnica
+                    </label>
+
+                    <select id="techniqueFilter">
+
+                        <option value="">
+                            Todas las técnicas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="yearFilter">
+                        Año
+                    </label>
+
+                    <select id="yearFilter">
+
+                        <option value="">
+                            Todos los años
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="filter-reset"
+                    id="resetFilters"
+                    type="button"
+                >
+                    Limpiar filtros
+                </button>
+
+            </div>
+
+
+            <!-- Información de resultados -->
+
+            <div class="catalog-toolbar">
+
+                <p>
+                    <span id="resultCount">
+                        0
+                    </span>
+
+                    <span id="resultLabel">
+                        obras
+                    </span>
+                </p>
+
+
+                <span class="catalog-toolbar__label">
+                    Catálogo general
+                </span>
+
+            </div>
+
+
+            <!-- Grid generado por JavaScript -->
+
+            <div
+                class="catalog-grid"
+                id="catalogGrid"
+            ></div>
+
+
+            <!-- Sin resultados -->
+
+            <div
+                class="catalog-empty"
+                id="catalogEmpty"
+                hidden
+            >
+
+                <span>—</span>
+
+                <h2>
+                    No encontramos obras
+                </h2>
+
+                <p>
+                    Prueba con otra búsqueda o elimina
+                    alguno de los filtros.
+                </p>
+
+                <button
+                    class="button"
+                    id="emptyResetButton"
+                    type="button"
+                >
+                    Ver todas las obras
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="js/main.js"></script>
+<script src="js/catalogo.js"></script>
+
+</body>
+</html>

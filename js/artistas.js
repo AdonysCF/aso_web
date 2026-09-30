@@ -1,0 +1,16 @@
+[
+    {
+        "id": "artista-001",
+        "nombre": "Nombre Artista 01",
+        "tipo": "artista",
+        "foto": "assets/artistas/artista-001.webp",
+        "biografia": ""
+    },
+    {
+        "id": "artista-002",
+        "nombre": "Nombre Artista 02",
+        "tipo": "artista",
+        "foto": "assets/artistas/artista-002.webp",
+        "biografia": ""
+    }
+]

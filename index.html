@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Colores en el viento - Asociación Cultural. Arte, cultura y comunidad."
+    >
+
+    <title>Colores en el viento | Asociación Cultural</title>
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/branding/favicon.png"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER GLOBAL
+    ========================================== -->
+
+    <header class="header" id="header">
+
+        <div class="header__container">
+
+            <!-- Logo -->
+            <a href="index.html" class="header__brand">
+
+                <img
+                    src="assets/branding/logo.png"
+                    alt="Colores en el viento - Asociación Cultural"
+                    class="header__logo"
+                >
+
+            </a>
+
+
+            <!-- Navegación escritorio -->
+            <nav
+                class="desktop-nav"
+                aria-label="Navegación principal"
+            >
+
+                <a href="obras.html" class="desktop-nav__link">
+                    Obras
+                </a>
+
+                <a href="artistas.html" class="desktop-nav__link">
+                    Artistas
+                </a>
+
+                <a href="exposiciones.html" class="desktop-nav__link">
+                    Exposiciones
+                </a>
+
+                <a href="asociacion.html" class="desktop-nav__link">
+                    Asociación
+                </a>
+
+                <a href="contacto.html" class="desktop-nav__link">
+                    Contacto
+                </a>
+
+            </nav>
+
+
+            <!-- Botón menú móvil -->
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MENÚ MÓVIL / PANTALLA COMPLETA
+    ========================================== -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <!-- Decoración -->
+        <div class="mobile-menu__glow mobile-menu__glow--one"></div>
+        <div class="mobile-menu__glow mobile-menu__glow--two"></div>
+
+
+        <div class="mobile-menu__header">
+
+            <a href="index.html" class="mobile-menu__brand">
+
+                <img
+                    src="assets/branding/logo.png"
+                    alt="Colores en el viento"
+                >
+
+            </a>
+
+        </div>
+
+
+        <nav
+            class="mobile-menu__nav"
+            aria-label="Menú móvil"
+        >
+
+            <a
+                href="index.html"
+                class="mobile-menu__link"
+            >
+                <span class="mobile-menu__number">01</span>
+                <span>Inicio</span>
+            </a>
+
+            <a
+                href="obras.html"
+                class="mobile-menu__link"
+            >
+                <span class="mobile-menu__number">02</span>
+                <span>Obras</span>
+            </a>
+
+            <a
+                href="artistas.html"
+                class="mobile-menu__link"
+            >
+                <span class="mobile-menu__number">03</span>
+                <span>Artistas</span>
+            </a>
+
+            <a
+                href="exposiciones.html"
+                class="mobile-menu__link"
+            >
+                <span class="mobile-menu__number">04</span>
+                <span>Exposiciones</span>
+            </a>
+
+            <a
+                href="asociacion.html"
+                class="mobile-menu__link"
+            >
+                <span class="mobile-menu__number">05</span>
+                <span>La Asociación</span>
+            </a>
+
+            <a
+                href="contacto.html"
+                class="mobile-menu__link"
+            >
+                <span class="mobile-menu__number">06</span>
+                <span>Contacto</span>
+            </a>
+
+        </nav>
+
+
+        <div class="mobile-menu__footer">
+
+            <p>Asociación Cultural</p>
+
+            <span>
+                Arte · Cultura · Comunidad
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         CONTENIDO TEMPORAL
+
+         En el paso 2 construiremos aquí
+         la portada real.
+    ========================================== -->
+
+<main>
+
+    <!-- =========================================
+         HERO / PORTADA
+    ========================================== -->
+
+    <section class="home-hero">
+
+        <!-- Decoración -->
+        <div class="home-hero__glow home-hero__glow--cyan"></div>
+        <div class="home-hero__glow home-hero__glow--pink"></div>
+
+        <img
+            src="assets/decoracion/pincelada-01.png"
+            alt=""
+            class="home-hero__brush home-hero__brush--one"
+            aria-hidden="true"
+        >
+
+        <img
+            src="assets/decoracion/pincelada-02.png"
+            alt=""
+            class="home-hero__brush home-hero__brush--two"
+            aria-hidden="true"
+        >
+
+
+        <div class="container home-hero__container">
+
+            <!-- Texto lateral -->
+            <div class="home-hero__intro">
+
+                <span class="eyebrow">
+                    Asociación Cultural
+                </span>
+
+                <p>
+                    Un espacio donde el arte,
+                    la identidad y la cultura
+                    encuentran nuevas formas
+                    de expresión.
+                </p>
+
+            </div>
+
+
+            <!-- Emblema principal -->
+            <div class="home-hero__identity">
+
+                <div class="home-hero__emblem-wrapper">
+
+                    <div class="home-hero__emblem-light"></div>
+
+                    <img
+                        src="assets/branding/emblema.png"
+                        alt="Emblema de Colores en el viento"
+                        class="home-hero__emblem"
+                    >
+
+                </div>
+
+                <h1 class="home-hero__title">
+                    <span>Colores</span>
+                    <span>en el viento</span>
+                </h1>
+
+                <p class="home-hero__subtitle">
+                    Arte · Cultura · Comunidad
+                </p>
+
+            </div>
+
+
+            <!-- Texto decorativo derecho -->
+            <div class="home-hero__side-text">
+                <span>ICA · PERÚ</span>
+                <span>2026</span>
+            </div>
+
+        </div>
+
+
+        <!-- Scroll -->
+        <a
+            href="#obras-destacadas"
+            class="scroll-indicator"
+            aria-label="Ir a obras destacadas"
+        >
+
+            <span class="scroll-indicator__text">
+                Descubrir
+            </span>
+
+            <span class="scroll-indicator__line"></span>
+
+            <span class="scroll-indicator__arrow">
+                ↓
+            </span>
+
+        </a>
+
+    </section>
+
+
+    <!-- =========================================
+         OBRAS DESTACADAS
+    ========================================== -->
+
+    <section
+        class="featured-works"
+        id="obras-destacadas"
+    >
+
+        <div class="container">
+
+            <!-- Encabezado -->
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        Selección artística
+                    </span>
+
+                    <h2 class="section-title">
+                        Obras
+                        <em>destacadas</em>
+                    </h2>
+
+                </div>
+
+
+                <div class="section-heading__description">
+
+                    <p>
+                        Una selección de obras que forman
+                        parte del recorrido artístico de
+                        Colores en el viento.
+                    </p>
+
+                    <a
+                        href="obras.html"
+                        class="text-link"
+                    >
+                        Ver catálogo completo
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Grid temporal de obras -->
+            <div class="featured-grid">
+
+                <!-- Obra 01 -->
+                <article class="featured-card featured-card--large">
+
+                    <a
+                        href="obra.html?id=cev-001"
+                        class="featured-card__image"
+                    >
+
+                        <img
+                            src="assets/obras/cev-001.webp"
+                            alt="Obra CEV-001"
+                        >
+
+                        <span class="featured-card__number">
+                            01
+                        </span>
+
+                        <span class="featured-card__view">
+                            Ver obra ↗
+                        </span>
+
+                    </a>
+
+                    <div class="featured-card__info">
+
+                        <div>
+                            <h3>
+                                Senderos recorridos
+                            </h3>
+
+                            <p>
+                                Nombre del artista
+                            </p>
+                        </div>
+
+                        <span>
+                            Técnica mixta · 2026
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Obra 02 -->
+                <article class="featured-card">
+
+                    <a
+                        href="obra.html?id=cev-002"
+                        class="featured-card__image"
+                    >
+
+                        <img
+                            src="assets/obras/cev-002.webp"
+                            alt="Obra CEV-002"
+                        >
+
+                        <span class="featured-card__number">
+                            02
+                        </span>
+
+                        <span class="featured-card__view">
+                            Ver obra ↗
+                        </span>
+
+                    </a>
+
+                    <div class="featured-card__info">
+
+                        <div>
+                            <h3>
+                                Memorias del viento
+                            </h3>
+
+                            <p>
+                                Nombre del artista
+                            </p>
+                        </div>
+
+                        <span>
+                            Óleo sobre lienzo · 2026
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Obra 03 -->
+                <article class="featured-card">
+
+                    <a
+                        href="obra.html?id=cev-003"
+                        class="featured-card__image"
+                    >
+
+                        <img
+                            src="assets/obras/cev-003.webp"
+                            alt="Obra CEV-003"
+                        >
+
+                        <span class="featured-card__number">
+                            03
+                        </span>
+
+                        <span class="featured-card__view">
+                            Ver obra ↗
+                        </span>
+
+                    </a>
+
+                    <div class="featured-card__info">
+
+                        <div>
+                            <h3>
+                                Raíces
+                            </h3>
+
+                            <p>
+                                Nombre del artista
+                            </p>
+                        </div>
+
+                        <span>
+                            Acrílico · 2026
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- Botón inferior -->
+            <div class="featured-works__footer">
+
+                <a
+                    href="obras.html"
+                    class="button button--primary"
+                >
+                    Explorar todas las obras
+
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
