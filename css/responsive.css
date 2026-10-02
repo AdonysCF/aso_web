@@ -773,3 +773,612 @@
     }
 
 }
+
+/* =========================================================
+   ARTISTAS RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .artists-hero__content {
+        grid-template-columns:
+            1.2fr
+            .8fr;
+
+        gap: 45px;
+    }
+
+
+    .artists-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .artist-profile-hero__container {
+        grid-template-columns:
+            minmax(280px, .8fr)
+            1.2fr;
+
+        gap: 55px;
+    }
+
+
+    .artist-profile-intro h1 {
+        font-size:
+            clamp(4rem, 8vw, 6rem);
+    }
+
+
+    .artist-works__grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    /* Directorio */
+
+    .artists-hero {
+        padding:
+            calc(var(--header-height) + 70px)
+            0
+            70px;
+    }
+
+
+    .artists-hero__content {
+        display: block;
+    }
+
+
+    .artists-hero__title {
+        font-size:
+            clamp(4rem, 19vw, 6.5rem);
+    }
+
+
+    .artists-hero__description {
+        margin-top: 45px;
+
+        font-size: 1.05rem;
+    }
+
+
+    .artists-hero__brush {
+        width: 400px;
+
+        right: -260px;
+
+        opacity: .08;
+    }
+
+
+    .artists-directory {
+        padding:
+            45px
+            0
+            100px;
+    }
+
+
+    .artists-controls {
+        display: block;
+    }
+
+
+    .artists-tabs {
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 8px;
+    }
+
+
+    .artists-tab {
+        flex: 0 0 auto;
+    }
+
+
+    .artists-search {
+        width: 100%;
+
+        max-width: none;
+
+        margin-top: 30px;
+    }
+
+
+    .artists-toolbar {
+        margin-top: 10px;
+    }
+
+
+    .artists-grid {
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+    }
+
+
+    .artist-card__view {
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    /* Perfil */
+
+    .artist-profile-hero {
+        min-height: auto;
+
+        padding:
+            calc(var(--header-height) + 50px)
+            0
+            80px;
+    }
+
+
+    .artist-profile-hero__container {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 55px;
+    }
+
+
+    .artist-profile-photo {
+        width: 100%;
+    }
+
+
+    .artist-profile-photo__frame {
+        width: 100%;
+
+        max-height: 70vh;
+    }
+
+
+    .artist-profile-back {
+        margin-bottom: 40px;
+    }
+
+
+    .artist-profile-intro {
+        width: 100%;
+    }
+
+
+    .artist-profile-intro h1 {
+        font-size:
+            clamp(4rem, 18vw, 6rem);
+    }
+
+
+    .artist-profile-intro__bio {
+        font-size: 1.15rem;
+    }
+
+
+    .artist-profile-hero__brush {
+        width: 400px;
+
+        right: -280px;
+
+        opacity: .07;
+    }
+
+
+    /* Obras */
+
+    .artist-works {
+        padding:
+            90px
+            0
+            100px;
+    }
+
+
+    .artist-works__heading {
+        display: block;
+
+        margin-bottom: 55px;
+    }
+
+
+    .artist-works__heading h2 {
+        font-size:
+            clamp(3.7rem, 17vw, 5.5rem);
+    }
+
+
+    .artist-works__count {
+        margin-top: 35px;
+    }
+
+
+    .artist-works__grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    .artist-work-card__view {
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    /* Footer perfil */
+
+    .artist-profile-footer__link {
+        min-height: 170px;
+
+        grid-template-columns:
+            1fr
+            auto;
+    }
+
+
+    .artist-profile-footer__link
+    > span:first-child {
+        display: none;
+    }
+
+
+    .artist-profile-footer__link strong {
+        font-size:
+            clamp(2.4rem, 11vw, 4rem);
+    }
+
+}
+
+/* =========================================================
+   EXPOSICIONES RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .exhibitions-hero__content {
+        grid-template-columns:
+            1.2fr
+            .8fr;
+
+        gap: 45px;
+    }
+
+
+    .exhibition-detail-hero__bottom {
+        grid-template-columns:
+            1.15fr
+            .85fr;
+
+        gap: 50px;
+    }
+
+
+    .exhibition-intro__grid {
+        grid-template-columns:
+            50px
+            1fr
+            .8fr;
+
+        gap: 35px;
+    }
+
+
+    .exhibition-artists__grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .exhibition-works__grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    /* Archivo */
+
+    .exhibitions-hero {
+        padding:
+            calc(var(--header-height) + 70px)
+            0
+            70px;
+    }
+
+
+    .exhibitions-hero__content {
+        display: block;
+    }
+
+
+    .exhibitions-hero__title {
+        font-size:
+            clamp(4rem, 18vw, 6.5rem);
+    }
+
+
+    .exhibitions-hero__description {
+        margin-top: 45px;
+
+        font-size: 1.05rem;
+    }
+
+
+    .exhibitions-hero__brush {
+        width: 400px;
+
+        right: -260px;
+
+        opacity: .08;
+    }
+
+
+    .exhibitions-list {
+        padding:
+            45px
+            0
+            100px;
+    }
+
+
+    .exhibitions-controls {
+        display: block;
+    }
+
+
+    .exhibitions-tabs {
+        overflow-x: auto;
+
+        padding-bottom: 8px;
+    }
+
+
+    .exhibitions-tab {
+        flex: 0 0 auto;
+    }
+
+
+    .exhibitions-count {
+        display: block;
+
+        margin-top: 25px;
+    }
+
+
+    .exhibitions-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 70px;
+
+        padding-top: 45px;
+    }
+
+
+    .exhibition-card__view {
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    .exhibition-card__footer {
+        display: block;
+    }
+
+
+    .exhibition-card__footer span {
+        display: block;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* Hero detalle */
+
+    .exhibition-detail-hero {
+        min-height: 90svh;
+    }
+
+
+    .exhibition-detail-hero__content {
+        padding-bottom: 40px;
+    }
+
+
+    .exhibition-detail-back {
+        left: 0;
+    }
+
+
+    .exhibition-detail-hero__bottom {
+        display: block;
+
+        margin-top: 40vh;
+    }
+
+
+    .exhibition-detail-hero h1 {
+        font-size:
+            clamp(4rem, 17vw, 6rem);
+    }
+
+
+    .exhibition-detail-hero__meta {
+        margin-top: 45px;
+
+        padding:
+            25px 0 0;
+
+        border-left: 0;
+
+        border-top:
+            1px solid
+            rgba(255,255,255,.25);
+    }
+
+
+    /* Intro */
+
+    .exhibition-intro {
+        padding:
+            90px
+            0;
+    }
+
+
+    .exhibition-intro__grid {
+        display: block;
+    }
+
+
+    .exhibition-intro
+    .exhibition-section-number {
+        display: block;
+
+        margin-bottom: 30px;
+    }
+
+
+    .exhibition-intro h2 {
+        font-size:
+            clamp(3.7rem, 16vw, 5.5rem);
+    }
+
+
+    .exhibition-intro__grid > p {
+        padding-top: 40px;
+
+        font-size: 1.1rem;
+    }
+
+
+    /* Headings */
+
+    .exhibition-section-heading {
+        align-items: end;
+    }
+
+
+    .exhibition-section-heading h2 {
+        font-size:
+            clamp(3.7rem, 16vw, 5.5rem);
+    }
+
+
+    .exhibition-section-count {
+        font-size: 4rem;
+    }
+
+
+    /* Artistas */
+
+    .exhibition-artists {
+        padding:
+            90px
+            0
+            100px;
+    }
+
+
+    .exhibition-artists__grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            40px
+            15px;
+    }
+
+
+    .exhibition-artist-card h3 {
+        font-size: 1.35rem;
+    }
+
+
+    /* Obras */
+
+    .exhibition-works {
+        padding:
+            90px
+            0
+            100px;
+    }
+
+
+    .exhibition-works__grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 60px;
+    }
+
+
+    .exhibition-work-card__view {
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    /* Galería */
+
+    .exhibition-gallery {
+        padding:
+            90px
+            0
+            100px;
+    }
+
+
+    .exhibition-gallery__grid {
+        display: block;
+    }
+
+
+    .exhibition-gallery__item,
+    .exhibition-gallery__item:nth-child(3n) {
+        margin-bottom: 18px;
+    }
+
+
+    /* Footer */
+
+    .exhibition-detail-footer__link {
+        min-height: 170px;
+
+        grid-template-columns:
+            1fr
+            auto;
+    }
+
+
+    .exhibition-detail-footer__link
+    > span:first-child {
+        display: none;
+    }
+
+
+    .exhibition-detail-footer__link strong {
+        font-size:
+            clamp(2.4rem, 11vw, 4rem);
+    }
+
+}

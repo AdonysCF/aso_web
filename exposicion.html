@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Exposición de la Asociación Cultural Colores en el viento."
+    >
+
+    <title>Exposición | Colores en el viento</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/branding/favicon.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="header header--scrolled" id="header">
+
+    <div class="header__container">
+
+        <a href="index.html" class="header__brand">
+
+            <img
+                src="assets/branding/logo.png"
+                alt="Colores en el viento"
+                class="header__logo"
+            >
+
+        </a>
+
+
+        <nav
+            class="desktop-nav"
+            aria-label="Navegación principal"
+        >
+
+            <a href="obras.html" class="desktop-nav__link">
+                Obras
+            </a>
+
+            <a href="artistas.html" class="desktop-nav__link">
+                Artistas
+            </a>
+
+            <a
+                href="exposiciones.html"
+                class="desktop-nav__link active"
+            >
+                Exposiciones
+            </a>
+
+            <a href="asociacion.html" class="desktop-nav__link">
+                Asociación
+            </a>
+
+            <a href="contacto.html" class="desktop-nav__link">
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MENÚ MÓVIL
+====================================================== -->
+
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+>
+
+    <div class="mobile-menu__glow mobile-menu__glow--one"></div>
+    <div class="mobile-menu__glow mobile-menu__glow--two"></div>
+
+
+    <nav class="mobile-menu__nav">
+
+        <a href="index.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">01</span>
+            <span>Inicio</span>
+        </a>
+
+        <a href="obras.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">02</span>
+            <span>Obras</span>
+        </a>
+
+        <a href="artistas.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">03</span>
+            <span>Artistas</span>
+        </a>
+
+        <a href="exposiciones.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">04</span>
+            <span>Exposiciones</span>
+        </a>
+
+        <a href="asociacion.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">05</span>
+            <span>La Asociación</span>
+        </a>
+
+        <a href="contacto.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">06</span>
+            <span>Contacto</span>
+        </a>
+
+    </nav>
+
+
+    <div class="mobile-menu__footer">
+        <p>Asociación Cultural</p>
+        <span>Arte · Cultura · Comunidad</span>
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CARGA
+====================================================== -->
+
+<div
+    class="exhibition-loading"
+    id="exhibitionLoading"
+>
+
+    <img
+        src="assets/branding/emblema.png"
+        alt=""
+    >
+
+    <span>
+        Cargando exposición...
+    </span>
+
+</div>
+
+
+<!-- =====================================================
+     ERROR
+====================================================== -->
+
+<section
+    class="exhibition-error"
+    id="exhibitionError"
+    hidden
+>
+
+    <span class="eyebrow">
+        Archivo cultural
+    </span>
+
+    <h1>
+        Exposición no encontrada
+    </h1>
+
+    <p>
+        La exposición solicitada
+        no está registrada.
+    </p>
+
+    <a
+        href="exposiciones.html"
+        class="button"
+    >
+        Ver exposiciones
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     EXPOSICIÓN
+====================================================== -->
+
+<main
+    class="exhibition-detail"
+    id="exhibitionDetail"
+    hidden
+>
+
+
+    <!-- HERO -->
+
+    <section class="exhibition-detail-hero">
+
+        <div
+            class="exhibition-detail-hero__background"
+            id="exhibitionBackground"
+        ></div>
+
+
+        <div class="exhibition-detail-hero__overlay"></div>
+
+
+        <img
+            src="assets/decoracion/pincelada-04.png"
+            alt=""
+            class="exhibition-detail-hero__brush"
+        >
+
+
+        <div class="container exhibition-detail-hero__content">
+
+            <a
+                href="exposiciones.html"
+                class="exhibition-detail-back"
+            >
+                ← Exposiciones
+            </a>
+
+
+            <div class="exhibition-detail-hero__bottom">
+
+                <div>
+
+                    <span
+                        class="exhibition-detail-status"
+                        id="exhibitionStatus"
+                    >
+                        —
+                    </span>
+
+
+                    <h1 id="exhibitionName">
+                        —
+                    </h1>
+
+                </div>
+
+
+                <div class="exhibition-detail-hero__meta">
+
+                    <div>
+                        <span>Fecha</span>
+                        <strong id="exhibitionDate">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Lugar</span>
+                        <strong id="exhibitionPlace">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Ciudad</span>
+                        <strong id="exhibitionCity">—</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCCIÓN -->
+
+    <section class="exhibition-intro">
+
+        <div class="container exhibition-intro__grid">
+
+            <span class="exhibition-section-number">
+                01
+            </span>
+
+
+            <div>
+
+                <span class="eyebrow">
+                    La exposición
+                </span>
+
+                <h2>
+                    Arte que habita
+                    <em>un mismo espacio.</em>
+                </h2>
+
+            </div>
+
+
+            <p id="exhibitionDescription">
+                Una muestra que reúne distintas
+                miradas y expresiones artísticas
+                de nuestra comunidad.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ARTISTAS -->
+
+    <section class="exhibition-artists">
+
+        <div class="container">
+
+            <div class="exhibition-section-heading">
+
+                <div>
+
+                    <span class="exhibition-section-number">
+                        02
+                    </span>
+
+                    <span class="eyebrow">
+                        Participantes
+                    </span>
+
+                    <h2>
+                        Artistas
+                    </h2>
+
+                </div>
+
+
+                <span
+                    class="exhibition-section-count"
+                    id="exhibitionArtistsCount"
+                >
+                    0
+                </span>
+
+            </div>
+
+
+            <div
+                class="exhibition-artists__grid"
+                id="exhibitionArtistsGrid"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OBRAS -->
+
+    <section class="exhibition-works">
+
+        <div class="container">
+
+            <div class="exhibition-section-heading">
+
+                <div>
+
+                    <span class="exhibition-section-number">
+                        03
+                    </span>
+
+                    <span class="eyebrow">
+                        Selección
+                    </span>
+
+                    <h2>
+                        Obras
+                        <em>expuestas</em>
+                    </h2>
+
+                </div>
+
+
+                <span
+                    class="exhibition-section-count"
+                    id="exhibitionWorksCount"
+                >
+                    0
+                </span>
+
+            </div>
+
+
+            <div
+                class="exhibition-works__grid"
+                id="exhibitionWorksGrid"
+            ></div>
+
+
+            <div class="exhibition-works__footer">
+
+                <a
+                    href="#"
+                    class="button"
+                    id="viewExhibitionCatalog"
+                >
+                    Ver en catálogo
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALERÍA -->
+
+    <section
+        class="exhibition-gallery"
+        id="exhibitionGallerySection"
+    >
+
+        <div class="container">
+
+            <div class="exhibition-section-heading">
+
+                <div>
+
+                    <span class="exhibition-section-number">
+                        04
+                    </span>
+
+                    <span class="eyebrow">
+                        Memoria visual
+                    </span>
+
+                    <h2>
+                        Galería
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="exhibition-gallery__grid"
+                id="exhibitionGalleryGrid"
+            ></div>
+
+
+            <div
+                class="exhibition-gallery__pending"
+                id="exhibitionGalleryPending"
+                hidden
+            >
+
+                <span>Próximamente</span>
+
+                <p>
+                    Las fotografías de esta exposición
+                    se incorporarán a este archivo
+                    después del encuentro.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="exhibition-detail-footer">
+
+        <div class="container">
+
+            <a
+                href="exposiciones.html"
+                class="exhibition-detail-footer__link"
+            >
+
+                <span>
+                    Archivo
+                </span>
+
+                <strong>
+                    Todas las exposiciones
+                </strong>
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="js/main.js"></script>
+<script src="js/exposicion.js"></script>
+
+</body>
+</html>
