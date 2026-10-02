@@ -1,62 +1,28 @@
-/* =========================================================
-   COLORES EN EL VIENTO
-   FICHA INDIVIDUAL DE OBRA
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", async () => {
 
     /* =====================================================
        ELEMENTOS
     ===================================================== */
 
-    const loading =
-        document.getElementById("artworkLoading");
+    const loading = document.getElementById("artworkLoading");
+    const error = document.getElementById("artworkError");
+    const page = document.getElementById("artworkPage");
 
-    const error =
-        document.getElementById("artworkError");
+    const artworkImage = document.getElementById("artworkImage");
+    const artworkId = document.getElementById("artworkId");
+    const artworkTitle = document.getElementById("artworkTitle");
+    const artworkArtist = document.getElementById("artworkArtist");
+    const artworkDescription = document.getElementById("artworkDescription");
 
-    const page =
-        document.getElementById("artworkPage");
-
-
-    const artworkImage =
-        document.getElementById("artworkImage");
-
-    const artworkId =
-        document.getElementById("artworkId");
-
-    const artworkTitle =
-        document.getElementById("artworkTitle");
-
-    const artworkArtist =
-        document.getElementById("artworkArtist");
-
-    const artworkDescription =
-        document.getElementById("artworkDescription");
-
-
-    const technicalArtist =
-        document.getElementById("technicalArtist");
-
-    const technicalTechnique =
-        document.getElementById("technicalTechnique");
-
-    const technicalSupport =
-        document.getElementById("technicalSupport");
-
-    const technicalDimensions =
-        document.getElementById("technicalDimensions");
-
-    const technicalYear =
-        document.getElementById("technicalYear");
-
-    const technicalCode =
-        document.getElementById("technicalCode");
-
+    const technicalArtist = document.getElementById("technicalArtist");
+    const technicalTechnique = document.getElementById("technicalTechnique");
+    const technicalSupport = document.getElementById("technicalSupport");
+    const technicalDimensions = document.getElementById("technicalDimensions");
+    const technicalYear = document.getElementById("technicalYear");
+    const technicalCode = document.getElementById("technicalCode");
 
     const artworkExhibitions =
         document.getElementById("artworkExhibitions");
-
 
     const previousArtwork =
         document.getElementById("previousArtwork");
@@ -72,24 +38,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     /* =====================================================
-       OBTENER ID DESDE URL
+       LEER ID DE LA URL
     ===================================================== */
 
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
+    const params = new URLSearchParams(window.location.search);
 
-    const artworkCode =
-        params.get("id");
+    const artworkCode = params.get("id");
 
 
     if (!artworkCode) {
-
         showError();
-
         return;
-
     }
 
 
@@ -108,52 +67,43 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
 
-        const [
-            obrasResponse,
-            artistasResponse,
-            exposicionesResponse
-        ] = await Promise.all([
-
+        const responses = await Promise.all([
             fetch("data/obras.json"),
-
             fetch("data/artistas.json"),
-
             fetch("data/exposiciones.json")
-
         ]);
 
 
-        if (
-            !obrasResponse.ok ||
-            !artistasResponse.ok ||
-            !exposicionesResponse.ok
-        ) {
+        if (responses.some(response => !response.ok)) {
 
             throw new Error(
-                "No se pudieron cargar los datos."
+                "No se pudieron cargar los archivos JSON."
             );
 
         }
 
 
-        obras =
-            await obrasResponse.json();
-
-        artistas =
-            await artistasResponse.json();
-
-        exposiciones =
-            await exposicionesResponse.json();
+        obras = await responses[0].json();
+        artistas = await responses[1].json();
+        exposiciones = await responses[2].json();
 
 
-        const artwork =
-            obras.find(
-                obra =>
-                    obra.id === artworkCode
-            );
+        console.log("Obras cargadas:", obras);
+        console.log("Artistas cargados:", artistas);
+        console.log("Exposiciones cargadas:", exposiciones);
+
+
+        const artwork = obras.find(
+            obra => obra.id === artworkCode
+        );
 
 
         if (!artwork) {
+
+            console.error(
+                "No existe la obra:",
+                artworkCode
+            );
 
             showError();
 
@@ -166,11 +116,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     }
 
-    catch (fetchError) {
+    catch (err) {
 
         console.error(
-            "Error cargando obra:",
-            fetchError
+            "Error cargando la ficha de obra:",
+            err
         );
 
         showError();
@@ -184,20 +134,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function renderArtwork(artwork) {
 
-        const artist =
-            artistas.find(
-                item =>
-                    item.id === artwork.artista
-            );
+        const artist = artistas.find(
+            artista => artista.id === artwork.artista
+        );
 
 
         const artistName =
-            artist
-                ? artist.nombre
-                : "Artista";
+            artist?.nombre || "Artista";
 
 
-        /* Página */
+        /* Título navegador */
 
         document.title =
             `${artwork.titulo} | Colores en el viento`;
@@ -205,26 +151,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         /* Imagen */
 
-        artworkImage.src =
-            artwork.imagen;
+        artworkImage.src = artwork.imagen;
 
-        artworkImage.alt =
-            artwork.titulo;
+        artworkImage.alt = artwork.titulo;
 
 
-        /* Código */
+        /* Información */
 
         artworkId.textContent =
             artwork.id.toUpperCase();
 
-
-        /* Título */
-
         artworkTitle.textContent =
             artwork.titulo;
-
-
-        /* Artista */
 
         artworkArtist.textContent =
             artistName;
@@ -233,14 +171,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             `artista.html?id=${artwork.artista}`;
 
 
-        /* Descripción */
-
         artworkDescription.textContent =
             artwork.descripcion ||
             "Información de la obra próximamente.";
 
 
-        /* Datos técnicos */
+        /* =================================================
+           FICHA TÉCNICA
+        ================================================= */
 
         technicalArtist.textContent =
             artistName;
@@ -266,12 +204,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         renderExhibitions(artwork);
 
 
-        /* Navegación */
+        /* Anterior / siguiente */
 
         renderNavigation(artwork);
 
 
-        /* Mostrar */
+        /* =================================================
+           MOSTRAR PÁGINA
+        ================================================= */
 
         loading.hidden = true;
 
@@ -279,17 +219,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         page.hidden = false;
 
-
-        window.scrollTo({
-            top: 0,
-            behavior: "instant"
-        });
-
     }
 
 
     /* =====================================================
-       EXPOSICIONES DE LA OBRA
+       EXPOSICIONES
     ===================================================== */
 
     function renderExhibitions(artwork) {
@@ -314,22 +248,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
 
-        const artworkExhibitionData =
+        const exhibitionData =
             artwork.exposiciones
-                .map(exhibitionId => {
+                .map(id => {
 
                     return exposiciones.find(
-                        expo =>
-                            expo.id === exhibitionId
+                        expo => expo.id === id
                     );
 
                 })
                 .filter(Boolean);
 
 
-        if (
-            artworkExhibitionData.length === 0
-        ) {
+        if (exhibitionData.length === 0) {
 
             artworkExhibitions.innerHTML = `
                 <p class="artwork-no-exhibition">
@@ -343,59 +274,57 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
 
-        artworkExhibitionData.forEach(
-            exhibition => {
+        exhibitionData.forEach(exhibition => {
 
-                const link =
-                    document.createElement("a");
-
-
-                link.className =
-                    "artwork-exhibition";
+            const link =
+                document.createElement("a");
 
 
-                link.href =
-                    `exposicion.html?id=${exhibition.id}`;
+            link.className =
+                "artwork-exhibition";
 
 
-                link.innerHTML = `
+            link.href =
+                `exposicion.html?id=${exhibition.id}`;
 
-                    <div>
 
-                        <span>
-                            ${exhibition.anio || ""}
-                        </span>
+            link.innerHTML = `
 
-                        <strong>
-                            ${exhibition.nombre}
-                        </strong>
+                <div>
 
-                        <small>
-                            ${exhibition.ciudad || ""}
-                            ${
-                                exhibition.lugar
-                                    ? " · " + exhibition.lugar
-                                    : ""
-                            }
-                        </small>
-
-                    </div>
-
-                    <span
-                        class="artwork-exhibition__arrow"
-                    >
-                        ↗
+                    <span>
+                        ${exhibition.anio || ""}
                     </span>
 
-                `;
+                    <strong>
+                        ${exhibition.nombre}
+                    </strong>
+
+                    <small>
+
+                        ${exhibition.ciudad || ""}
+
+                        ${
+                            exhibition.lugar
+                                ? " · " + exhibition.lugar
+                                : ""
+                        }
+
+                    </small>
+
+                </div>
 
 
-                artworkExhibitions.appendChild(
-                    link
-                );
+                <span class="artwork-exhibition__arrow">
+                    ↗
+                </span>
 
-            }
-        );
+            `;
+
+
+            artworkExhibitions.appendChild(link);
+
+        });
 
     }
 
@@ -406,22 +335,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function renderNavigation(artwork) {
 
+        if (obras.length <= 1) {
+
+            previousArtwork.style.visibility =
+                "hidden";
+
+            nextArtwork.style.visibility =
+                "hidden";
+
+            return;
+
+        }
+
+
         const currentIndex =
             obras.findIndex(
-                item =>
-                    item.id === artwork.id
+                obra => obra.id === artwork.id
             );
 
-
-        /*
-         * Navegación circular:
-         *
-         * Primera obra:
-         * anterior = última
-         *
-         * Última obra:
-         * siguiente = primera
-         */
 
         const previousIndex =
             currentIndex === 0
@@ -438,31 +369,26 @@ document.addEventListener("DOMContentLoaded", async () => {
         const previous =
             obras[previousIndex];
 
-
         const next =
             obras[nextIndex];
 
 
-        if (previous) {
+        /* Anterior */
 
-            previousArtwork.href =
-                `obra.html?id=${previous.id}`;
+        previousArtwork.href =
+            `obra.html?id=${previous.id}`;
 
-            previousArtworkTitle.textContent =
-                previous.titulo;
-
-        }
+        previousArtworkTitle.textContent =
+            previous.titulo;
 
 
-        if (next) {
+        /* Siguiente */
 
-            nextArtwork.href =
-                `obra.html?id=${next.id}`;
+        nextArtwork.href =
+            `obra.html?id=${next.id}`;
 
-            nextArtworkTitle.textContent =
-                next.titulo;
-
-        }
+        nextArtworkTitle.textContent =
+            next.titulo;
 
     }
 
@@ -473,11 +399,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function showError() {
 
-        loading.hidden = true;
+        if (loading) {
+            loading.hidden = true;
+        }
 
-        page.hidden = true;
 
-        error.hidden = false;
+        if (page) {
+            page.hidden = true;
+        }
+
+
+        if (error) {
+            error.hidden = false;
+        }
+
 
         document.title =
             "Obra no encontrada | Colores en el viento";

@@ -2960,3 +2960,11 @@ button {
     background:
         var(--color-cyan);
 }
+
+/* =========================================================
+   CORRECCIÓN ELEMENTOS OCULTOS
+========================================================= */
+
+[hidden] {
+    display: none !important;
+}
