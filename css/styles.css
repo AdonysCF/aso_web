@@ -260,6 +260,8 @@ button {
     width: 105px;
     height: auto;
 
+    max-height: calc(var(--header-height) - 18px);
+
     display: block;
 
     object-fit: contain;
