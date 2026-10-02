@@ -247,6 +247,8 @@ button {
 .header__brand {
     position: relative;
 
+    height: 100%;
+
     display: flex;
     align-items: center;
 
@@ -255,8 +257,10 @@ button {
 
 
 .header__logo {
-    width: 170px;
+    width: 105px;
     height: auto;
+
+    display: block;
 
     object-fit: contain;
 
@@ -7726,4 +7730,148 @@ span:nth-child(2) {
 
 .site-footer__bottom a:hover {
     color: var(--color-cyan);
+}
+
+/* =========================================================
+   22. PULIDO GLOBAL
+========================================================= */
+
+
+/* =========================================================
+   MENÚ MÓVIL ACTIVO
+========================================================= */
+
+.mobile-menu__link.active {
+
+    color:
+        var(--color-white);
+
+}
+
+
+.mobile-menu__link.active
+.mobile-menu__number {
+
+    color:
+        var(--color-cyan);
+
+}
+
+
+.mobile-menu__link.active::after {
+
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    margin-left: auto;
+
+    border-radius: 50%;
+
+    background:
+        var(--color-cyan);
+
+    box-shadow:
+        0 0 18px
+        rgba(24,197,207,.55);
+
+}
+
+
+/* =========================================================
+   SELECCIÓN DE TEXTO
+========================================================= */
+
+::selection {
+
+    background:
+        var(--color-cyan);
+
+    color:
+        #050505;
+
+}
+
+
+/* =========================================================
+   FOCUS ACCESIBLE
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+
+    outline:
+        2px solid
+        var(--color-cyan);
+
+    outline-offset:
+        4px;
+
+}
+
+
+/* =========================================================
+   IMÁGENES
+========================================================= */
+
+img {
+
+    max-width: 100%;
+
+}
+
+
+/* =========================================================
+   SCROLL MARGIN
+========================================================= */
+
+section[id] {
+
+    scroll-margin-top:
+        calc(
+            var(--header-height)
+            + 30px
+        );
+
+}
+
+
+/* =========================================================
+   LINKS FOOTER
+========================================================= */
+
+.site-footer a {
+
+    text-decoration: none;
+
+}
+
+
+/* =========================================================
+   PULIDO DE CARGA
+========================================================= */
+
+.artwork-loading,
+.artist-loading,
+.exhibition-loading {
+
+    transition:
+        opacity .3s ease;
+
+}
+
+
+/* =========================================================
+   ELEMENTOS HIDDEN
+========================================================= */
+
+[hidden] {
+
+    display:
+        none !important;
+
 }

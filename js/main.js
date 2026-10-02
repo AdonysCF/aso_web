@@ -3,16 +3,21 @@
    JAVASCRIPT GLOBAL
 ========================================================= */
 
-
 document.addEventListener("DOMContentLoaded", () => {
+
 
     /* =====================================================
        ELEMENTOS
     ===================================================== */
 
-    const header = document.getElementById("header");
-    const menuButton = document.getElementById("menuButton");
-    const mobileMenu = document.getElementById("mobileMenu");
+    const header =
+        document.getElementById("header");
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
 
 
 
@@ -27,11 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (window.scrollY > 30) {
 
-            header.classList.add("header--scrolled");
+            header.classList.add(
+                "header--scrolled"
+            );
 
         } else {
 
-            header.classList.remove("header--scrolled");
+            header.classList.remove(
+                "header--scrolled"
+            );
 
         }
 
@@ -40,10 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateHeader();
 
+
     window.addEventListener(
         "scroll",
         updateHeader,
-        { passive: true }
+        {
+            passive: true
+        }
     );
 
 
@@ -54,13 +66,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function openMenu() {
 
-        if (!menuButton || !mobileMenu) return;
+        if (
+            !menuButton ||
+            !mobileMenu
+        ) return;
 
 
-        menuButton.classList.add("active");
-        mobileMenu.classList.add("active");
+        menuButton.classList.add(
+            "active"
+        );
 
-        document.body.classList.add("menu-open");
+        mobileMenu.classList.add(
+            "active"
+        );
+
+        document.body.classList.add(
+            "menu-open"
+        );
 
 
         menuButton.setAttribute(
@@ -86,13 +108,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeMenu() {
 
-        if (!menuButton || !mobileMenu) return;
+        if (
+            !menuButton ||
+            !mobileMenu
+        ) return;
 
 
-        menuButton.classList.remove("active");
-        mobileMenu.classList.remove("active");
+        menuButton.classList.remove(
+            "active"
+        );
 
-        document.body.classList.remove("menu-open");
+        mobileMenu.classList.remove(
+            "active"
+        );
+
+        document.body.classList.remove(
+            "menu-open"
+        );
 
 
         menuButton.setAttribute(
@@ -118,8 +150,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function toggleMenu() {
 
+        if (!mobileMenu) return;
+
+
         const isOpen =
-            mobileMenu.classList.contains("active");
+            mobileMenu.classList.contains(
+                "active"
+            );
 
 
         if (isOpen) {
@@ -148,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       CERRAR MENÚ AL HACER CLICK EN UN ENLACE
+       CERRAR MENÚ AL HACER CLICK
     ===================================================== */
 
     const mobileLinks =
@@ -178,7 +215,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (
                 event.key === "Escape" &&
-                mobileMenu?.classList.contains("active")
+                mobileMenu?.classList.contains(
+                    "active"
+                )
             ) {
 
                 closeMenu();
@@ -191,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       CERRAR MENÚ SI PASAMOS A ESCRITORIO
+       CERRAR MENÚ AL PASAR A ESCRITORIO
     ===================================================== */
 
     window.addEventListener(
@@ -200,7 +239,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (
                 window.innerWidth > 1050 &&
-                mobileMenu?.classList.contains("active")
+                mobileMenu?.classList.contains(
+                    "active"
+                )
             ) {
 
                 closeMenu();
@@ -213,14 +254,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       MARCAR PÁGINA ACTUAL EN EL MENÚ
+       NAVEGACIÓN ACTIVA
     ===================================================== */
 
     const currentPage =
         window.location.pathname
             .split("/")
-            .pop();
+            .pop()
+            .toLowerCase();
 
+
+    /*
+     * Relacionamos páginas de detalle
+     * con su sección principal.
+     */
+
+    const sectionMap = {
+
+        "obra.html":
+            "obras.html",
+
+        "artista.html":
+            "artistas.html",
+
+        "exposicion.html":
+            "exposiciones.html"
+
+    };
+
+
+    const activePage =
+        sectionMap[currentPage] ||
+        currentPage;
+
+
+
+    /* =====================================================
+       MENÚ DE ESCRITORIO
+    ===================================================== */
 
     const desktopLinks =
         document.querySelectorAll(
@@ -230,16 +301,267 @@ document.addEventListener("DOMContentLoaded", () => {
 
     desktopLinks.forEach(link => {
 
+        link.classList.remove(
+            "active"
+        );
+
+
         const linkPage =
-            link.getAttribute("href");
+            link
+                .getAttribute("href")
+                ?.split("?")[0]
+                .toLowerCase();
 
 
-        if (linkPage === currentPage) {
+        if (
+            linkPage === activePage
+        ) {
 
-            link.classList.add("active");
+            link.classList.add(
+                "active"
+            );
+
+            link.setAttribute(
+                "aria-current",
+                "page"
+            );
+
+        } else {
+
+            link.removeAttribute(
+                "aria-current"
+            );
 
         }
 
     });
+
+
+
+    /* =====================================================
+       MENÚ MÓVIL ACTIVO
+    ===================================================== */
+
+    mobileLinks.forEach(link => {
+
+        link.classList.remove(
+            "active"
+        );
+
+
+        const linkPage =
+            link
+                .getAttribute("href")
+                ?.split("?")[0]
+                .toLowerCase();
+
+
+        if (
+            linkPage === activePage
+        ) {
+
+            link.classList.add(
+                "active"
+            );
+
+            link.setAttribute(
+                "aria-current",
+                "page"
+            );
+
+        } else {
+
+            link.removeAttribute(
+                "aria-current"
+            );
+
+        }
+
+    });
+
+
+
+    /* =====================================================
+       AÑO AUTOMÁTICO
+    ===================================================== */
+
+    const yearElements =
+        document.querySelectorAll(
+            "[data-current-year]"
+        );
+
+
+    yearElements.forEach(element => {
+
+        element.textContent =
+            new Date().getFullYear();
+
+    });
+
+
+
+    /* =====================================================
+       ANIMACIONES AL HACER SCROLL
+    ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(
+            "[data-reveal]"
+        );
+
+
+    /*
+     * Respetamos la configuración
+     * de accesibilidad del usuario.
+     */
+
+    const prefersReducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+
+    if (prefersReducedMotion) {
+
+        revealElements.forEach(
+            element => {
+
+                element.classList.add(
+                    "is-visible"
+                );
+
+            }
+        );
+
+    } else if (
+        "IntersectionObserver" in window
+    ) {
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target
+                                    .classList.add(
+                                        "is-visible"
+                                    );
+
+
+                                revealObserver
+                                    .unobserve(
+                                        entry.target
+                                    );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.12,
+                    rootMargin:
+                        "0px 0px -40px 0px"
+                }
+
+            );
+
+
+        revealElements.forEach(
+            element => {
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
+    } else {
+
+        revealElements.forEach(
+            element => {
+
+                element.classList.add(
+                    "is-visible"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       ENLACES INTERNOS SUAVES
+    ===================================================== */
+
+    const anchorLinks =
+        document.querySelectorAll(
+            'a[href^="#"]'
+        );
+
+
+    anchorLinks.forEach(link => {
+
+        link.addEventListener(
+            "click",
+            event => {
+
+                const href =
+                    link.getAttribute(
+                        "href"
+                    );
+
+
+                if (
+                    !href ||
+                    href === "#"
+                ) {
+
+                    return;
+
+                }
+
+
+                const target =
+                    document.querySelector(
+                        href
+                    );
+
+
+                if (!target) return;
+
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+
+                    behavior:
+                        prefersReducedMotion
+                            ? "auto"
+                            : "smooth",
+
+                    block:
+                        "start"
+
+                });
+
+            }
+        );
+
+    });
+
 
 });

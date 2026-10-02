@@ -1,0 +1,206 @@
+/* =========================================================
+   COLORES EN EL VIENTO
+   ANIMACIONES GLOBALES
+========================================================= */
+
+
+/* =========================================================
+   REVEAL BASE
+========================================================= */
+
+[data-reveal] {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity
+        .8s
+        cubic-bezier(.2,.7,.2,1),
+
+        transform
+        .8s
+        cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+/* =========================================================
+   ELEMENTO VISIBLE
+========================================================= */
+
+[data-reveal].is-visible {
+
+    opacity: 1;
+
+    transform:
+        translate3d(0, 0, 0);
+
+}
+
+
+/* =========================================================
+   VARIANTE DESDE IZQUIERDA
+========================================================= */
+
+[data-reveal="left"] {
+
+    transform:
+        translateX(-35px);
+
+}
+
+
+[data-reveal="left"].is-visible {
+
+    transform:
+        translateX(0);
+
+}
+
+
+/* =========================================================
+   VARIANTE DESDE DERECHA
+========================================================= */
+
+[data-reveal="right"] {
+
+    transform:
+        translateX(35px);
+
+}
+
+
+[data-reveal="right"].is-visible {
+
+    transform:
+        translateX(0);
+
+}
+
+
+/* =========================================================
+   VARIANTE ESCALA
+========================================================= */
+
+[data-reveal="scale"] {
+
+    opacity: 0;
+
+    transform:
+        scale(.97);
+
+}
+
+
+[data-reveal="scale"].is-visible {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+
+}
+
+
+/* =========================================================
+   RETRASOS
+========================================================= */
+
+[data-delay="1"] {
+    transition-delay: .08s;
+}
+
+
+[data-delay="2"] {
+    transition-delay: .16s;
+}
+
+
+[data-delay="3"] {
+    transition-delay: .24s;
+}
+
+
+[data-delay="4"] {
+    transition-delay: .32s;
+}
+
+
+/* =========================================================
+   ANIMACIÓN SUAVE DEL EMBLEMA
+========================================================= */
+
+@keyframes emblemFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-7px);
+
+    }
+
+}
+
+
+.home-hero__emblem img,
+.association-closing__emblem {
+
+    animation:
+        emblemFloat
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =========================================================
+   RESPETAR REDUCCIÓN DE MOVIMIENTO
+========================================================= */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+    }
+
+
+    [data-reveal] {
+
+        opacity: 1 !important;
+
+        transform:
+            none !important;
+
+    }
+
+}
