@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Obra de la Asociación Cultural Colores en el viento."
+    >
+
+    <title>Obra | Colores en el viento</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/branding/favicon.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+
+<!-- ================================================
+     HEADER
+================================================ -->
+
+<header class="header header--scrolled" id="header">
+
+    <div class="header__container">
+
+        <a
+            href="index.html"
+            class="header__brand"
+        >
+            <img
+                src="assets/branding/logo.png"
+                alt="Colores en el viento"
+                class="header__logo"
+            >
+        </a>
+
+
+        <nav
+            class="desktop-nav"
+            aria-label="Navegación principal"
+        >
+
+            <a href="obras.html" class="desktop-nav__link active">
+                Obras
+            </a>
+
+            <a href="artistas.html" class="desktop-nav__link">
+                Artistas
+            </a>
+
+            <a href="exposiciones.html" class="desktop-nav__link">
+                Exposiciones
+            </a>
+
+            <a href="asociacion.html" class="desktop-nav__link">
+                Asociación
+            </a>
+
+            <a href="contacto.html" class="desktop-nav__link">
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================================================
+     MENÚ MÓVIL
+================================================ -->
+
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+>
+
+    <div class="mobile-menu__glow mobile-menu__glow--one"></div>
+    <div class="mobile-menu__glow mobile-menu__glow--two"></div>
+
+    <nav
+        class="mobile-menu__nav"
+        aria-label="Menú móvil"
+    >
+
+        <a href="index.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">01</span>
+            <span>Inicio</span>
+        </a>
+
+        <a href="obras.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">02</span>
+            <span>Obras</span>
+        </a>
+
+        <a href="artistas.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">03</span>
+            <span>Artistas</span>
+        </a>
+
+        <a href="exposiciones.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">04</span>
+            <span>Exposiciones</span>
+        </a>
+
+        <a href="asociacion.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">05</span>
+            <span>La Asociación</span>
+        </a>
+
+        <a href="contacto.html" class="mobile-menu__link">
+            <span class="mobile-menu__number">06</span>
+            <span>Contacto</span>
+        </a>
+
+    </nav>
+
+    <div class="mobile-menu__footer">
+        <p>Asociación Cultural</p>
+        <span>Arte · Cultura · Comunidad</span>
+    </div>
+
+</div>
+
+
+<!-- ================================================
+     CARGANDO
+================================================ -->
+
+<div class="artwork-loading" id="artworkLoading">
+
+    <img
+        src="assets/branding/emblema.png"
+        alt=""
+    >
+
+    <span>Cargando obra...</span>
+
+</div>
+
+
+<!-- ================================================
+     ERROR
+================================================ -->
+
+<div
+    class="artwork-error"
+    id="artworkError"
+    hidden
+>
+
+    <span class="eyebrow">
+        Archivo artístico
+    </span>
+
+    <h1>Obra no encontrada</h1>
+
+    <p>
+        La obra solicitada no existe o no pudo cargarse.
+    </p>
+
+    <a href="obras.html" class="button">
+        Volver al catálogo
+    </a>
+
+</div>
+
+
+<!-- ================================================
+     OBRA
+================================================ -->
+
+<main
+    class="artwork-page"
+    id="artworkPage"
+    hidden
+>
+
+
+    <!-- IMAGEN PRINCIPAL -->
+
+    <section class="artwork-visual">
+
+        <div class="artwork-visual__back">
+
+            <a href="obras.html">
+                ← Catálogo
+            </a>
+
+        </div>
+
+
+        <div class="artwork-visual__frame">
+
+            <img
+                id="artworkImage"
+                src=""
+                alt=""
+                class="artwork-visual__image"
+            >
+
+        </div>
+
+
+        <span
+            class="artwork-visual__id"
+            id="artworkId"
+        ></span>
+
+
+        <!-- decoración -->
+
+        <img
+            src="assets/decoracion/pincelada-04.png"
+            alt=""
+            class="artwork-visual__brush"
+            aria-hidden="true"
+        >
+
+    </section>
+
+
+    <!-- INFORMACIÓN -->
+
+    <section class="artwork-info">
+
+        <div class="artwork-info__inner">
+
+
+            <!-- CABECERA -->
+
+            <div class="artwork-heading">
+
+                <span class="eyebrow">
+                    Obra
+                </span>
+
+                <h1 id="artworkTitle">
+                    —
+                </h1>
+
+                <a
+                    href="#"
+                    id="artworkArtist"
+                    class="artwork-heading__artist"
+                >
+                    —
+                </a>
+
+            </div>
+
+
+            <!-- DESCRIPCIÓN -->
+
+            <div class="artwork-description">
+
+                <span class="artwork-section-number">
+                    01
+                </span>
+
+                <div>
+
+                    <span class="artwork-small-title">
+                        Sobre la obra
+                    </span>
+
+                    <p id="artworkDescription">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DATOS TÉCNICOS -->
+
+            <div class="artwork-technical">
+
+                <span class="artwork-section-number">
+                    02
+                </span>
+
+
+                <div class="artwork-technical__content">
+
+                    <span class="artwork-small-title">
+                        Ficha técnica
+                    </span>
+
+
+                    <dl class="artwork-data">
+
+                        <div>
+                            <dt>Artista</dt>
+                            <dd id="technicalArtist">—</dd>
+                        </div>
+
+                        <div>
+                            <dt>Técnica</dt>
+                            <dd id="technicalTechnique">—</dd>
+                        </div>
+
+                        <div>
+                            <dt>Soporte</dt>
+                            <dd id="technicalSupport">—</dd>
+                        </div>
+
+                        <div>
+                            <dt>Dimensiones</dt>
+                            <dd id="technicalDimensions">—</dd>
+                        </div>
+
+                        <div>
+                            <dt>Año</dt>
+                            <dd id="technicalYear">—</dd>
+                        </div>
+
+                        <div>
+                            <dt>Código</dt>
+                            <dd id="technicalCode">—</dd>
+                        </div>
+
+                    </dl>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPOSICIONES -->
+
+            <div class="artwork-exhibitions">
+
+                <span class="artwork-section-number">
+                    03
+                </span>
+
+                <div class="artwork-exhibitions__content">
+
+                    <span class="artwork-small-title">
+                        Exposiciones
+                    </span>
+
+                    <div id="artworkExhibitions">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================================
+         NAVEGACIÓN ENTRE OBRAS
+    ============================================= -->
+
+    <section class="artwork-navigation">
+
+        <a
+            href="#"
+            id="previousArtwork"
+            class="artwork-navigation__item artwork-navigation__item--previous"
+        >
+
+            <span>
+                ← Obra anterior
+            </span>
+
+            <strong id="previousArtworkTitle">
+                —
+            </strong>
+
+        </a>
+
+
+        <a
+            href="obras.html"
+            class="artwork-navigation__center"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+
+
+        <a
+            href="#"
+            id="nextArtwork"
+            class="artwork-navigation__item artwork-navigation__item--next"
+        >
+
+            <span>
+                Siguiente obra →
+            </span>
+
+            <strong id="nextArtworkTitle">
+                —
+            </strong>
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<script src="js/main.js"></script>
+<script src="js/obra.js"></script>
+
+</body>
+</html>

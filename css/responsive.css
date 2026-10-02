@@ -588,3 +588,188 @@
     }
 
 }
+
+/* =========================================================
+   FICHA DE OBRA RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .artwork-page {
+        display: block;
+    }
+
+
+    .artwork-visual {
+        min-height: 90vh;
+
+        padding:
+            calc(var(--header-height) + 70px)
+            8vw
+            70px;
+    }
+
+
+    .artwork-info {
+        min-height: auto;
+
+        border-left: none;
+
+        border-top:
+            1px solid
+            rgba(255,255,255,.08);
+    }
+
+
+    .artwork-info__inner {
+        max-width: 750px;
+    }
+
+
+    .artwork-navigation {
+        grid-template-columns:
+            1fr
+            80px
+            1fr;
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    .artwork-visual {
+        min-height: 75vh;
+
+        padding:
+            calc(var(--header-height) + 65px)
+            25px
+            55px;
+    }
+
+
+    .artwork-visual__back {
+        top:
+            calc(var(--header-height) + 15px);
+
+        left: 20px;
+    }
+
+
+    .artwork-visual__frame {
+        max-height: 58vh;
+    }
+
+
+    .artwork-visual__image {
+        max-height: 58vh;
+    }
+
+
+    .artwork-visual__id {
+        left: 20px;
+        bottom: 20px;
+    }
+
+
+    .artwork-visual__brush {
+        width: 330px;
+
+        left: -210px;
+    }
+
+
+    /* Información */
+
+    .artwork-info {
+        padding:
+            70px
+            22px
+            50px;
+    }
+
+
+    .artwork-heading {
+        padding-bottom: 50px;
+    }
+
+
+    .artwork-heading h1 {
+        font-size:
+            clamp(
+                3.4rem,
+                16vw,
+                5.5rem
+            );
+    }
+
+
+    /* Secciones */
+
+    .artwork-description,
+    .artwork-technical,
+    .artwork-exhibitions {
+        grid-template-columns:
+            30px
+            1fr;
+
+        gap: 10px;
+
+        padding:
+            32px
+            0;
+    }
+
+
+    .artwork-description p {
+        font-size: 1.15rem;
+    }
+
+
+    .artwork-data > div {
+        grid-template-columns:
+            105px
+            1fr;
+
+        gap: 10px;
+    }
+
+
+    /* Navegación */
+
+    .artwork-navigation {
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        min-height: 170px;
+    }
+
+
+    .artwork-navigation__center {
+        display: none;
+    }
+
+
+    .artwork-navigation__item {
+        padding:
+            30px
+            20px;
+    }
+
+
+    .artwork-navigation__item--previous {
+        border-right:
+            1px solid
+            rgba(255,255,255,.08);
+    }
+
+
+    .artwork-navigation__item strong {
+        font-size: 1.35rem;
+    }
+
+}
