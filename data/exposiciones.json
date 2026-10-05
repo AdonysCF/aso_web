@@ -1,23 +1,46 @@
 [
     {
         "id": "expo-001",
-        "slug": "primera-exposicion-2026",
-        "nombre": "Primera Exposición Cultural",
-        "fecha": "2026-10-18",
+        "slug": "lo-que-el-cerebro-calla-y-el-lienzo-grita",
+        "nombre": "DEL CABLE A LA RAÍZ",
+        "fecha": "2026-10-09",
         "anio": 2026,
-        "lugar": "Institución",
-        "ciudad": "Ica",
+        "lugar": "Plaza de Carhuaz",
+        "ciudad": "Carhuaz",
         "estado": "proxima",
+        "descripcion": "Las 23 obras funcionan como un grito visual de aquello que el cerebro silencia. El lienzo se convierte en el espacio donde se expresa la violencia internalizada, la dependencia tecnológica y el proceso de sanación, abordando ciencia, tecnología, bienestar y ética desde el arte.",
         "portada": "assets/exposiciones/expo-001/portada.webp",
         "galeria": [],
         "obras": [
+            "cev-000",
             "cev-001",
             "cev-002",
-            "cev-003"
+            "cev-003",
+            "cev-004",
+            "cev-005",
+            "cev-006",
+            "cev-007",
+            "cev-008",
+            "cev-009",
+            "cev-010",
+            "cev-011",
+            "cev-012",
+            "cev-013",
+            "cev-014",
+            "cev-015",
+            "cev-016",
+            "cev-017",
+            "cev-018",
+            "cev-019",
+            "cev-020",
+            "cev-021",
+            "cev-022"
         ],
         "artistas": [
             "artista-001",
-            "artista-002"
+            "artista-002",
+            "artista-003",
+            "artista-004"
         ]
     }
 ]

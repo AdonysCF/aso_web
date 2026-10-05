@@ -1,7 +1,7 @@
 [
     {
         "id": "artista-001",
-        "nombre": "Nombre Artista 01",
+        "nombre": "Annia Ferrer",
         "tipo": "artista",
         "foto": "assets/artistas/artista-001.webp",
         "biografia": "",
@@ -10,9 +10,27 @@
     },
     {
         "id": "artista-002",
-        "nombre": "Nombre Artista 02",
+        "nombre": "Indira García Quispe",
         "tipo": "artista",
         "foto": "assets/artistas/artista-002.webp",
+        "biografia": "",
+        "instagram": "",
+        "facebook": ""
+    },
+    {
+        "id": "artista-003",
+        "nombre": "Daphna Ferrer",
+        "tipo": "artista",
+        "foto": "assets/artistas/artista-003.webp",
+        "biografia": "",
+        "instagram": "",
+        "facebook": ""
+    },
+    {
+        "id": "artista-004",
+        "nombre": "Carlos Lozano",
+        "tipo": "artista",
+        "foto": "assets/artistas/artista-004.webp",
         "biografia": "",
         "instagram": "",
         "facebook": ""

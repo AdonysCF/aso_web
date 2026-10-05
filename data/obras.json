@@ -1,14 +1,29 @@
 [
     {
-        "id": "cev-001",
-        "titulo": "Senderos recorridos",
+        "id": "cev-000",
+        "titulo": "Corazón conectado, corazón liberado",
         "artista": "artista-001",
-        "imagen": "assets/obras/cev-001.webp",
-        "tecnica": "Técnica mixta",
+        "imagen": "assets/obras/cev-000.webp",
+        "tecnica": "Acrílico",
         "soporte": "Lienzo",
-        "dimensiones": "50 × 70 cm",
+        "dimensiones": "50 x 70 cm",
         "anio": 2026,
-        "descripcion": "Descripción de la obra Senderos recorridos.",
+        "descripcion": "Es lo que nos pasa ahora. Tenemos el corazón enchufado al celular. La mitad del corazón ya se puso gris, fría, por estar tanto tiempo conectado. Pero cuando el corazón decide soltarse, el celular se incendia y en lugar de humo salen mariposas. El dolor conectado se transforma en vuelo. Las ramitas verdes que brotan del corazón dicen que todavía está vivo.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": true
+    },
+    {
+        "id": "cev-001",
+        "titulo": "El poder del pensamiento",
+        "artista": "artista-002",
+        "imagen": "assets/obras/cev-001.webp",
+        "tecnica": "Óleo",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es lo que pasa cuando pensamos bonito. El pensamiento no es invisible: florece. Si piensas con calma, de tu cabeza nace una flor. Las ramitas azules son las neuronas conectándose. Algunas hojas secas son los pensamientos tristes que se van cayendo, y las hojas verdes y la flor rosada son los pensamientos nuevos que te sanan.",
         "exposiciones": [
             "expo-001"
         ],
@@ -16,14 +31,14 @@
     },
     {
         "id": "cev-002",
-        "titulo": "Memorias del viento",
-        "artista": "artista-002",
+        "titulo": "El encuentro con la IA",
+        "artista": "artista-001",
         "imagen": "assets/obras/cev-002.webp",
         "tecnica": "Óleo",
         "soporte": "Lienzo",
-        "dimensiones": "60 × 80 cm",
+        "dimensiones": "50 x 70 cm aprox.",
         "anio": 2026,
-        "descripcion": "Descripción de la obra Memorias del viento.",
+        "descripcion": "Es el futuro que ya llegó. El abuelito es la humanidad, el pasado, la experiencia. El robot es la Inteligencia Artificial, el futuro frío y perfecto. El abuelito lo mira, le tiende la mano, quiere entenderlo. Las personas de atrás se desvanecen, porque este encuentro cambia todo.",
         "exposiciones": [
             "expo-001"
         ],
@@ -31,17 +46,302 @@
     },
     {
         "id": "cev-003",
-        "titulo": "Raíces",
+        "titulo": "El tiempo que se derrite",
         "artista": "artista-001",
         "imagen": "assets/obras/cev-003.webp",
         "tecnica": "Acrílico",
         "soporte": "Lienzo",
-        "dimensiones": "50 × 70 cm",
+        "dimensiones": "50 x 70 cm aprox.",
         "anio": 2026,
-        "descripcion": "Descripción de la obra Raíces.",
+        "descripcion": "El tiempo no es duro, se derrite. El reloj que se escurre nos dice que el tiempo pasa y no lo podemos atrapar. Frente a él, el árbol sigue firme, viviendo a su ritmo, con raíces fuertes. Es el tiempo de la naturaleza contra el tiempo de los humanos.",
         "exposiciones": [
             "expo-001"
         ],
-        "destacada": true
+        "destacada": false
+    },
+    {
+        "id": "cev-004",
+        "titulo": "Rompiendo cadenas",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-004.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "La obra habla de liberarse. Las cadenas son todo lo que nos hace daño: el odio, el miedo y el bullying. Romperlas juntos genera una luz de esperanza. Es un trabajo en equipo.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-005",
+        "titulo": "El osito olvidado",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-005.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm aprox.",
+        "anio": 2026,
+        "descripcion": "Es un juguete olvidado, como un niño olvidado. Lo dejaron tirado y se rompió. Pero al lado de su dolor, nace una flor blanca. Aunque esté roto y solo, todavía hay vida que nace a su lado. Es tristeza y esperanza juntas.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-006",
+        "titulo": "Futuro incierto",
+        "artista": "artista-003",
+        "imagen": "assets/obras/cev-006.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Retrato de mujer anciana andina con sombrero celeste y chompa azul intensa. La mirada baja y el rostro marcado por el tiempo transmiten introspección y cansancio vital, pero también dignidad. El fondo difuso en amarillos y niebla evoca el territorio andino que se desvanece en su memoria.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-007",
+        "titulo": "Silencio impuesto",
+        "artista": "artista-003",
+        "imagen": "assets/obras/cev-007.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es el momento exacto en que te quitan la voz. No es que ella no quiera hablar, es que no la dejan. Las manos no son de ella, son ajenas, que vienen de afuera e imponen el silencio. Sus ojos están abiertos porque el cuerpo quiere pedir ayuda aunque la boca esté tapada. Es una pintura sobre lo que se siente cuando te callan a la fuerza.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-008",
+        "titulo": "El fruto que ve la luz desde la grieta",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-008.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es la vida que resiste y madura incluso dentro de la roca. Desde la oscuridad de la cueva, lo único que cuelga y brilla es un fruto vivo. La cueva es áspera, cerrada, oscura, pero deja un hueco por donde entra la luz y se ve el mundo exterior. El racimo no está abajo en el valle, está arriba, colgando en lo alto, madurando frente a la luz. Es la esperanza vista desde el encierro.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-009",
+        "titulo": "Frágil equilibrio",
+        "artista": "artista-004",
+        "imagen": "assets/obras/cev-009.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es el equilibrio de hoy. La mariposa es lo frágil: la salud mental, la naturaleza, el alma humana. El mundo azul es lo pesado: la tecnología, las redes, el mundo digital que todo lo quiere. La balanza no aguanta tanto peso digital y se rompe. La mujer mira preocupada: ¿cómo cuidamos lo frágil si el mundo pesa tanto?",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-010",
+        "titulo": "El arrepentimiento",
+        "artista": "artista-004",
+        "imagen": "assets/obras/cev-010.webp",
+        "tecnica": "Óleo",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es la historia de muchos. Cuando la madre estaba viva, el hijo le gritaba y quería pegarle. No la valoró. Ahora que está muerta, la abraza en una piedra fría y llora. Es el remordimiento que llega tarde. Nos enseña a valorar ahora.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-011",
+        "titulo": "La luz que rompe",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-011.webp",
+        "tecnica": "Óleo con textura (empaste)",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm aprox.",
+        "anio": 2026,
+        "descripcion": "Es la oscuridad que se rompe. Estás en un lugar muy oscuro, triste, y de repente algo se raja y entra una luz que no puedes detener. Es doloroso romper, pero por esa grieta entra la esperanza. Es el momento justo antes de sanar.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-012",
+        "titulo": "La coca y el celular",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-012.webp",
+        "tecnica": "Óleo",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es el choque de dos mundos. Adelante la tradición andina: la hoja de coca, sagrada, para pedir permiso a la tierra. Atrás la comunidad real que todavía se junta a compartir. Y detrás de ellos, su sombra fantasma, ya atrapada por el celular. Es lo que estamos perdiendo.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-013",
+        "titulo": "La niña de oro",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-013.webp",
+        "tecnica": "Óleo",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es una niña que se rompió, pero no la botaron, la repararon con oro. Cada rajadura es una herida, pero ahora brilla más que antes. Es más valiosa porque se rompió y la curaron con amor. No esconde sus heridas, las muestra doradas.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-014",
+        "titulo": "El que se va con el viento",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-014.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm aprox.",
+        "anio": 2026,
+        "descripcion": "Es el olvido. Es un abuelito que se está yendo poco a poco, como las hojas en otoño. Su cuerpo se hace tierra y su memoria se va con el viento. Y la ciudad de atrás también se cae, porque cuando olvidamos a nuestros viejitos, todo se derrumba.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-015",
+        "titulo": "Lo que nace de la máscara",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-015.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es quitarse la máscara. Todos a veces usamos una cara que no es la nuestra para que no nos hagan daño. Cuando esa máscara se rompe, duele, pero deja que nazca algo real y vivo por dentro. Es una plantita nueva.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-016",
+        "titulo": "Hilos que no terminan",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-016.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es la lucha que no termina. La niña corta los hilos que la controlan, pero cuando corta uno, aparece otro. Es cansado, pero ella sigue intentando ser libre. Habla de lo difícil que es salir de algo que te ata.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-017",
+        "titulo": "Palomas de la cadena",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-017.webp",
+        "tecnica": "Óleo",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es la libertad después del dolor. La cadena es todo lo que nos ata. Cuando se rompe, lo que sale no es odio, es paz. Las palomas son la esperanza que vuela.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-018",
+        "titulo": "Sueño",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-018.webp",
+        "tecnica": "Óleo",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es el sueño de una niña que lleva su cultura en el corazón. Mientras duerme, su imaginación viaja entre sus montañas, sus animalitos y su luna. Es ternura, identidad y paz.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-019",
+        "titulo": "Flor de luz",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-019.webp",
+        "tecnica": "Óleo",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es la esperanza que no muere. Aunque todo alrededor está oscuro, la flor blanca sigue viva y brilla. El tallo con espinas muestra que crecer duele, pero igual florece.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-020",
+        "titulo": "Lucha y esperanza",
+        "artista": "artista-001",
+        "imagen": "assets/obras/cev-020.webp",
+        "tecnica": "Acrílico",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es una imagen de lucha y esperanza. Las manos quieren atrapar o sostener algo que se escapa. La luz al final representa una salida, una verdad que aparece en medio de lo oscuro.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-021",
+        "titulo": "Apariencias",
+        "artista": "artista-002",
+        "imagen": "assets/obras/cev-021.webp",
+        "tecnica": "Óleo",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es lo que hacen las redes sociales. Por fuera todos parecen perfectos, con likes. Por dentro la persona está rota, cuarteada, negra. Se pone una máscara de sonrisa porque tiene miedo de que la insulten: fea, no sirves, estúpida. Es la mujer que finge estar bien en Instagram mientras por dentro se está quebrando.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
+    },
+    {
+        "id": "cev-022",
+        "titulo": "Dolor de infancia",
+        "artista": "artista-004",
+        "imagen": "assets/obras/cev-022.webp",
+        "tecnica": "Tinta de huarango / plumilla",
+        "soporte": "Lienzo",
+        "dimensiones": "50 x 70 cm",
+        "anio": 2026,
+        "descripcion": "Es lo que vive un niño cuando sus padres pelean. Los padres creen que el niño no escucha, pero el grito se queda adentro de su cabeza para siempre. La niña no puede sacar a sus padres de su mente. Ese es el dolor de infancia: llevar la pelea de tus padres dentro de ti.",
+        "exposiciones": [
+            "expo-001"
+        ],
+        "destacada": false
     }
 ]
