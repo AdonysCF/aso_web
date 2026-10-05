@@ -19,7 +19,7 @@
     },
     {
         "id": "artista-003",
-        "nombre": "Daphna Ferrer",
+        "nombre": "Daphna Cavero Ferrer",
         "tipo": "artista",
         "foto": "assets/artistas/artista-003.webp",
         "biografia": "",
@@ -28,7 +28,7 @@
     },
     {
         "id": "artista-004",
-        "nombre": "Carlos Lozano",
+        "nombre": "Carlos Jesús Lozano Huamán",
         "tipo": "artista",
         "foto": "assets/artistas/artista-004.webp",
         "biografia": "",
