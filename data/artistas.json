@@ -34,5 +34,23 @@
         "biografia": "",
         "instagram": "",
         "facebook": ""
+    },
+    {
+        "id": "artista-005",
+        "nombre": "Adonys Cavero Ferrer",
+        "tipo": "colaborador",
+        "foto": "assets/artistas/artista-005.webp",
+        "biografia": "",
+        "instagram": "",
+        "facebook": ""
+    },
+    {
+        "id": "artista-006",
+        "nombre": "Victor Huamani Reyes",
+        "tipo": "colaborador",
+        "foto": "assets/artistas/artista-006.webp",
+        "biografia": "",
+        "instagram": "",
+        "facebook": ""
     }
 ]
