@@ -9,6 +9,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es lo que nos pasa ahora. Tenemos el corazón enchufado al celular. La mitad del corazón ya se puso gris, fría, por estar tanto tiempo conectado. Pero cuando el corazón decide soltarse, el celular se incendia y en lugar de humo salen mariposas. El dolor conectado se transforma en vuelo. Las ramitas verdes que brotan del corazón dicen que todavía está vivo.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El corazón gris es el sistema nervioso en estrés crónico por hiperconexión: cortisol alto, corazón apagado. Los cables son las conexiones neuronales secuestradas por la dopamina digital. Cuando se corta la conexión, el cerebro libera y se produce la metamorfosis: de cable a mariposa. Neuroplasticidad emocional."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Eje central de la obra. Es la dependencia emocional tecnológica. Cargamos el corazón con el celular, como si fuera su cargador. Le damos nuestra energía vital a una pantalla. La obra muestra el detox: desconectar para que el corazón vuelva a latir en colores y no en notificaciones. Del cable a la raíz."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "La violencia invisible de hoy es tener el corazón atado a un aparato. Nos violentamos a nosotros mismos cuando dejamos que un celular decida si nuestro corazón está gris o rojo. Prevenir es enseñar a desenchufar el corazón a tiempo, antes de que se quede todo gris."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Esta es la sanación. En terapia no cortamos los cables de golpe, los transformamos. El fuego que sale del celular no es destrucción, es transformación. Las mariposas son el bienestar que vuelve cuando el corazón se libera. De corazón cableado a corazón alado. El bienestar es volver a volar."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "El desafío ético es preguntarnos: ¿a qué está conectado nuestro corazón? Como psicólogos en la era digital, debemos ayudar a las personas a elegir dónde enchufar su corazón. No es ético dejar que una pantalla tenga todo el poder sobre nuestro órgano más humano. La ética es devolverle el corazón a la vida."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -24,6 +51,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es lo que pasa cuando pensamos bonito. El pensamiento no es invisible: florece. Si piensas con calma, de tu cabeza nace una flor. Las ramitas azules son las neuronas conectándose. Algunas hojas secas son los pensamientos tristes que se van cayendo, y las hojas verdes y la flor rosada son los pensamientos nuevos que te sanan.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Neuroplasticidad. Cada pensamiento crea una conexión neuronal (las lucecitas azules). Si cambias tu pensamiento, cambias tu cerebro y haces florecer una flor. Pensar bien no es magia, es neurociencia: el cerebro florece."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Frente a la obra anterior llena de insultos y likes, esta obra es el detox digital. Cerrar los ojos, apagar el celular, dejar que el cerebro respire y florezca. La tecnología nos llena de ruido, el poder del pensamiento es volver al silencio interior."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Un pensamiento sano previene la violencia. Cuando la mente está en paz, con los ojos cerrados y floreciendo, no ataca. Prevenir la violencia es enseñar a las personas a cultivar su jardín interior, a cambiar el pensamiento de odio por una flor."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Esta es la meta de la terapia. No es solo quitar lo malo, es hacer florecer algo nuevo. En terapia ayudamos a que de la cabeza oscura nazca una flor. El bienestar es esto: cerrar los ojos, respirar y ver cómo tu pensamiento se vuelve flor. Mindfulness puro."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "El desafío ético es creer en el ser humano. Creer que por más oscuro que esté el cerebro, puede florecer. Como psicólogos no vemos cerebros rotos, vemos jardines que pueden florecer. Esa es nuestra ética: cuidar el poder del pensamiento."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -39,6 +93,33 @@
         "dimensiones": "50 x 70 cm aprox.",
         "anio": 2026,
         "descripcion": "Es el futuro que ya llegó. El abuelito es la humanidad, el pasado, la experiencia. El robot es la Inteligencia Artificial, el futuro frío y perfecto. El abuelito lo mira, le tiende la mano, quiere entenderlo. Las personas de atrás se desvanecen, porque este encuentro cambia todo.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El cerebro humano siente, recuerda, tiembla, envejece. El cerebro de la IA no siente, solo calcula. La obra pregunta: ¿qué pasa con nuestro cerebro cuando interactuamos con algo que no tiene emociones? ¿Nos volvemos más fríos?"
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Habla de la soledad digital. El abuelito representa a mucha gente mayor (y a nosotros también) que ahora tiene que hablar con una máquina en vez de con una persona. ¿La IA nos acerca o nos reemplaza?"
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "La violencia hoy también es que una máquina te quite el trabajo, la compañía, el sentido. Prevenir es enseñar a usar la IA como herramienta, no como reemplazo del humano. Que no nos deje solos como las sombras del fondo."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "En terapia, la IA ya está entrando. ¿Puede un robot escuchar tu dolor? El abuelito con la mano estirada es el paciente buscando conexión humana. El bienestar necesita contacto humano, no solo respuestas perfectas de una máquina."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "El gran tema ético del congreso. ¿Hasta dónde dejamos que la IA reemplace lo humano? ¿Quién cuida al abuelito cuando solo queda el robot? Como psicólogos, debemos poner límites éticos a la tecnología."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -54,6 +135,33 @@
         "dimensiones": "50 x 70 cm aprox.",
         "anio": 2026,
         "descripcion": "El tiempo no es duro, se derrite. El reloj que se escurre nos dice que el tiempo pasa y no lo podemos atrapar. Frente a él, el árbol sigue firme, viviendo a su ritmo, con raíces fuertes. Es el tiempo de la naturaleza contra el tiempo de los humanos.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Nuestro cerebro no siente el tiempo como un reloj. A veces una hora parece eterna, a veces un año pasa volando. El reloj derretido es como la ansiedad que deforma el tiempo. El árbol es el cerebro en calma."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Hoy vivimos corriendo por el reloj, por el celular, por la hora. Esta obra dice: para. El tiempo digital nos estresa. Necesitamos el tiempo del árbol, lento y con raíces."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "La violencia también es no tener tiempo para uno mismo, vivir apurados y explotar. Prevenir es aprender a detener el reloj derretido y volver a respirar como el árbol."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "En terapia muchas heridas vienen del pasado, de un tiempo que no cierra. El reloj derretido es dejar ir ese tiempo que duele. El árbol es el bienestar que queda cuando sanas y echas raíces de nuevo."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "¿Qué tiempo le estamos dando a las personas? ¿Tiempo de calidad o tiempo que se derrite y se pierde? Como psicólogos, ayudar a la gente a recuperar su tiempo es un acto ético."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -69,6 +177,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "La obra habla de liberarse. Las cadenas son todo lo que nos hace daño: el odio, el miedo y el bullying. Romperlas juntos genera una luz de esperanza. Es un trabajo en equipo.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Cuando sentimos odio o miedo, nuestro cerebro se bloquea. Romper la cadena es como el cerebro aprendiendo a salir del estrés. La luz es el cerebro que se calma."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "El bullying hoy pasa mucho en internet. Esta obra habla del ciberbullying. Las manos representan cómo la tecnología puede hacer daño, pero también cómo podemos defendernos juntos."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Este es tu eje principal aquí. Muestra clarito la violencia del bullying, del odio y del miedo. Y muestra la solución: prevenir rompiendo el silencio entre todos."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es sanar en grupo. Ninguna mano sola puede romper todas las cadenas. Necesitamos apoyo de otros para curarnos. La luz del centro es el bienestar que llega cuando nos liberamos."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nos dice que no podemos quedarnos mirando. Si vemos odio o bullying, tenemos que actuar. Es un compromiso de todos, no solo de la víctima."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -84,6 +219,33 @@
         "dimensiones": "50 x 70 cm aprox.",
         "anio": 2026,
         "descripcion": "Es un juguete olvidado, como un niño olvidado. Lo dejaron tirado y se rompió. Pero al lado de su dolor, nace una flor blanca. Aunque esté roto y solo, todavía hay vida que nace a su lado. Es tristeza y esperanza juntas.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El osito es el niño interior que todos llevamos. Cuando sufrimos de niños, ese osito queda herido y abandonado en nuestro cerebro. La florecita es la capacidad del cerebro de seguir creciendo a pesar del daño."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Hoy muchos niños cambian el peluche por el celular. El osito tirado es la infancia que estamos perdiendo por la tecnología. La flor es lo que debemos cuidar: la infancia real, que necesita tierra, no pantalla."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Es abandono infantil. Un osito roto es un niño que no fue cuidado. La obra habla de negligencia. Prevenir es no dejar a ningún niño tirado como juguete viejo. La flor dice que aún se puede salvar si lo atendemos."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "En terapia muchos adultos vienen con su osito interior roto. Esta obra es el trabajo de sanar esa infancia herida. La florecita blanca es el bienestar que nace cuando por fin alguien ve ese dolor olvidado."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nos pregunta como sociedad: ¿cuántos ositos rotos dejamos en la calle? ¿Cuántos niños olvidados? El desafío ético es recoger ese osito, limpiarlo y dejar que la flor que está a su lado crezca."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -99,6 +261,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Retrato de mujer anciana andina con sombrero celeste y chompa azul intensa. La mirada baja y el rostro marcado por el tiempo transmiten introspección y cansancio vital, pero también dignidad. El fondo difuso en amarillos y niebla evoca el territorio andino que se desvanece en su memoria.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El rostro surcado y la mirada perdida reflejan los procesos de envejecimiento cerebral, la memoria autobiográfica y la ralentización cognitiva. La obra visibiliza el cerebro que recuerda, pero que también olvida."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Su atuendo tradicional y su desconexión con lo digital representa la brecha tecnológica. Es el rostro de quienes quedaron fuera de la era digital, generando aislamiento y sentimiento de obsolescencia."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "No es violencia física, es violencia por abandono estructural. Retrata la violencia silenciosa del olvido social hacia el adulto mayor rural, una forma de maltrato por omisión que debemos prevenir."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Aquí está el corazón de la obra. La mirada abatida habla de soledad, duelo y resiliencia. En terapia, esta imagen invita a trabajar el bienestar desde la validación de la historia de vida, la escucha activa y el rescate de la identidad."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nos plantea el dilema ético: ¿Qué hacemos con quienes no caben en el futuro incierto digital? La obra exige una psicología con rostro humano, que no deje atrás a Cajatambo y Carhuaz por avanzar hacia lo digital."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -114,6 +303,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es el momento exacto en que te quitan la voz. No es que ella no quiera hablar, es que no la dejan. Las manos no son de ella, son ajenas, que vienen de afuera e imponen el silencio. Sus ojos están abiertos porque el cuerpo quiere pedir ayuda aunque la boca esté tapada. Es una pintura sobre lo que se siente cuando te callan a la fuerza.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El cerebro en amenaza. Cuando nos tapan la boca, el cerebro entra en modo supervivencia: ojos hipervigilantes, frente arrugada, cuello tenso. Es la respuesta de congelamiento y miedo del sistema nervioso. La neurociencia muestra que el trauma del silenciamiento deja huella en el cuerpo: no poder hablar se guarda en el cuello, en la respiración."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "El silencio impuesto hoy también es digital. Nos tapan la boca cuando nos censuran, cuando nos hacen bullying virtual, cuando nos dicen \"cállate\" en redes. Esta mano en la boca es igual a un comentario que te bloquea, a un mensaje que te dice que tu voz no vale. La psicología digital debe romper ese bloqueo."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Eje principal de la obra. Es violencia de género, violencia psicológica, violencia que busca anular. Tapar la boca es la forma más antigua de violencia para que no haya denuncia. Prevenir es enseñar a ver estas dos manos: cuando veas que le tapan la boca a alguien, no seas cómplice, ayuda a quitarlas."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "No hay bienestar si no hay voz. La terapia es el espacio donde se quitan esas dos manos. El bienestar humano empieza cuando la persona puede decir \"me taparon la boca\". Esta obra es el antes de la terapia: el grito atrapado. El después es la voz liberada."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "El desafío ético más grande para la psicología en Huaraz y en todo el Perú es ser la mano que quita la otra mano. Como psicólogos no podemos ser las manos que tapan, debemos ser los que ayudan a hablar. Nuestra ética es no mirar a otro lado cuando vemos ojos que piden ayuda. Romper el silencio es un acto ético."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -129,6 +345,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es la vida que resiste y madura incluso dentro de la roca. Desde la oscuridad de la cueva, lo único que cuelga y brilla es un fruto vivo. La cueva es áspera, cerrada, oscura, pero deja un hueco por donde entra la luz y se ve el mundo exterior. El racimo no está abajo en el valle, está arriba, colgando en lo alto, madurando frente a la luz. Es la esperanza vista desde el encierro.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "La cueva es el cerebro en modo amenaza: oscuro, rígido, de piedra. El hueco es la ventana de la neuroplasticidad. Aunque estemos en modo cueva, el cerebro puede seguir produciendo frutos. El racimo es la conducta que madura cuando encuentra un poco de luz. La resiliencia es neurobiológica: florecer incluso en la roca."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "La cueva es el doomscrolling, el encierro digital. Vivimos metidos en cuevas oscuras de pantallas. Esta obra es lo contrario: mirar desde la cueva hacia el territorio real. El fruto no es virtual, es real, tangible. Nos recuerda que la psicología digital debe sacarnos de la cueva y devolvernos al paisaje, al pueblo, al agua, a lo real."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "La cueva oscura es la violencia que nos encierra y nos hace ver el mundo desde una grieta pequeña. El racimo que cuelga sano a pesar de la roca es la prevención: incluso en contextos duros y secos como Ica, con tierra árida y rocas, puede crecer algo dulce. Prevenir es no dejar que la cueva se cierre por completo."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Esta es la meta del bienestar. No es negar la cueva, todos tenemos una parte cueva, rocosa y oscura. Es aprender a ver desde ahí y aún así dar frutos. La terapia no destruye la cueva, abre el hueco para que entre luz y el racimo pueda madurar. Es el paso de la supervivencia en la roca al bienestar de dar frutos."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "El desafío ético es ser como la vid en el desierto iqueño: dar fruto donde no parece posible. Como psicólogos tenemos el compromiso de cuidar el fruto, no la roca. De valorar lo que madura en condiciones adversas. La ética es creer que de nuestra tierra, por más árida que parezca, siempre puede colgar un racimo."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -144,6 +387,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es el equilibrio de hoy. La mariposa es lo frágil: la salud mental, la naturaleza, el alma humana. El mundo azul es lo pesado: la tecnología, las redes, el mundo digital que todo lo quiere. La balanza no aguanta tanto peso digital y se rompe. La mujer mira preocupada: ¿cómo cuidamos lo frágil si el mundo pesa tanto?",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Nuestro cerebro no fue hecho para cargar tanto mundo digital. La balanza rota es el sistema nervioso colapsado por sobrecarga de información. La mariposa es la dopamina natural, la calma, lo simple. Si seguimos pesando el cerebro con tanto mundo, lo frágil se rompe."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Un platillo es lo humano-natural (mariposa) y el otro es lo digital-global (mundo con redes). La obra grita: la tecnología pesa demasiado y está rompiendo el equilibrio mental. Tenemos que volver a tocar la mariposa con el dedo, no solo la pantalla."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "La violencia hoy también es digital: ciberbullying, comparaciones, ansiedad por redes. Eso pesa y rompe a la gente frágil. Prevenir es enseñar a equilibrar: usar tecnología sin que nos destruya. Cuidar la mariposa interior de nuestros niños."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "En terapia buscamos ese equilibrio. La mujer de la obra es la psicóloga que observa. El bienestar no es quitar el mundo azul, es no dejar que aplaste a la mariposa. Es aprender a sostener lo frágil con un dedo, con delicadeza, con mindfulness."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "El desafío ético más grande: ¿vamos a dejar que el mundo tecnológico rompa todo? ¿O vamos a proteger lo frágil? Como psicólogos tenemos la responsabilidad ética de defender la mariposa: la vida, la empatía, lo humano, aunque el mundo pese cada vez más."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -159,6 +429,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es la historia de muchos. Cuando la madre estaba viva, el hijo le gritaba y quería pegarle. No la valoró. Ahora que está muerta, la abraza en una piedra fría y llora. Es el remordimiento que llega tarde. Nos enseña a valorar ahora.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El cerebro impulsivo del joven no controla la ira, es el cerebro que explota. El cerebro arrepentido de abajo es el cerebro que ya entendió, pero tarde. La neurociencia dice que aprender a regular la ira evita este dolor."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "No es tecnología, es lo más humano. Hoy muchos jóvenes viven irritados por el estrés digital y explotan con quien más los quiere: la madre. La obra es una llamada a desconectarse de la rabia y conectarse con el respeto."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Es violencia familiar contra el adulto mayor. Maltrato a la madre anciana. La prevención es enseñar a los hijos a no levantar la mano, a pedir ayuda psicológica antes de golpear. Prevenir para no llorar en una tumba."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es culpa y duelo patológico. En terapia llegan muchos hijos que maltrataron y ahora no pueden vivir con la culpa. El bienestar es aprender a perdonarse y aprender a tratar bien mientras la persona está viva. La terapia es para el antes, no solo para el después."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "El respeto a los ancianos se está perdiendo. Como sociedad, ¿qué estamos haciendo para proteger a nuestras abuelitas del maltrato de sus propios hijos? El desafío ético es cuidar a los adultos mayores con amor y denunciar la violencia en casa."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -174,6 +471,33 @@
         "dimensiones": "50 x 70 cm aprox.",
         "anio": 2026,
         "descripcion": "Es la oscuridad que se rompe. Estás en un lugar muy oscuro, triste, y de repente algo se raja y entra una luz que no puedes detener. Es doloroso romper, pero por esa grieta entra la esperanza. Es el momento justo antes de sanar.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El cerebro en depresión es todo oscuro, azul y negro. La luz central es un insight, un momento de claridad. Cuando el cerebro se rompe (crisis) también se abre para dejar entrar algo nuevo. La grieta es necesaria."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "La oscuridad es estar saturado de información, de pantallas oscuras. La luz que rompe es desconectarse y volver a ver el sol real. Romper la pantalla negra para que entre la luz natural."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Es el trauma. La oscuridad es lo que deja la violencia. La luz que entra por el centro es la denuncia, la ayuda que llega, la persona que escucha. La grieta duele pero salva."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Esta es la obra más psicoterapéutica. Es el breakthrough, el momento en terapia donde el paciente llora y se quiebra, y por ahí entra la luz. No se puede sanar sin primero romperse. El bienestar nace de la grieta."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Como sociedad a veces estamos en oscuridad total, como el cuadro. Nuestro trabajo ético es ser esa luz que se mete por la grieta. No tapar la grieta, sino hacer que la luz entre más."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -189,6 +513,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es el choque de dos mundos. Adelante la tradición andina: la hoja de coca, sagrada, para pedir permiso a la tierra. Atrás la comunidad real que todavía se junta a compartir. Y detrás de ellos, su sombra fantasma, ya atrapada por el celular. Es lo que estamos perdiendo.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "La coca es ancestral, conecta con la calma y la tierra. El celular es dopamina rápida que atrapa al cerebro. La obra muestra dos cerebros: uno conectado con la naturaleza y otro conectado con la pantalla azul fantasma."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Los fantasmas con celular somos todos nosotros, presentes de cuerpo pero ausentes de mente. Están en la pampa, pero miran otra realidad. Es la adicción digital que desconecta de la comunidad."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Cuando se pierde la comunidad, aparece la violencia. El círculo de campesinos es prevención, es estar juntos, cuidarse. El fantasma con celular rompe el círculo. Prevenir es volver a sentarse juntos sin celular."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "La mano con coca es el bienestar andino, natural, ritual, que sana. El celular fantasma es la ansiedad moderna. La obra pregunta: ¿qué nos sana más, la hoja de la tierra o la luz del celular? Para sanar hay que volver a la tierra."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "¿Estamos dejando que la tecnología borre nuestra cultura? El desafío ético es usar la tecnología sin volvernos fantasmas transparentes que olvidan sus raíces. Respetar la coca, la pampa y la comunidad es salud mental andina."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -204,6 +555,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es una niña que se rompió, pero no la botaron, la repararon con oro. Cada rajadura es una herida, pero ahora brilla más que antes. Es más valiosa porque se rompió y la curaron con amor. No esconde sus heridas, las muestra doradas.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Esto se llama resiliencia en el cerebro. Cuando sufrimos y sanamos, el cerebro no queda igual, queda más fuerte. Las líneas de oro son nuevas conexiones neuronales que se forman después del dolor."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Hoy queremos vernos perfectos, sin grietas. Esta niña nos enseña lo opuesto: mostrar nuestras grietas con orgullo. En redes todos esconden sus roturas, ella las convierte en oro. Es salud mental real."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Una niña rota por violencia no tiene que quedar rota para siempre. Si la reparamos con cuidado, con amor, con justicia, sus heridas se vuelven su fuerza. Prevenir es también reparar bonito, no esconder."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es la imagen perfecta de Kintsugi, muy usada en terapia. No se trata de volver a ser como antes de romperse, se trata de ser más bonita después de romperse. El bienestar es brillar por las cicatrices."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Como sociedad, ¿botamos a los niños rotos o los reparamos con oro? Nos enseña que cada niño que sufre merece ser restaurado con dignidad, y que sus cicatrices no son vergüenza, son oro."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -219,6 +597,33 @@
         "dimensiones": "50 x 70 cm aprox.",
         "anio": 2026,
         "descripcion": "Es el olvido. Es un abuelito que se está yendo poco a poco, como las hojas en otoño. Su cuerpo se hace tierra y su memoria se va con el viento. Y la ciudad de atrás también se cae, porque cuando olvidamos a nuestros viejitos, todo se derrumba.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Es la vejez, la memoria que se va, el Alzheimer, el cerebro que se deshoja. Las hojas que vuelan son los recuerdos que se pierden. Las manos-raíces es el cerebro que intenta agarrarse a lo que queda."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Esta obra es un grito contra el olvido digital. Hoy todo es rápido y nuevo, y dejamos a los ancianos atrás, en ruinas. Nos conectamos con todo el mundo menos con ellos. Es soledad."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "La violencia más silenciosa es el abandono al adulto mayor. Dejarlo que se deshaga solo, sin cuidado. Prevenir es no dejar que se vuelva ruina, es cuidarlo antes de que el viento se lo lleve."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "En terapia hablamos mucho de duelos, de dejar ir. Esta obra es el duelo por uno mismo, por el tiempo que pasa. El bienestar en la vejez es poder irse en paz, como hoja, no con dolor."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nos pregunta: ¿qué hacemos con nuestros viejitos? ¿Los vemos como sabiduría o como ruinas? Como psicólogos y como sociedad, cuidar su dignidad hasta el final es nuestro deber ético más grande."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -234,6 +639,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es quitarse la máscara. Todos a veces usamos una cara que no es la nuestra para que no nos hagan daño. Cuando esa máscara se rompe, duele, pero deja que nazca algo real y vivo por dentro. Es una plantita nueva.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "La máscara es una defensa del cerebro. Cuando estamos en peligro, el cerebro crea una máscara para protegerse. Cuando ya estamos seguros, la máscara se raja y nace algo nuevo. El cerebro puede sanar y crecer."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Hoy vivimos con máscaras en redes sociales, filtros, vidas perfectas. Esta obra habla de quitarse ese filtro. Romper la máscara digital duele, pero es lo único que nos deja crecer de verdad."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Muchas personas que sufren violencia se ponen una máscara de \"estoy bien\" para sobrevivir. Esta obra muestra ese momento en que ya no puede sostenerla más y se rompe. Prevenir es ayudar antes de que se rompa sola."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "El paciente llega con máscara. En terapia la máscara se va rajando y de ahí nace su yo verdadero, como la plantita. El bienestar no es poner una máscara bonita, es dejar que crezca lo de adentro."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Como psicólogos, ¿estamos ayudando a la gente a quitarse la máscara o les ponemos una nueva? Nuestro trabajo ético es cuidar esa plantita chiquita que nace cuando la máscara cae."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -249,6 +681,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es la lucha que no termina. La niña corta los hilos que la controlan, pero cuando corta uno, aparece otro. Es cansado, pero ella sigue intentando ser libre. Habla de lo difícil que es salir de algo que te ata.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Así funciona el cerebro con el trauma. Cortas un mal pensamiento y viene otro. Es el circuito de la ansiedad. La obra muestra ese bucle mental que no para."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Cortas una red social, pero te ata otra. Cortas una comparación, viene otra. Es la dependencia digital, hilos invisibles que siempre vuelven."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Es el ciclo de la violencia. La víctima corta, sale, pero el agresor o la sociedad le pone otro hilo. Prevención es cortar TODOS los hilos, no solo uno."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es lo que pasa en terapia. El paciente avanza, corta un hilo, y de pronto siente que retrocede porque aparece otro. Es normal. Sanar no es cortar una vez, es aprender a seguir cortando hasta ser libre."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nos pregunta si realmente estamos ayudando a cortar o solo cortamos por encimita. Si el sistema sigue fabricando hilos nuevos, nunca habrá libertad real. Es un desafío ético para la psicología."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -264,6 +723,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es la libertad después del dolor. La cadena es todo lo que nos ata. Cuando se rompe, lo que sale no es odio, es paz. Las palomas son la esperanza que vuela.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El cerebro puede transformar el dolor en algo bueno. La cadena es el estrés o el trauma. Cuando lo procesamos, el cerebro crea algo nuevo: paz, como las palomas. Es neuroplasticidad."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Muchas personas están atadas a cadenas digitales: miedo, comparación, odio en redes. Romper esa cadena es desconectarse para volver a ser libres y encontrar paz mental."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "La violencia es la cadena. La prevención es romperla a tiempo. Y el resultado de romperla bien es la paz, no más violencia. Las palomas son la prevención que funciona."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es la meta de toda terapia. El paciente llega encadenado a su pasado. Cuando logra romper esa cadena, su alma vuela como paloma. Es sanación y liberación."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nos pregunta: ¿a quién estamos ayudando a romper sus cadenas? Como psicólogos, ¿estamos formando palomas o manteniendo cadenas? Es un llamado a liberar, no a juzgar."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -279,6 +765,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es el sueño de una niña que lleva su cultura en el corazón. Mientras duerme, su imaginación viaja entre sus montañas, sus animalitos y su luna. Es ternura, identidad y paz.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El sueño es muy importante para el cerebro. Cuando la niña duerme, su cerebro guarda recuerdos, aprende y se cura. La luz dorada es el cerebro soñando y creando."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Esta obra es lo opuesto a una tablet. Habla de un sueño natural, sin pantallas. Nos recuerda que los niños necesitan dormir con historias de su tierra, no con el celular, para tener buena salud mental."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Un niño que duerme en paz es un niño protegido. Si cuidamos su identidad y su cultura, lo protegemos de la violencia y de sentirse sin valor. Prevenir es darle un lugar seguro para soñar."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es la obra del bienestar puro. Representa la calma, la seguridad y el sentirse amado. En terapia, buscamos que la persona vuelva a este estado: dormir tranquila, envuelta en lo que la hace ser ella."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nos obliga a pensar si estamos dejando que los niños andinos sueñen con su propia cultura o si les imponemos sueños de otros lugares. Cuidar su identidad es un acto ético y urgente en esta era digital."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -294,6 +807,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es la esperanza que no muere. Aunque todo alrededor está oscuro, la flor blanca sigue viva y brilla. El tallo con espinas muestra que crecer duele, pero igual florece.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El cerebro también puede florecer en la oscuridad. Aunque haya tristeza o depresión (el fondo oscuro), siempre queda una parte que busca la luz. Eso es la resiliencia del cerebro."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "En un mundo lleno de noticias tristes y oscuras de internet, ser como esa flor blanca es ser diferente. Es mantener la calma y lo bonito dentro del ruido digital."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "La flor con espinas es la persona que sufrió pero no se rompió. Prevención es cuidar esa flor antes de que la oscuridad la tape. Es proteger la vida."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es la imagen perfecta del bienestar. En terapia buscamos eso: que el paciente vuelva a florecer aunque su historia haya sido difícil. Una sola flor puede iluminar todo."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nos pregunta: ¿qué estamos haciendo para cuidar lo frágil y bonito de las personas? En una sociedad que va rápido, cuidar una flor blanca es un acto ético."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -309,6 +849,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es una imagen de lucha y esperanza. Las manos quieren atrapar o sostener algo que se escapa. La luz al final representa una salida, una verdad que aparece en medio de lo oscuro.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El cerebro a veces se siente atrapado entre lo oscuro (miedo, tristeza) y busca la luz. Es como cuando tenemos ansiedad y nuestro cuerpo quiere salir de eso."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Habla de lo que ocultamos y mostramos. En redes mostramos solo la luz, pero en la oscuridad guardamos lo que nos duele. El cabello puede ser nuestra identidad real."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Las manos que jalan el cabello pueden ser violencia hacia uno mismo o de otros. La obra ayuda a ver la violencia que no se ve, la que se sufre en silencio, y buscar ayuda antes de que sea tarde."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es una obra de sanación. Sostener el cabello con cuidado es como aprender a sostenernos a nosotros mismos. Ir de la oscuridad hacia la luz es el proceso de terapia."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nos pregunta si estamos cuidando la salud mental. ¿Dejamos que la gente se quede en la oscuridad o le ayudamos a encontrar su luz?"
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -324,6 +891,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es lo que hacen las redes sociales. Por fuera todos parecen perfectos, con likes. Por dentro la persona está rota, cuarteada, negra. Se pone una máscara de sonrisa porque tiene miedo de que la insulten: fea, no sirves, estúpida. Es la mujer que finge estar bien en Instagram mientras por dentro se está quebrando.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "El cerebro se quiebra con el estrés de aparentar. Esa cara cuarteada es la ansiedad, la disociación. El cerebro no puede sostener una máscara de \"perfecta\" todo el día, se raja. Es el costo neurológico de vivir para el like."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Es la psicología digital: likes, comentarios crueles, emojis, la foto perfecta. La obra muestra la enfermedad de nuestra época: vivir de apariencias digitales. El celular nos está cuarteando la cara real."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Es violencia digital y psicológica. Decirle a una mujer \"fea, no sirves, estúpida\" por mensajes es violencia. Eso rompe. La prevención es educación digital, enseñar a no creer todo lo que dice un comentario, a no poner tu valor en un corazón rojo. Y enseñar a no insultar por redes."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "En terapia llegan muchas jóvenes así: perfectas por fuera, rotas por dentro. Con la máscara de \"estoy bien\". El bienestar es quitarse la máscara, dejar de sonreír para la foto y empezar a sanar la grieta negra que baja por el cuello hasta el pecho."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "El desafío ético es: ¿hasta cuándo vamos a exigirle a la mujer que sea \"perfecta\"? La sociedad y las redes le piden belleza perfecta, pero por dentro la destruyen. La ética es defender la salud mental por encima de la apariencia, decirle \"no tienes que ser perfecta, tienes que estar sana\"."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],
@@ -339,6 +933,33 @@
         "dimensiones": "50 x 70 cm",
         "anio": 2026,
         "descripcion": "Es lo que vive un niño cuando sus padres pelean. Los padres creen que el niño no escucha, pero el grito se queda adentro de su cabeza para siempre. La niña no puede sacar a sus padres de su mente. Ese es el dolor de infancia: llevar la pelea de tus padres dentro de ti.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Lo que se ve es real en el cerebro. Cuando un niño ve pelear a sus padres, su amígdala se activa como si estuviera en peligro. El estrés tóxico deja huella neuronal. Esa pelea que vemos dentro de la cabeza se queda grabada como trauma infantil. El cuerpo llora aunque los padres ya no griten."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Hoy muchos niños escapan de los gritos de casa metiéndose al celular. Pero el celular no borra el grito interno. Esta obra nos recuerda que no sirve darle una tablet a un niño que sufre, hay que curar lo que pasa en casa."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "ESTA ES LA OBRA DE VIOLENCIA INTRAFAMILIAR. Es violencia psicológica. Gritarse delante de los hijos es maltratarlos. La prevención es enseñar a las parejas a no pelear delante de los niños, a pedir ayuda, a separar si hace falta pero no hacerle daño al hijo. Prevenir es cerrar esa cabeza abierta."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "En terapia vemos a muchos adultos que siguen con la pelea de sus padres adentro. Lloran como esta niña aunque ya tengan 30 años. El bienestar es sacar esos dos rostros gritando de la cabeza, procesar ese dolor de infancia, perdonar y aprender que el grito no era su culpa."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Como sociedad normalizamos \"así pelean todos los padres\". No es normal. El desafío ético es proteger la infancia. Un niño no debe ser testigo de la violencia. Cuidar la salud mental de los niños es enseñar a los adultos a discutir sin destruirse delante de ellos."
+            }
+        ],
         "exposiciones": [
             "expo-001"
         ],

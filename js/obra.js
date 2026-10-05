@@ -21,8 +21,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const technicalYear = document.getElementById("technicalYear");
     const technicalCode = document.getElementById("technicalCode");
 
-    const artworkExhibitions =
-        document.getElementById("artworkExhibitions");
+    const artworkInterpretations =
+        document.getElementById("artworkInterpretations");
+
+    const artworkExhibitionNote =
+        document.getElementById("artworkExhibitionNote");
+
+    const artworkExhibitionLinks =
+        document.getElementById("artworkExhibitionLinks");
 
     const previousArtwork =
         document.getElementById("previousArtwork");
@@ -42,9 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ===================================================== */
 
     const params = new URLSearchParams(window.location.search);
-
     const artworkCode = params.get("id");
-
 
     if (!artworkCode) {
         showError();
@@ -73,56 +77,28 @@ document.addEventListener("DOMContentLoaded", async () => {
             fetch("data/exposiciones.json")
         ]);
 
-
         if (responses.some(response => !response.ok)) {
-
-            throw new Error(
-                "No se pudieron cargar los archivos JSON."
-            );
-
+            throw new Error("No se pudieron cargar los archivos JSON.");
         }
-
 
         obras = await responses[0].json();
         artistas = await responses[1].json();
         exposiciones = await responses[2].json();
 
-
-        console.log("Obras cargadas:", obras);
-        console.log("Artistas cargados:", artistas);
-        console.log("Exposiciones cargadas:", exposiciones);
-
-
         const artwork = obras.find(
             obra => obra.id === artworkCode
         );
 
-
         if (!artwork) {
-
-            console.error(
-                "No existe la obra:",
-                artworkCode
-            );
-
             showError();
-
             return;
-
         }
-
 
         renderArtwork(artwork);
 
-    }
+    } catch (err) {
 
-    catch (err) {
-
-        console.error(
-            "Error cargando la ficha de obra:",
-            err
-        );
-
+        console.error("Error cargando la ficha de obra:", err);
         showError();
 
     }
@@ -138,194 +114,190 @@ document.addEventListener("DOMContentLoaded", async () => {
             artista => artista.id === artwork.artista
         );
 
-
-        const artistName =
-            artist?.nombre || "Artista";
-
-
-        /* Título navegador */
+        const artistName = artist?.nombre || "Artista";
 
         document.title =
             `${artwork.titulo} | Colores en el viento`;
 
-
-        /* Imagen */
-
         artworkImage.src = artwork.imagen;
-
         artworkImage.alt = artwork.titulo;
 
-
-        /* Información */
-
-        artworkId.textContent =
-            artwork.id.toUpperCase();
-
-        artworkTitle.textContent =
-            artwork.titulo;
-
-        artworkArtist.textContent =
-            artistName;
-
-        artworkArtist.href =
-            `artista.html?id=${artwork.artista}`;
-
+        artworkId.textContent = artwork.id.toUpperCase();
+        artworkTitle.textContent = artwork.titulo;
+        artworkArtist.textContent = artistName;
+        artworkArtist.href = `artista.html?id=${artwork.artista}`;
 
         artworkDescription.textContent =
             artwork.descripcion ||
             "Información de la obra próximamente.";
 
+        technicalArtist.textContent = artistName;
+        technicalTechnique.textContent = artwork.tecnica || "—";
+        technicalSupport.textContent = artwork.soporte || "—";
+        technicalDimensions.textContent = artwork.dimensiones || "—";
+        technicalYear.textContent = artwork.anio || "—";
+        technicalCode.textContent = artwork.id.toUpperCase();
 
-        /* =================================================
-           FICHA TÉCNICA
-        ================================================= */
-
-        technicalArtist.textContent =
-            artistName;
-
-        technicalTechnique.textContent =
-            artwork.tecnica || "—";
-
-        technicalSupport.textContent =
-            artwork.soporte || "—";
-
-        technicalDimensions.textContent =
-            artwork.dimensiones || "—";
-
-        technicalYear.textContent =
-            artwork.anio || "—";
-
-        technicalCode.textContent =
-            artwork.id.toUpperCase();
-
-
-        /* Exposiciones */
-
-        renderExhibitions(artwork);
-
-
-        /* Anterior / siguiente */
-
+        renderInterpretations(artwork);
+        renderExhibitionNote(artwork);
         renderNavigation(artwork);
 
-
-        /* =================================================
-           MOSTRAR PÁGINA
-        ================================================= */
-
         loading.hidden = true;
-
         error.hidden = true;
-
         page.hidden = false;
-
     }
 
 
     /* =====================================================
-       EXPOSICIONES
+       INTERPRETACIONES
     ===================================================== */
 
-    function renderExhibitions(artwork) {
+    function renderInterpretations(artwork) {
 
-        artworkExhibitions.innerHTML = "";
+        artworkInterpretations.innerHTML = "";
 
+        if (
+            !Array.isArray(artwork.interpretaciones) ||
+            artwork.interpretaciones.length === 0
+        ) {
+            const message = document.createElement("p");
+            message.className = "artwork-no-interpretations";
+            message.textContent =
+                "Las interpretaciones de esta obra estarán disponibles próximamente.";
+            artworkInterpretations.appendChild(message);
+            return;
+        }
+
+        artwork.interpretaciones.forEach((interpretation, index) => {
+
+            const card = document.createElement("article");
+            card.className = "interpretation-card";
+            card.dataset.type = interpretation.tipo || "ciencia";
+
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "interpretation-card__toggle";
+            button.setAttribute("aria-expanded", "false");
+
+            const number = document.createElement("span");
+            number.className = "interpretation-card__number";
+            number.textContent = String(index + 1).padStart(2, "0");
+
+            const title = document.createElement("span");
+            title.className = "interpretation-card__title";
+            title.textContent = interpretation.titulo || `Interpretación ${index + 1}`;
+
+            const icon = document.createElement("span");
+            icon.className = "interpretation-card__icon";
+            icon.setAttribute("aria-hidden", "true");
+            icon.textContent = "+";
+
+            const content = document.createElement("div");
+            content.className = "interpretation-card__content";
+
+            const contentInner = document.createElement("div");
+            contentInner.className = "interpretation-card__content-inner";
+
+            const text = document.createElement("p");
+            text.textContent = interpretation.texto || "";
+
+            contentInner.appendChild(text);
+            content.appendChild(contentInner);
+
+            button.appendChild(number);
+            button.appendChild(title);
+            button.appendChild(icon);
+
+            card.appendChild(button);
+            card.appendChild(content);
+
+            button.addEventListener("click", () => {
+
+                const wasOpen = card.classList.contains("is-open");
+
+                artworkInterpretations
+                    .querySelectorAll(".interpretation-card.is-open")
+                    .forEach(openCard => {
+                        openCard.classList.remove("is-open");
+                        const openButton = openCard.querySelector(
+                            ".interpretation-card__toggle"
+                        );
+                        if (openButton) {
+                            openButton.setAttribute("aria-expanded", "false");
+                        }
+                    });
+
+                if (!wasOpen) {
+                    card.classList.add("is-open");
+                    button.setAttribute("aria-expanded", "true");
+                }
+
+            });
+
+            artworkInterpretations.appendChild(card);
+        });
+    }
+
+
+    /* =====================================================
+       EXPOSICIÓN — FRANJA PEQUEÑA
+    ===================================================== */
+
+    function renderExhibitionNote(artwork) {
+
+        artworkExhibitionLinks.innerHTML = "";
+        artworkExhibitionNote.hidden = true;
 
         if (
             !Array.isArray(artwork.exposiciones) ||
             artwork.exposiciones.length === 0
         ) {
-
-            artworkExhibitions.innerHTML = `
-                <p class="artwork-no-exhibition">
-                    Esta obra todavía no tiene
-                    exposiciones registradas.
-                </p>
-            `;
-
             return;
-
         }
 
-
-        const exhibitionData =
-            artwork.exposiciones
-                .map(id => {
-
-                    return exposiciones.find(
-                        expo => expo.id === id
-                    );
-
-                })
-                .filter(Boolean);
-
+        const exhibitionData = artwork.exposiciones
+            .map(id => exposiciones.find(expo => expo.id === id))
+            .filter(Boolean);
 
         if (exhibitionData.length === 0) {
-
-            artworkExhibitions.innerHTML = `
-                <p class="artwork-no-exhibition">
-                    Información de exposición
-                    próximamente.
-                </p>
-            `;
-
             return;
-
         }
 
+        exhibitionData.forEach((exhibition, index) => {
 
-        exhibitionData.forEach(exhibition => {
+            const link = document.createElement("a");
+            link.href = `exposicion.html?id=${exhibition.id}`;
+            link.className = "artwork-exhibition-note__link";
 
-            const link =
-                document.createElement("a");
+            const name = document.createElement("strong");
+            name.textContent = exhibition.nombre;
 
+            const meta = document.createElement("span");
+            meta.textContent = [
+                exhibition.lugar,
+                exhibition.ciudad,
+                exhibition.anio
+            ].filter(Boolean).join(" · ");
 
-            link.className =
-                "artwork-exhibition";
+            const arrow = document.createElement("span");
+            arrow.className = "artwork-exhibition-note__arrow";
+            arrow.setAttribute("aria-hidden", "true");
+            arrow.textContent = "↗";
 
+            link.appendChild(name);
+            link.appendChild(meta);
+            link.appendChild(arrow);
 
-            link.href =
-                `exposicion.html?id=${exhibition.id}`;
+            artworkExhibitionLinks.appendChild(link);
 
-
-            link.innerHTML = `
-
-                <div>
-
-                    <span>
-                        ${exhibition.anio || ""}
-                    </span>
-
-                    <strong>
-                        ${exhibition.nombre}
-                    </strong>
-
-                    <small>
-
-                        ${exhibition.ciudad || ""}
-
-                        ${
-                            exhibition.lugar
-                                ? " · " + exhibition.lugar
-                                : ""
-                        }
-
-                    </small>
-
-                </div>
-
-
-                <span class="artwork-exhibition__arrow">
-                    ↗
-                </span>
-
-            `;
-
-
-            artworkExhibitions.appendChild(link);
-
+            if (index < exhibitionData.length - 1) {
+                const divider = document.createElement("span");
+                divider.className = "artwork-exhibition-note__divider";
+                artworkExhibitionLinks.appendChild(divider);
+            }
         });
 
+        artworkExhibitionNote.hidden = false;
     }
 
 
@@ -336,60 +308,33 @@ document.addEventListener("DOMContentLoaded", async () => {
     function renderNavigation(artwork) {
 
         if (obras.length <= 1) {
-
-            previousArtwork.style.visibility =
-                "hidden";
-
-            nextArtwork.style.visibility =
-                "hidden";
-
+            previousArtwork.style.visibility = "hidden";
+            nextArtwork.style.visibility = "hidden";
             return;
-
         }
 
-
-        const currentIndex =
-            obras.findIndex(
-                obra => obra.id === artwork.id
-            );
-
+        const currentIndex = obras.findIndex(
+            obra => obra.id === artwork.id
+        );
 
         const previousIndex =
             currentIndex === 0
                 ? obras.length - 1
                 : currentIndex - 1;
 
-
         const nextIndex =
             currentIndex === obras.length - 1
                 ? 0
                 : currentIndex + 1;
 
+        const previous = obras[previousIndex];
+        const next = obras[nextIndex];
 
-        const previous =
-            obras[previousIndex];
+        previousArtwork.href = `obra.html?id=${previous.id}`;
+        previousArtworkTitle.textContent = previous.titulo;
 
-        const next =
-            obras[nextIndex];
-
-
-        /* Anterior */
-
-        previousArtwork.href =
-            `obra.html?id=${previous.id}`;
-
-        previousArtworkTitle.textContent =
-            previous.titulo;
-
-
-        /* Siguiente */
-
-        nextArtwork.href =
-            `obra.html?id=${next.id}`;
-
-        nextArtworkTitle.textContent =
-            next.titulo;
-
+        nextArtwork.href = `obra.html?id=${next.id}`;
+        nextArtworkTitle.textContent = next.titulo;
     }
 
 
@@ -403,20 +348,16 @@ document.addEventListener("DOMContentLoaded", async () => {
             loading.hidden = true;
         }
 
-
         if (page) {
             page.hidden = true;
         }
-
 
         if (error) {
             error.hidden = false;
         }
 
-
         document.title =
             "Obra no encontrada | Colores en el viento";
-
     }
 
 });
