@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const detail =
         document.getElementById("exhibitionDetail");
 
-
     const background =
         document.getElementById("exhibitionBackground");
 
@@ -36,7 +35,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("exhibitionDescription");
 
 
-    /* PARTICIPANTES */
+    /* =====================================================
+       PARTICIPANTES
+    ===================================================== */
 
     const artistsCount =
         document.getElementById("exhibitionArtistsCount");
@@ -45,7 +46,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("exhibitionArtistsGrid");
 
 
-    /* INVITADOS */
+    /* =====================================================
+       INVITADOS
+    ===================================================== */
 
     const guestsSection =
         document.getElementById("exhibitionGuestsSection");
@@ -57,7 +60,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("exhibitionGuestsGrid");
 
 
-    /* OBRAS */
+    /* =====================================================
+       OBRAS
+    ===================================================== */
 
     const worksCount =
         document.getElementById("exhibitionWorksCount");
@@ -66,7 +71,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("exhibitionWorksGrid");
 
 
-    /* GALERÍA */
+    /* =====================================================
+       GALERÍA
+    ===================================================== */
 
     const galleryGrid =
         document.getElementById("exhibitionGalleryGrid");
@@ -75,63 +82,87 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("exhibitionGalleryPending");
 
 
-    /* CATÁLOGO */
+    /* =====================================================
+       CATÁLOGO
+    ===================================================== */
 
     const catalogButton =
         document.getElementById("viewExhibitionCatalog");
 
 
-    /* MODAL OBRA INVITADA */
+    /* =====================================================
+       MODAL DE OBRA
+    ===================================================== */
 
-    const guestWorkModal =
+    const workModal =
         document.getElementById("guestWorkModal");
 
-    const guestWorkModalBackdrop =
+    const workModalBackdrop =
         document.getElementById("guestWorkModalBackdrop");
 
-    const guestWorkModalClose =
+    const workModalClose =
         document.getElementById("guestWorkModalClose");
 
-    const guestWorkImage =
+    const workImage =
         document.getElementById("guestWorkImage");
 
-    const guestWorkTitle =
+    const workTitle =
         document.getElementById("guestWorkTitle");
 
-    const guestWorkArtist =
+    const workArtist =
         document.getElementById("guestWorkArtist");
 
-    const guestWorkTechnique =
+    const workTechnique =
         document.getElementById("guestWorkTechnique");
 
-    const guestWorkSupport =
+    const workSupport =
         document.getElementById("guestWorkSupport");
 
-    const guestWorkDimensions =
+    const workDimensions =
         document.getElementById("guestWorkDimensions");
 
-    const guestWorkYear =
+    const workYear =
         document.getElementById("guestWorkYear");
 
-    const guestWorkDescription =
+    const workDescription =
         document.getElementById("guestWorkDescription");
 
-    const guestWorkInterpretations =
+    const workInterpretations =
         document.getElementById("guestWorkInterpretations");
 
 
+    /*
+       Reutilizamos el modal que originalmente
+       se creó para las obras invitadas.
+    */
+
+    const workModalBadge =
+        workModal.querySelector(
+            ".guest-work-modal__badge"
+        );
+
+    const workModalEyebrow =
+        workModal.querySelector(
+            ".guest-work-modal__content > .eyebrow"
+        );
+
+
     /* =====================================================
-       ID EXPOSICIÓN
+       PARÁMETROS DE LA URL
     ===================================================== */
 
-    const params =
+    const initialParams =
         new URLSearchParams(
             window.location.search
         );
 
 
     const exhibitionId =
-        params.get("id");
+        initialParams.get("id");
+
+
+    const initialArtworkId =
+        initialParams.get("obra");
 
 
     if (!exhibitionId) {
@@ -148,10 +179,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     ===================================================== */
 
     let exposiciones = [];
+
     let artistas = [];
+
     let obras = [];
+
     let invitados = [];
+
     let obrasInvitadas = [];
+
+    let currentExhibition = null;
 
 
     /* =====================================================
@@ -199,20 +236,24 @@ document.addEventListener("DOMContentLoaded", async () => {
         exposiciones =
             await exhibitionsResponse.json();
 
+
         artistas =
             await artistsResponse.json();
+
 
         obras =
             await worksResponse.json();
 
+
         invitados =
             await guestsResponse.json();
+
 
         obrasInvitadas =
             await guestWorksResponse.json();
 
 
-        const exhibition =
+        currentExhibition =
             exposiciones.find(
                 item =>
                     item.id === exhibitionId ||
@@ -220,7 +261,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             );
 
 
-        if (!exhibition) {
+        if (!currentExhibition) {
 
             showError();
 
@@ -230,8 +271,33 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
         renderExhibition(
-            exhibition
+            currentExhibition
         );
+
+
+        /*
+           Si la URL viene de un QR:
+
+           exposicion.html?id=expo-001&obra=cev-000
+
+           abre directamente la obra.
+        */
+
+        if (initialArtworkId) {
+
+            requestAnimationFrame(
+                () => {
+
+                    openExhibitionWork(
+                        currentExhibition,
+                        initialArtworkId,
+                        false
+                    );
+
+                }
+            );
+
+        }
 
     }
 
@@ -304,7 +370,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
 
-        /* Catálogo oficial */
+        /*
+           Este botón continúa mostrando
+           solamente las obras oficiales
+           del catálogo.
+        */
 
         catalogButton.href =
             `obras.html?exposicion=${encodeURIComponent(exhibition.id)}`;
@@ -330,11 +400,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
 
 
-        loading.hidden = true;
+        loading.hidden =
+            true;
 
-        error.hidden = true;
 
-        detail.hidden = false;
+        error.hidden =
+            true;
+
+
+        detail.hidden =
+            false;
 
     }
 
@@ -357,13 +432,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const participants =
             ids
-                .map(id =>
+                .map(
+                    id =>
 
-                    artistas.find(
-                        artist =>
-                            artist.id === id
-                    )
-
+                        artistas.find(
+                            artist =>
+                                artist.id === id
+                        )
                 )
                 .filter(Boolean);
 
@@ -425,6 +500,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <span>
                             ${typeLabel}
                         </span>
+
 
                         <h3>
 
@@ -498,13 +574,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const exhibitionGuests =
             ids
-                .map(id =>
+                .map(
+                    id =>
 
-                    invitados.find(
-                        guest =>
-                            guest.id === id
-                    )
-
+                        invitados.find(
+                            guest =>
+                                guest.id === id
+                        )
                 )
                 .filter(Boolean);
 
@@ -756,26 +832,26 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const officialWorks =
             officialIds
-                .map(id =>
+                .map(
+                    id =>
 
-                    obras.find(
-                        work =>
-                            work.id === id
-                    )
-
+                        obras.find(
+                            work =>
+                                work.id === id
+                        )
                 )
                 .filter(Boolean);
 
 
         const invitedWorks =
             invitedIds
-                .map(id =>
+                .map(
+                    id =>
 
-                    obrasInvitadas.find(
-                        work =>
-                            work.id === id
-                    )
-
+                        obrasInvitadas.find(
+                            work =>
+                                work.id === id
+                        )
                 )
                 .filter(Boolean);
 
@@ -812,6 +888,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                     );
 
 
+                const artworkUrl =
+                    buildArtworkUrl(
+                        exhibition.id,
+                        work.id
+                    );
+
+
                 const article =
                     document.createElement(
                         "article"
@@ -825,8 +908,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 article.innerHTML = `
 
                     <a
-                        href="obra.html?id=${work.id}"
+                        href="${artworkUrl}"
                         class="exhibition-work-card__image"
+                        data-exhibition-work="${work.id}"
                     >
 
                         <img
@@ -853,12 +937,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <h3>
 
                                 <a
-                                    href="obra.html?id=${work.id}"
+                                    href="${artworkUrl}"
+                                    data-exhibition-work="${work.id}"
                                 >
                                     ${work.titulo}
                                 </a>
 
                             </h3>
+
 
                             <span>
                                 ${
@@ -870,6 +956,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                         </div>
 
+
                         <span>
                             ${work.anio || ""}
                         </span>
@@ -877,6 +964,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
 
                 `;
+
+
+                addArtworkLinkEvents(
+                    article,
+                    exhibition
+                );
 
 
                 worksGrid.appendChild(
@@ -907,6 +1000,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                     1;
 
 
+                const artworkUrl =
+                    buildArtworkUrl(
+                        exhibition.id,
+                        work.id
+                    );
+
+
                 const article =
                     document.createElement(
                         "article"
@@ -919,10 +1019,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 article.innerHTML = `
 
-                    <button
-                        type="button"
+                    <a
+                        href="${artworkUrl}"
                         class="exhibition-work-card__image exhibition-work-card__image--button"
-                        data-guest-work="${work.id}"
+                        data-exhibition-work="${work.id}"
                         aria-label="Ver ficha de ${work.titulo}"
                     >
 
@@ -944,7 +1044,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             Ver ficha ↗
                         </span>
 
-                    </button>
+                    </a>
 
 
                     <div class="exhibition-work-card__info">
@@ -953,15 +1053,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                             <h3>
 
-                                <button
-                                    type="button"
+                                <a
+                                    href="${artworkUrl}"
                                     class="exhibition-work-card__title-button"
-                                    data-guest-work="${work.id}"
+                                    data-exhibition-work="${work.id}"
                                 >
                                     ${work.titulo}
-                                </button>
+                                </a>
 
                             </h3>
+
 
                             <span>
                                 ${
@@ -973,6 +1074,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                         </div>
 
+
                         <span>
                             ${work.anio || ""}
                         </span>
@@ -982,26 +1084,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 `;
 
 
-                article
-                    .querySelectorAll(
-                        "[data-guest-work]"
-                    )
-                    .forEach(
-                        button => {
-
-                            button.addEventListener(
-                                "click",
-                                () => {
-
-                                    openGuestWork(
-                                        button.dataset.guestWork
-                                    );
-
-                                }
-                            );
-
-                        }
-                    );
+                addArtworkLinkEvents(
+                    article,
+                    exhibition
+                );
 
 
                 worksGrid.appendChild(
@@ -1015,82 +1101,306 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     /* =====================================================
-       MODAL OBRA INVITADA
+       EVENTOS DE LAS OBRAS
     ===================================================== */
 
-    function openGuestWork(
+    function addArtworkLinkEvents(
+        article,
+        exhibition
+    ) {
+
+        article
+            .querySelectorAll(
+                "[data-exhibition-work]"
+            )
+            .forEach(
+                link => {
+
+                    link.addEventListener(
+                        "click",
+                        event => {
+
+                            event.preventDefault();
+
+
+                            const workId =
+                                link.dataset.exhibitionWork;
+
+
+                            const newUrl =
+                                buildArtworkUrl(
+                                    exhibition.id,
+                                    workId
+                                );
+
+
+                            window.history.pushState(
+                                {},
+                                "",
+                                newUrl
+                            );
+
+
+                            openExhibitionWork(
+                                exhibition,
+                                workId,
+                                false
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+    }
+
+
+    /* =====================================================
+       CONSTRUIR URL DE QR / EXPOSICIÓN
+    ===================================================== */
+
+    function buildArtworkUrl(
+        exhibitionId,
         workId
     ) {
 
-        const work =
-            obrasInvitadas.find(
-                item =>
-                    item.id === workId
+        return (
+            `exposicion.html?id=${encodeURIComponent(exhibitionId)}` +
+            `&obra=${encodeURIComponent(workId)}`
+        );
+
+    }
+
+
+    /* =====================================================
+       ABRIR OBRA DE LA EXPOSICIÓN
+    ===================================================== */
+
+    function openExhibitionWork(
+        exhibition,
+        workId,
+        updateUrl = true
+    ) {
+
+        /*
+           Primero verificamos si la obra pertenece
+           realmente a esta exposición.
+        */
+
+        const officialIds =
+            Array.isArray(
+                exhibition.obras
+            )
+                ? exhibition.obras
+                : [];
+
+
+        const invitedIds =
+            Array.isArray(
+                exhibition.obras_invitadas
+            )
+                ? exhibition.obras_invitadas
+                : [];
+
+
+        const isOfficial =
+            officialIds.includes(
+                workId
             );
 
 
-        if (!work) {
+        const isInvited =
+            invitedIds.includes(
+                workId
+            );
+
+
+        /*
+           Si alguien intenta escribir manualmente una
+           obra que no pertenece a esta exposición,
+           no se abre.
+        */
+
+        if (
+            !isOfficial &&
+            !isInvited
+        ) {
+
+            console.warn(
+                "La obra solicitada no pertenece a esta exposición:",
+                workId
+            );
+
             return;
+
         }
 
 
-        const guest =
-            invitados.find(
-                item =>
-                    item.id === work.artista
+        let work = null;
+
+        let author = null;
+
+
+        /* =================================================
+           OBRA OFICIAL
+        ================================================= */
+
+        if (isOfficial) {
+
+            work =
+                obras.find(
+                    item =>
+                        item.id === workId
+                );
+
+
+            if (!work) {
+
+                return;
+
+            }
+
+
+            author =
+                artistas.find(
+                    item =>
+                        item.id === work.artista
+                );
+
+
+            workModalBadge.textContent =
+                "Obra de la asociación";
+
+
+            workModalEyebrow.textContent =
+                "Artista participante";
+
+        }
+
+
+        /* =================================================
+           OBRA INVITADA
+        ================================================= */
+
+        if (isInvited) {
+
+            work =
+                obrasInvitadas.find(
+                    item =>
+                        item.id === workId
+                );
+
+
+            if (!work) {
+
+                return;
+
+            }
+
+
+            author =
+                invitados.find(
+                    item =>
+                        item.id === work.artista
+                );
+
+
+            workModalBadge.textContent =
+                "Obra invitada";
+
+
+            workModalEyebrow.textContent =
+                "Artista invitada";
+
+        }
+
+
+        /* =================================================
+           ACTUALIZAR URL
+        ================================================= */
+
+        if (updateUrl) {
+
+            const newUrl =
+                buildArtworkUrl(
+                    exhibition.id,
+                    work.id
+                );
+
+
+            window.history.pushState(
+                {},
+                "",
+                newUrl
             );
 
+        }
 
-        guestWorkTitle.textContent =
+
+        /* =================================================
+           INFORMACIÓN DE LA OBRA
+        ================================================= */
+
+        workTitle.textContent =
             work.titulo ||
-            "Obra invitada";
+            "Obra";
 
 
-        guestWorkArtist.textContent =
-            guest?.nombre ||
-            "Artista invitada";
+        workArtist.textContent =
+            author?.nombre ||
+            "Artista";
 
 
-        guestWorkImage.src =
-            work.imagen || "";
+        workImage.src =
+            work.imagen ||
+            "";
 
 
-        guestWorkImage.alt =
+        workImage.alt =
             work.titulo ||
-            "Obra invitada";
+            "Obra";
 
 
-        guestWorkTechnique.textContent =
-            work.tecnica || "—";
+        workTechnique.textContent =
+            work.tecnica ||
+            "—";
 
 
-        guestWorkSupport.textContent =
-            work.soporte || "—";
+        workSupport.textContent =
+            work.soporte ||
+            "—";
 
 
-        guestWorkDimensions.textContent =
-            work.dimensiones || "—";
+        workDimensions.textContent =
+            work.dimensiones ||
+            "—";
 
 
-        guestWorkYear.textContent =
-            work.anio || "—";
+        workYear.textContent =
+            work.anio ||
+            "—";
 
 
-        guestWorkDescription.textContent =
+        workDescription.textContent =
             work.descripcion ||
             "Descripción próximamente.";
 
 
-        renderGuestInterpretations(
+        renderWorkInterpretations(
             work.interpretaciones
         );
 
 
-        guestWorkModal.hidden =
+        /* =================================================
+           ABRIR MODAL
+        ================================================= */
+
+        workModal.hidden =
             false;
 
 
-        guestWorkModal.setAttribute(
+        workModal.setAttribute(
             "aria-hidden",
             "false"
         );
@@ -1104,12 +1414,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         requestAnimationFrame(
             () => {
 
-                guestWorkModal.classList.add(
+                workModal.classList.add(
                     "is-open"
                 );
 
 
-                guestWorkModalClose.focus();
+                workModalClose.focus();
 
             }
         );
@@ -1117,10 +1427,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
-    function closeGuestWork() {
+    /* =====================================================
+       CERRAR OBRA
+    ===================================================== */
+
+    function closeWorkModal(
+        updateUrl = true
+    ) {
 
         if (
-            guestWorkModal.hidden
+            workModal.hidden
         ) {
 
             return;
@@ -1128,12 +1444,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
 
-        guestWorkModal.classList.remove(
+        workModal.classList.remove(
             "is-open"
         );
 
 
-        guestWorkModal.setAttribute(
+        workModal.setAttribute(
             "aria-hidden",
             "true"
         );
@@ -1144,10 +1460,33 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
 
 
+        /*
+           Al cerrar eliminamos solamente &obra=...
+           y dejamos la exposición abierta.
+        */
+
+        if (
+            updateUrl &&
+            currentExhibition
+        ) {
+
+            const cleanUrl =
+                `exposicion.html?id=${encodeURIComponent(currentExhibition.id)}`;
+
+
+            window.history.pushState(
+                {},
+                "",
+                cleanUrl
+            );
+
+        }
+
+
         window.setTimeout(
             () => {
 
-                guestWorkModal.hidden =
+                workModal.hidden =
                     true;
 
             },
@@ -1157,15 +1496,27 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
-    guestWorkModalClose.addEventListener(
+    workModalClose.addEventListener(
         "click",
-        closeGuestWork
+        () => {
+
+            closeWorkModal(
+                true
+            );
+
+        }
     );
 
 
-    guestWorkModalBackdrop.addEventListener(
+    workModalBackdrop.addEventListener(
         "click",
-        closeGuestWork
+        () => {
+
+            closeWorkModal(
+                true
+            );
+
+        }
     );
 
 
@@ -1175,10 +1526,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             if (
                 event.key === "Escape" &&
-                !guestWorkModal.hidden
+                !workModal.hidden
             ) {
 
-                closeGuestWork();
+                closeWorkModal(
+                    true
+                );
 
             }
 
@@ -1187,14 +1540,61 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     /* =====================================================
-       INTERPRETACIONES OBRA INVITADA
+       BOTONES ATRÁS / ADELANTE DEL NAVEGADOR
     ===================================================== */
 
-    function renderGuestInterpretations(
+    window.addEventListener(
+        "popstate",
+        () => {
+
+            if (!currentExhibition) {
+
+                return;
+
+            }
+
+
+            const params =
+                new URLSearchParams(
+                    window.location.search
+                );
+
+
+            const artworkId =
+                params.get("obra");
+
+
+            if (artworkId) {
+
+                openExhibitionWork(
+                    currentExhibition,
+                    artworkId,
+                    false
+                );
+
+            }
+
+            else {
+
+                closeWorkModal(
+                    false
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       INTERPRETACIONES
+    ===================================================== */
+
+    function renderWorkInterpretations(
         interpretations
     ) {
 
-        guestWorkInterpretations.innerHTML =
+        workInterpretations.innerHTML =
             "";
 
 
@@ -1205,13 +1605,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             interpretations.length === 0
         ) {
 
-            guestWorkInterpretations.innerHTML = `
+            workInterpretations.innerHTML = `
 
                 <p class="artwork-no-interpretations">
                     Interpretaciones próximamente.
                 </p>
 
             `;
+
 
             return;
 
@@ -1237,7 +1638,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
                 const panelId =
-                    `guestInterpretation-${index}`;
+                    `exhibitionInterpretation-${index}`;
 
 
                 card.innerHTML = `
@@ -1250,18 +1651,26 @@ document.addEventListener("DOMContentLoaded", async () => {
                     >
 
                         <span class="interpretation-card__number">
+
                             ${String(index + 1).padStart(2, "0")}
+
                         </span>
 
+
                         <span class="interpretation-card__title">
+
                             ${interpretation.titulo}
+
                         </span>
+
 
                         <span
                             class="interpretation-card__icon"
                             aria-hidden="true"
                         >
+
                             +
+
                         </span>
 
                     </button>
@@ -1301,7 +1710,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                             );
 
 
-                        guestWorkInterpretations
+                        /*
+                           Cerramos cualquier otra interpretación
+                           que esté abierta.
+                        */
+
+                        workInterpretations
                             .querySelectorAll(
                                 ".interpretation-card.is-open"
                             )
@@ -1313,18 +1727,28 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     );
 
 
-                                    openCard
-                                        .querySelector(
+                                    const openButton =
+                                        openCard.querySelector(
                                             ".interpretation-card__toggle"
-                                        )
-                                        .setAttribute(
+                                        );
+
+
+                                    if (openButton) {
+
+                                        openButton.setAttribute(
                                             "aria-expanded",
                                             "false"
                                         );
 
+                                    }
+
                                 }
                             );
 
+
+                        /*
+                           Abrimos la seleccionada.
+                        */
 
                         if (!currentlyOpen) {
 
@@ -1344,7 +1768,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 );
 
 
-                guestWorkInterpretations.appendChild(
+                workInterpretations.appendChild(
                     card
                 );
 
@@ -1421,7 +1845,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     >
 
                     <figcaption>
+
                         ${String(index + 1).padStart(2, "0")}
+
                     </figcaption>
 
                 `;

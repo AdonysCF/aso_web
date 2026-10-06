@@ -4,52 +4,52 @@
         "nombre": "Annia Ferrer",
         "tipo": "artista",
         "foto": "assets/artistas/artista-001.webp",
-        "biografia": "La artista plástica Annia Ferrer nació un 19 de noviembre en la ciudad de Carhuaz - Áncash, donde realizó sus estudios de primaria y secundaria. Egresada de la ESFAP Sérvulo Gutiérrez, es miembro de prestigiosas asociaciones culturales, tales como: Pintoras Perú, Paraaqqos y la ANEA - Ica. Ha sido galardonada por el Congreso de la República, la Embajada de Brasil en el Perú y ha participado en diferentes exposiciones a nivel nacional e internacional, donde ha mostrado siempre su extraordinario talento artístico.",
-        "instagram": "enith_ferrer",
-        "facebook": "Annia Enith Ferrer Quito"
+        "biografia": "Annia Ferrer es artista plástica nacida en Carhuaz, Áncash, donde realizó sus estudios de primaria y secundaria. Es egresada de la ESFAP Sérvulo Gutiérrez y desarrolla una trayectoria vinculada a la creación, difusión y participación en espacios artísticos y culturales. Forma parte de distintas asociaciones, entre ellas Pintoras Perú, Paraaqqos y la ANEA – Ica. A lo largo de su carrera ha recibido reconocimientos del Congreso de la República y de la Embajada de Brasil en el Perú, además de participar en exposiciones a nivel nacional e internacional. Como integrante de la Asociación Cultural Colores en el viento, aporta su experiencia, sensibilidad y compromiso con el desarrollo del arte y la promoción de nuevas propuestas culturales.",
+        "instagram": "https://www.instagram.com/enith_ferrer/",
+        "facebook": "https://www.facebook.com/anniaenith.ferrerquito"
     },
     {
         "id": "artista-002",
         "nombre": "Indira García Quispe",
         "tipo": "artista",
         "foto": "assets/artistas/artista-002.webp",
-        "biografia": "",
-        "instagram": "",
-        "facebook": ""
+        "biografia": "Indira García Quispe es docente de Comunicación y artista plástica egresada de la Escuela de Arte de Ica. Su formación combina la enseñanza, la sensibilidad artística y la expresión visual, desarrollando principalmente una técnica de enfoque realista. Como integrante de la Asociación Cultural Colores en el viento, aporta desde la educación y las artes plásticas, contribuyendo a la creación de propuestas que fortalecen la comunicación, la identidad y la apreciación del arte en la comunidad.",
+        "instagram": "https://www.instagram.com/indira.gq/",
+        "facebook": "https://www.facebook.com/indira.garciaquispe.9"
     },
     {
         "id": "artista-003",
         "nombre": "Daphna Cavero Ferrer",
         "tipo": "artista",
         "foto": "assets/artistas/artista-003.webp",
-        "biografia": "",
-        "instagram": "",
-        "facebook": ""
+        "biografia": "Daphna Cavero Ferrer reside actualmente en Lima y se desempeña como guía de turismo. Su experiencia está vinculada al contacto con personas, culturas y distintos contextos, lo que se complementa con sus conocimientos de inglés, portugués, nociones de quechua y lenguaje de señas. Aunque no se dedica exclusivamente al arte, mantiene un interés cercano por la expresión artística y cultural. Como integrante de la Asociación Cultural Colores en el viento, aporta una mirada intercultural, comunicativa y multidisciplinaria, contribuyendo al vínculo entre el arte, la identidad, el patrimonio y la diversidad cultural.",
+        "instagram": "https://www.instagram.com/daphnacha/",
+        "facebook": "https://www.facebook.com/profile.php?id=100009723919040"
     },
     {
         "id": "artista-004",
         "nombre": "Carlos Jesús Lozano Huamán",
         "tipo": "artista",
         "foto": "assets/artistas/artista-004.webp",
-        "biografia": "",
+        "biografia": "Carlos Jesús Lozano Huamán es docente de Artes Plásticas y artista plástico especializado en escultura. Su trabajo se caracteriza por una técnica de orientación realista, con especial interés en la representación de formas, volúmenes y expresiones. Como integrante de la Asociación Cultural Colores en el viento, aporta su experiencia artística y pedagógica al desarrollo de exposiciones, proyectos y actividades culturales, fortaleciendo el vínculo entre la enseñanza, la creación plástica y la difusión del arte.",
         "instagram": "",
-        "facebook": ""
+        "facebook": "https://www.facebook.com/carlosjesus.lozanohuaman.5"
     },
     {
         "id": "artista-005",
         "nombre": "Adonys Cavero Ferrer",
         "tipo": "equipo",
         "foto": "assets/artistas/artista-005.webp",
-        "biografia": "",
-        "instagram": "",
-        "facebook": ""
+        "biografia": "Adonys Cavero Ferrer es estudiante de Ingeniería de Sistemas, tiene 20 años y reside en Lima. Su formación está orientada al uso de la tecnología, el análisis y el desarrollo de soluciones digitales. Como integrante de la Asociación Cultural Colores en el viento, aporta una mirada vinculada a la tecnología y a los nuevos medios, contribuyendo al desarrollo y fortalecimiento de las iniciativas de la asociación. Además, cuenta con conocimientos del idioma francés, lo que amplía su capacidad de comunicación y apertura hacia diferentes contextos culturales.",
+        "instagram": "https://www.instagram.com/adonyscf/",
+        "facebook": "https://www.facebook.com/adonys.ferrer.1"
     },
     {
         "id": "artista-006",
         "nombre": "Victor Huamani Reyes",
         "tipo": "equipo",
         "foto": "assets/artistas/artista-006.webp",
-        "biografia": "",
+        "biografia": "Víctor Huamani Reyes es psicólogo y actualmente se desempeña como decano del Colegio de Psicólogos del Perú – Consejo Directivo Regional XVII Ica. Reside en la ciudad de Ica y cuenta con experiencia en actividades académicas, institucionales y de difusión vinculadas a la psicología. Como integrante de la Asociación Cultural Colores en el viento, participa activamente en sus exposiciones y actividades, desempeñándose como ponente, presentador y representante en distintos encuentros culturales. Su aporte fortalece el vínculo entre el arte, la psicología, la salud mental y la comunidad, contribuyendo a generar espacios de reflexión y diálogo desde una perspectiva multidisciplinaria.",
         "instagram": "",
         "facebook": ""
     }
