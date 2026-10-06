@@ -308,8 +308,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                         <span>
                             ${
-                                artist.tipo === "colaborador"
-                                    ? "Colaborador"
+                                artist.tipo === "equipo"
+                                    ? "Equipo multidisciplinario"
                                     : "Artista"
                             }
                         </span>

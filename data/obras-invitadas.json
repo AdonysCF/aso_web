@@ -1,0 +1,43 @@
+[
+    {
+        "id": "obra-invitada-001",
+        "titulo": "El susurro del Río",
+        "artista": "invitado-001",
+        "imagen": "assets/obras-invitadas/obra-invitada-001.webp",
+        "tecnica": "Óleo",
+        "soporte": "Lienzo",
+        "dimensiones": "90 x 60 cm",
+        "anio": 2026,
+        "descripcion": "Esta pintura representa la naturaleza como un organismo vivo que fluye, respira y se transforma. El río, como elemento central, simboliza la vida y la continuidad de los ecosistemas; sus aguas atraviesan el paisaje recordándonos que cada recurso natural es esencial para nuestra existencia. La obra busca generar una reflexión sobre la importancia de proteger los ríos, conservar los bosques y respetar nuestro entorno natural. La abundante vegetación y el movimiento del agua representan un equilibrio que puede mantenerse únicamente cuando existe una relación responsable entre el ser humano y la naturaleza.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Regulación del sistema nervioso autónomo. El paisaje natural activa el sistema parasimpático (respuesta de calma). Según la teoría de la biofilia y la restauración atencional, contemplar agua en movimiento reduce cortisol, baja la frecuencia cardíaca y favorece la neuroplasticidad. Es la base neurológica del mindfulness en la naturaleza."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y salud mental",
+                "texto": "Contrapunto a la hiperconectividad. En un mundo digital saturado, la obra propone la ecoterapia como tecnología ancestral de regulación. Invita a la desconexión consciente, al grounding, al uso de imágenes de naturaleza para intervenciones breves de ansiedad en consulta y telepsicología."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia, prevención y protección",
+                "texto": "La obra habla de continuidad de la vida después de la violencia. El río no se queda estancado en la piedra que lo golpeó. Representa a las sobrevivientes que siguen. Prevención desde el enfoque de recursos, no solo desde el daño. Enseña que sanar no es borrar las piedras, es aprender a fluir a pesar de ellas."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia, bienestar y desarrollo humano",
+                "texto": "Metáfora terapéutica central de la ACT (Terapia de Aceptación y Compromiso): «Tú no eres la piedra, eres el río». Trabajo de fluidez psicológica, aceptación y compromiso con el camino. Ideal para trabajar duelo, resiliencia y proyecto de vida. Bienestar entendido como movimiento, no como ausencia de problemas."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética, derechos y responsabilidad social",
+                "texto": "Derecho a un entorno saludable y a la conexión con la naturaleza como determinante de salud mental. La ética del psicólogo incluye proteger no solo a la persona sino a su entorno. Huaraz, tierra de ríos y montañas, nos recuerda la responsabilidad ambiental como responsabilidad psicológica. Cuidar el río es cuidar la mente colectiva."
+            }
+        ],
+        "exposiciones": [
+            "expo-001"
+        ]
+    }
+]

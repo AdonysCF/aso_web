@@ -41,6 +41,12 @@
             "artista-002",
             "artista-003",
             "artista-004"
+        ],
+                "invitados": [
+            "invitado-001"
+        ],
+        "obras_invitadas": [
+            "obra-invitada-001"
         ]
     }
 ]
