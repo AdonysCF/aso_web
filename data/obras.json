@@ -964,5 +964,47 @@
             "expo-001"
         ],
         "destacada": false
-    }
+    },
+    {
+    "id": "cev-023",
+    "titulo": "Yo soy puente: entre el desierto y el nevado",
+    "artista": "artista-001",
+    "imagen": "assets/obras/cev-023.webp",
+    "tecnica": "Acrílico",
+    "soporte": "Lienzo",
+    "dimensiones": "50 x 70 cm",
+    "anio": 2026,
+    "descripcion": "Es la identidad que no se divide, se trenza. No eres de aquí o de allá, eres el puente. El azul del cabello es el cielo andino y el mar del sur. Las trenzas multicolores son la memoria ancestral que sigue viva y teje tu presente. Las cruces y los ojos son la fe y la vigilancia interior. Sonreír en medio de dos territorios es el acto político más tierno: decir yo pertenezco a ambos.",
+    "interpretaciones": [
+        {
+            "tipo": "ciencia",
+            "titulo": "Ciencia y neurociencia",
+            "texto": "El cerebro bicultural. La obra muestra la integración de hemisferios y de memorias: la memoria del desierto y la memoria de la altura. La trenza es la metáfora perfecta de la integración neural, trenzar lo que estaba suelto. Las perlas del rosario son las neuronas espejo que conectan identidad y territorio. Ser puente reduce el cortisol del desarraigo."
+        },
+        {
+            "tipo": "tecnologia",
+            "titulo": "Tecnología y psicología digital",
+            "texto": "En un mundo de filtros digitales que nos quieren uniformes, esta obra es un acto de identidad digital real. No es un avatar, es un rostro con historia, con montañas y desierto detrás. La psicología digital debe ayudar a que los jóvenes trencen su identidad y no la editen para borrarla. Tu rostro con trenzas de colores es anti-algoritmo: es raíz."
+        },
+        {
+            "tipo": "violencia",
+            "titulo": "Violencia y prevención",
+            "texto": "Las trenzas que parecen atar son también las que sostienen. La violencia intenta cortar la trenza de la identidad, decirle a la mujer andina o costeña que no vale. Prevenir es volver a trenzar, con colores más vivos. Los ojos bordados en tu pecho son los ojos que vigilan y cuidan, la comunidad que no deja que te pierdas. La prevención es trenzar redes."
+        },
+        {
+            "tipo": "bienestar",
+            "titulo": "Psicoterapia y bienestar humano",
+            "texto": "El bienestar es integración. No negar tu parte Ica ni tu parte Huaraz, sino llevarlas ambas en el cabello. La terapia es ese trenzado. El rostro sonríe porque ya integró. Las cruces no pesan, acompañan. Bienestar es poder decir: mi historia es multicolor y no me da vergüenza llevarla puesta."
+        },
+        {
+            "tipo": "etica",
+            "titulo": "Ética y desafíos sociales",
+            "texto": "El desafío ético más grande hoy es ser puente en un país que se quiere partido. La ética es no olvidar de dónde vienes mientras abrazas a donde vas. Es llevar el desierto al nevado y el nevado al desierto sin que ninguno se derrita."
+        }
+    ],
+    "exposiciones": [
+        "expo-001"
+    ],
+    "destacada": false
+}
 ]
