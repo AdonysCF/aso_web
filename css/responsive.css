@@ -2384,7 +2384,7 @@
 
     .exhibition-guests__grid {
         grid-template-columns:
-            1fr;
+            repeat(2, minmax(0, 1fr));
     }
 
 
@@ -2402,11 +2402,13 @@
 
     /* Invitados */
 
-    .exhibition-guests {
-        padding:
-            90px
-            0
-            100px;
+    .exhibition-guests__grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            40px
+            15px;
     }
 
 
@@ -2438,12 +2440,15 @@
 
 
     .exhibition-guest-card__heading h3 {
+        font-family:
+            var(--font-display);
+
         font-size:
-            clamp(
-                2.2rem,
-                10vw,
-                3.2rem
-            );
+            1.7rem;
+
+        font-weight: 500;
+
+        line-height: 1.1;
     }
 
 

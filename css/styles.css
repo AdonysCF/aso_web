@@ -8118,9 +8118,9 @@ section[id] {
     display: grid;
 
     grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(4, minmax(0, 1fr));
 
-    gap: 40px;
+    gap: 25px;
 }
 
 
@@ -8291,21 +8291,15 @@ section[id] {
 
 
 .exhibition-guest-card__heading h3 {
-    margin-top: 7px;
-
     font-family:
         var(--font-display);
 
     font-size:
-        clamp(
-            1.8rem,
-            3vw,
-            2.8rem
-        );
+        1.7rem;
 
     font-weight: 500;
 
-    line-height: 1;
+    line-height: 1.1;
 }
 
 
