@@ -289,88 +289,94 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
+/* =====================================================
+   ENVÍO
+===================================================== */
 
-    /* =====================================================
-       ENVÍO
-    ===================================================== */
+form.addEventListener(
+    "submit",
+    event => {
 
-    form.addEventListener(
-        "submit",
-        event => {
-
-            event.preventDefault();
-
-
-            if (success) {
-
-                success.hidden = true;
-
-            }
+        event.preventDefault();
 
 
-            const nameValid =
-                validateName();
+        const nameValid =
+            validateName();
 
-            const emailValid =
-                validateEmail();
+        const emailValid =
+            validateEmail();
 
-            const subjectValid =
-                validateSubject();
+        const subjectValid =
+            validateSubject();
 
-            const messageValid =
-                validateMessage();
-
-
-            const formValid =
-                nameValid &&
-                emailValid &&
-                subjectValid &&
-                messageValid;
+        const messageValid =
+            validateMessage();
 
 
-            if (!formValid) {
-
-                const firstError =
-                    form.querySelector(
-                        ".contact-field--error input, " +
-                        ".contact-field--error select, " +
-                        ".contact-field--error textarea"
-                    );
+        const formValid =
+            nameValid &&
+            emailValid &&
+            subjectValid &&
+            messageValid;
 
 
-                firstError?.focus();
+        if (!formValid) {
+
+            const firstError =
+                form.querySelector(
+                    ".contact-field--error input, " +
+                    ".contact-field--error select, " +
+                    ".contact-field--error textarea"
+                );
 
 
-                return;
+            firstError?.focus();
 
-            }
-
-
-            /*
-             * IMPORTANTE:
-             *
-             * Por ahora no enviamos información
-             * a ningún servidor.
-             *
-             * En la fase de publicación podremos
-             * conectar este formulario a un
-             * servicio real.
-             */
-
-
-            if (success) {
-
-                success.hidden = false;
-
-
-                success.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest"
-                });
-
-            }
-
+            return;
         }
-    );
+
+
+        /* =============================================
+           PREPARAR CORREO
+        ============================================= */
+
+        const subjectLabels = {
+            consulta: "Consulta general",
+            exposicion: "Exposiciones",
+            colaboracion: "Colaboraciones",
+            artista: "Participación artística",
+            obra: "Información sobre una obra",
+            otro: "Otro"
+        };
+
+
+        const subjectText =
+            subjectLabels[subjectInput.value]
+            || "Consulta desde la web";
+
+
+        const emailSubject =
+            `Colores en el viento - ${subjectText}`;
+
+
+        const emailBody =
+`Nombre: ${nameInput.value.trim()}
+Correo: ${emailInput.value.trim()}
+Motivo: ${subjectText}
+
+Mensaje:
+${messageInput.value.trim()}`;
+
+
+        const mailtoLink =
+            `mailto:coloresenelviento5@gmail.com` +
+            `?subject=${encodeURIComponent(emailSubject)}` +
+            `&body=${encodeURIComponent(emailBody)}`;
+
+
+        window.location.href = mailtoLink;
+
+    }
+);
 
 });
