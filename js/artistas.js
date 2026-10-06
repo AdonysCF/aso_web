@@ -214,8 +214,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
             const typeLabel =
-                person.tipo === "colaborador"
-                    ? "Colaborador"
+                person.tipo === "equipo"
+                    ? "Equipo multidisciplinario"
                     : "Artista";
 
 

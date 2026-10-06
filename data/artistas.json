@@ -38,7 +38,7 @@
     {
         "id": "artista-005",
         "nombre": "Adonys Cavero Ferrer",
-        "tipo": "colaborador",
+        "tipo": "equipo",
         "foto": "assets/artistas/artista-005.webp",
         "biografia": "",
         "instagram": "",
@@ -47,7 +47,7 @@
     {
         "id": "artista-006",
         "nombre": "Victor Huamani Reyes",
-        "tipo": "colaborador",
+        "tipo": "equipo",
         "foto": "assets/artistas/artista-006.webp",
         "biografia": "",
         "instagram": "",

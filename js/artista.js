@@ -173,8 +173,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         /* Tipo */
 
         type.textContent =
-            artist.tipo === "colaborador"
-                ? "Colaborador"
+            artist.tipo === "equipo"
+                ? "Equipo multidisplinario"
                 : "Artista";
 
 
