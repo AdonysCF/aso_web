@@ -1,9 +1,8 @@
-/* =========================================================
-   COLORES EN EL VIENTO
-   FICHA INDIVIDUAL DE EXPOSICIÓN
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", async () => {
+
+    /* =====================================================
+       ELEMENTOS GENERALES
+    ===================================================== */
 
     const loading =
         document.getElementById("exhibitionLoading");
@@ -37,12 +36,28 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("exhibitionDescription");
 
 
+    /* PARTICIPANTES */
+
     const artistsCount =
         document.getElementById("exhibitionArtistsCount");
 
     const artistsGrid =
         document.getElementById("exhibitionArtistsGrid");
 
+
+    /* INVITADOS */
+
+    const guestsSection =
+        document.getElementById("exhibitionGuestsSection");
+
+    const guestsCount =
+        document.getElementById("exhibitionGuestsCount");
+
+    const guestsGrid =
+        document.getElementById("exhibitionGuestsGrid");
+
+
+    /* OBRAS */
 
     const worksCount =
         document.getElementById("exhibitionWorksCount");
@@ -51,8 +66,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("exhibitionWorksGrid");
 
 
-    const gallerySection =
-        document.getElementById("exhibitionGallerySection");
+    /* GALERÍA */
 
     const galleryGrid =
         document.getElementById("exhibitionGalleryGrid");
@@ -61,18 +75,60 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("exhibitionGalleryPending");
 
 
+    /* CATÁLOGO */
+
     const catalogButton =
         document.getElementById("viewExhibitionCatalog");
 
 
+    /* MODAL OBRA INVITADA */
+
+    const guestWorkModal =
+        document.getElementById("guestWorkModal");
+
+    const guestWorkModalBackdrop =
+        document.getElementById("guestWorkModalBackdrop");
+
+    const guestWorkModalClose =
+        document.getElementById("guestWorkModalClose");
+
+    const guestWorkImage =
+        document.getElementById("guestWorkImage");
+
+    const guestWorkTitle =
+        document.getElementById("guestWorkTitle");
+
+    const guestWorkArtist =
+        document.getElementById("guestWorkArtist");
+
+    const guestWorkTechnique =
+        document.getElementById("guestWorkTechnique");
+
+    const guestWorkSupport =
+        document.getElementById("guestWorkSupport");
+
+    const guestWorkDimensions =
+        document.getElementById("guestWorkDimensions");
+
+    const guestWorkYear =
+        document.getElementById("guestWorkYear");
+
+    const guestWorkDescription =
+        document.getElementById("guestWorkDescription");
+
+    const guestWorkInterpretations =
+        document.getElementById("guestWorkInterpretations");
+
+
     /* =====================================================
-       ID DESDE URL
+       ID EXPOSICIÓN
     ===================================================== */
 
     const params =
         new URLSearchParams(
             window.location.search
         );
+
 
     const exhibitionId =
         params.get("id");
@@ -87,13 +143,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
+    /* =====================================================
+       DATOS
+    ===================================================== */
+
     let exposiciones = [];
     let artistas = [];
     let obras = [];
+    let invitados = [];
+    let obrasInvitadas = [];
 
 
     /* =====================================================
-       CARGAR DATOS
+       CARGAR JSON
     ===================================================== */
 
     try {
@@ -101,12 +163,20 @@ document.addEventListener("DOMContentLoaded", async () => {
         const [
             exhibitionsResponse,
             artistsResponse,
-            worksResponse
+            worksResponse,
+            guestsResponse,
+            guestWorksResponse
         ] = await Promise.all([
 
             fetch("data/exposiciones.json"),
+
             fetch("data/artistas.json"),
-            fetch("data/obras.json")
+
+            fetch("data/obras.json"),
+
+            fetch("data/invitados.json"),
+
+            fetch("data/obras-invitadas.json")
 
         ]);
 
@@ -114,7 +184,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (
             !exhibitionsResponse.ok ||
             !artistsResponse.ok ||
-            !worksResponse.ok
+            !worksResponse.ok ||
+            !guestsResponse.ok ||
+            !guestWorksResponse.ok
         ) {
 
             throw new Error(
@@ -132,6 +204,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         obras =
             await worksResponse.json();
+
+        invitados =
+            await guestsResponse.json();
+
+        obrasInvitadas =
+            await guestWorksResponse.json();
 
 
         const exhibition =
@@ -151,7 +229,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
 
-        renderExhibition(exhibition);
+        renderExhibition(
+            exhibition
+        );
 
     }
 
@@ -172,7 +252,9 @@ document.addEventListener("DOMContentLoaded", async () => {
        RENDER GENERAL
     ===================================================== */
 
-    function renderExhibition(exhibition) {
+    function renderExhibition(
+        exhibition
+    ) {
 
         document.title =
             `${exhibition.nombre} | Colores en el viento`;
@@ -193,7 +275,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
         date.textContent =
-            formatDate(exhibition.fecha);
+            formatDate(
+                exhibition.fecha
+            );
 
 
         place.textContent =
@@ -209,10 +293,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         description.textContent =
             exhibition.descripcion?.trim()
                 ? exhibition.descripcion
-                : "Una muestra que reúne distintas miradas y expresiones artísticas de nuestra comunidad.";
+                : "Información de la exposición próximamente.";
 
-
-        /* Portada */
 
         if (exhibition.portada) {
 
@@ -222,34 +304,53 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
 
-        /* Catálogo filtrado */
+        /* Catálogo oficial */
 
         catalogButton.href =
             `obras.html?exposicion=${encodeURIComponent(exhibition.id)}`;
 
 
-        renderArtists(exhibition);
+        renderParticipants(
+            exhibition
+        );
 
-        renderWorks(exhibition);
 
-        renderGallery(exhibition);
+        renderGuests(
+            exhibition
+        );
+
+
+        renderWorks(
+            exhibition
+        );
+
+
+        renderGallery(
+            exhibition
+        );
 
 
         loading.hidden = true;
+
         error.hidden = true;
+
         detail.hidden = false;
 
     }
 
 
     /* =====================================================
-       ARTISTAS
+       02 / PARTICIPANTES
     ===================================================== */
 
-    function renderArtists(exhibition) {
+    function renderParticipants(
+        exhibition
+    ) {
 
         const ids =
-            Array.isArray(exhibition.artistas)
+            Array.isArray(
+                exhibition.artistas
+            )
                 ? exhibition.artistas
                 : [];
 
@@ -257,31 +358,46 @@ document.addEventListener("DOMContentLoaded", async () => {
         const participants =
             ids
                 .map(id =>
+
                     artistas.find(
                         artist =>
                             artist.id === id
                     )
+
                 )
                 .filter(Boolean);
 
 
         artistsCount.textContent =
-            String(participants.length)
-                .padStart(2, "0");
+            String(
+                participants.length
+            ).padStart(
+                2,
+                "0"
+            );
 
 
-        artistsGrid.innerHTML = "";
+        artistsGrid.innerHTML =
+            "";
 
 
         participants.forEach(
             (artist, index) => {
 
                 const article =
-                    document.createElement("article");
+                    document.createElement(
+                        "article"
+                    );
 
 
                 article.className =
                     "exhibition-artist-card";
+
+
+                const typeLabel =
+                    artist.tipo === "equipo"
+                        ? "Equipo multidisciplinario"
+                        : "Artista";
 
 
                 article.innerHTML = `
@@ -307,11 +423,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div>
 
                         <span>
-                            ${
-                                artist.tipo === "equipo"
-                                    ? "Equipo multidisciplinario"
-                                    : "Artista"
-                            }
+                            ${typeLabel}
                         </span>
 
                         <h3>
@@ -330,7 +442,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
                 const image =
-                    article.querySelector("img");
+                    article.querySelector(
+                        "img"
+                    );
 
 
                 image.addEventListener(
@@ -339,6 +453,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                         image.style.display =
                             "none";
+
 
                         article
                             .querySelector(
@@ -349,7 +464,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                             );
 
                     },
-                    { once: true }
+                    {
+                        once: true
+                    }
                 );
 
 
@@ -364,37 +481,328 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     /* =====================================================
-       OBRAS
+       03 / INVITADOS
     ===================================================== */
 
-    function renderWorks(exhibition) {
+    function renderGuests(
+        exhibition
+    ) {
 
         const ids =
-            Array.isArray(exhibition.obras)
-                ? exhibition.obras
+            Array.isArray(
+                exhibition.invitados
+            )
+                ? exhibition.invitados
                 : [];
 
 
-        const exhibitionWorks =
+        const exhibitionGuests =
             ids
                 .map(id =>
-                    obras.find(
-                        work =>
-                            work.id === id
+
+                    invitados.find(
+                        guest =>
+                            guest.id === id
                     )
+
                 )
                 .filter(Boolean);
 
 
+        if (
+            exhibitionGuests.length === 0
+        ) {
+
+            guestsSection.hidden =
+                true;
+
+            return;
+
+        }
+
+
+        guestsSection.hidden =
+            false;
+
+
+        guestsCount.textContent =
+            String(
+                exhibitionGuests.length
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        guestsGrid.innerHTML =
+            "";
+
+
+        exhibitionGuests.forEach(
+            (guest, index) => {
+
+                const guestWorks =
+                    obrasInvitadas.filter(
+                        work =>
+
+                            work.artista ===
+                                guest.id &&
+
+                            Array.isArray(
+                                work.exposiciones
+                            ) &&
+
+                            work.exposiciones.includes(
+                                exhibition.id
+                            )
+                    );
+
+
+                const biography =
+                    guest.biografia?.trim()
+                        ? guest.biografia
+                        : "Biografía próximamente.";
+
+
+                const workLabel =
+                    guestWorks.length === 1
+                        ? "1 obra"
+                        : `${guestWorks.length} obras`;
+
+
+                const article =
+                    document.createElement(
+                        "article"
+                    );
+
+
+                article.className =
+                    "exhibition-guest-card";
+
+
+                article.innerHTML = `
+
+                    <button
+                        type="button"
+                        class="exhibition-guest-card__image"
+                        aria-expanded="false"
+                        aria-controls="guestBio-${guest.id}"
+                    >
+
+                        <img
+                            src="${guest.foto}"
+                            alt="${guest.nombre}"
+                            loading="lazy"
+                        >
+
+                        <span class="exhibition-guest-card__number">
+                            ${String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <span class="exhibition-guest-card__action">
+                            Ver perfil +
+                        </span>
+
+                    </button>
+
+
+                    <div class="exhibition-guest-card__heading">
+
+                        <div>
+
+                            <span>
+                                Artista invitada
+                            </span>
+
+                            <h3>
+                                ${guest.nombre}
+                            </h3>
+
+                        </div>
+
+                        <span>
+                            ${workLabel}
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="exhibition-guest-card__bio"
+                        id="guestBio-${guest.id}"
+                        hidden
+                    >
+
+                        <p>
+                            ${biography}
+                        </p>
+
+                    </div>
+
+                `;
+
+
+                const imageButton =
+                    article.querySelector(
+                        ".exhibition-guest-card__image"
+                    );
+
+
+                const bio =
+                    article.querySelector(
+                        ".exhibition-guest-card__bio"
+                    );
+
+
+                const action =
+                    article.querySelector(
+                        ".exhibition-guest-card__action"
+                    );
+
+
+                const image =
+                    article.querySelector(
+                        "img"
+                    );
+
+
+                imageButton.addEventListener(
+                    "click",
+                    () => {
+
+                        const isOpen =
+                            imageButton.getAttribute(
+                                "aria-expanded"
+                            ) === "true";
+
+
+                        imageButton.setAttribute(
+                            "aria-expanded",
+                            String(!isOpen)
+                        );
+
+
+                        bio.hidden =
+                            isOpen;
+
+
+                        article.classList.toggle(
+                            "is-open",
+                            !isOpen
+                        );
+
+
+                        action.textContent =
+                            !isOpen
+                                ? "Cerrar −"
+                                : "Ver perfil +";
+
+                    }
+                );
+
+
+                image.addEventListener(
+                    "error",
+                    () => {
+
+                        image.style.display =
+                            "none";
+
+
+                        imageButton.classList.add(
+                            "exhibition-guest-card__image--empty"
+                        );
+
+                    },
+                    {
+                        once: true
+                    }
+                );
+
+
+                guestsGrid.appendChild(
+                    article
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       04 / OBRAS EXPUESTAS
+    ===================================================== */
+
+    function renderWorks(
+        exhibition
+    ) {
+
+        const officialIds =
+            Array.isArray(
+                exhibition.obras
+            )
+                ? exhibition.obras
+                : [];
+
+
+        const invitedIds =
+            Array.isArray(
+                exhibition.obras_invitadas
+            )
+                ? exhibition.obras_invitadas
+                : [];
+
+
+        const officialWorks =
+            officialIds
+                .map(id =>
+
+                    obras.find(
+                        work =>
+                            work.id === id
+                    )
+
+                )
+                .filter(Boolean);
+
+
+        const invitedWorks =
+            invitedIds
+                .map(id =>
+
+                    obrasInvitadas.find(
+                        work =>
+                            work.id === id
+                    )
+
+                )
+                .filter(Boolean);
+
+
+        const totalWorks =
+            officialWorks.length +
+            invitedWorks.length;
+
+
         worksCount.textContent =
-            String(exhibitionWorks.length)
-                .padStart(2, "0");
+            String(
+                totalWorks
+            ).padStart(
+                2,
+                "0"
+            );
 
 
-        worksGrid.innerHTML = "";
+        worksGrid.innerHTML =
+            "";
 
 
-        exhibitionWorks.forEach(
+        /* =================================================
+           OBRAS DE LA ASOCIACIÓN
+        ================================================= */
+
+        officialWorks.forEach(
             (work, index) => {
 
                 const artist =
@@ -405,7 +813,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
                 const article =
-                    document.createElement("article");
+                    document.createElement(
+                        "article"
+                    );
 
 
                 article.className =
@@ -450,7 +860,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                             </h3>
 
-
                             <span>
                                 ${
                                     artist
@@ -460,7 +869,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </span>
 
                         </div>
-
 
                         <span>
                             ${work.anio || ""}
@@ -478,45 +886,526 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         );
 
+
+        /* =================================================
+           OBRAS INVITADAS
+        ================================================= */
+
+        invitedWorks.forEach(
+            (work, invitedIndex) => {
+
+                const guest =
+                    invitados.find(
+                        item =>
+                            item.id === work.artista
+                    );
+
+
+                const displayIndex =
+                    officialWorks.length +
+                    invitedIndex +
+                    1;
+
+
+                const article =
+                    document.createElement(
+                        "article"
+                    );
+
+
+                article.className =
+                    "exhibition-work-card exhibition-work-card--guest";
+
+
+                article.innerHTML = `
+
+                    <button
+                        type="button"
+                        class="exhibition-work-card__image exhibition-work-card__image--button"
+                        data-guest-work="${work.id}"
+                        aria-label="Ver ficha de ${work.titulo}"
+                    >
+
+                        <img
+                            src="${work.imagen}"
+                            alt="${work.titulo}"
+                            loading="lazy"
+                        >
+
+                        <span class="exhibition-work-card__number">
+                            ${String(displayIndex).padStart(2, "0")}
+                        </span>
+
+                        <span class="exhibition-work-card__guest-badge">
+                            Obra invitada
+                        </span>
+
+                        <span class="exhibition-work-card__view">
+                            Ver ficha ↗
+                        </span>
+
+                    </button>
+
+
+                    <div class="exhibition-work-card__info">
+
+                        <div>
+
+                            <h3>
+
+                                <button
+                                    type="button"
+                                    class="exhibition-work-card__title-button"
+                                    data-guest-work="${work.id}"
+                                >
+                                    ${work.titulo}
+                                </button>
+
+                            </h3>
+
+                            <span>
+                                ${
+                                    guest
+                                        ? guest.nombre
+                                        : "Artista invitada"
+                                }
+                            </span>
+
+                        </div>
+
+                        <span>
+                            ${work.anio || ""}
+                        </span>
+
+                    </div>
+
+                `;
+
+
+                article
+                    .querySelectorAll(
+                        "[data-guest-work]"
+                    )
+                    .forEach(
+                        button => {
+
+                            button.addEventListener(
+                                "click",
+                                () => {
+
+                                    openGuestWork(
+                                        button.dataset.guestWork
+                                    );
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+                worksGrid.appendChild(
+                    article
+                );
+
+            }
+        );
+
     }
 
 
     /* =====================================================
-       GALERÍA
+       MODAL OBRA INVITADA
     ===================================================== */
 
-    function renderGallery(exhibition) {
+    function openGuestWork(
+        workId
+    ) {
 
-        const gallery =
-            Array.isArray(exhibition.galeria)
-                ? exhibition.galeria
-                : [];
+        const work =
+            obrasInvitadas.find(
+                item =>
+                    item.id === workId
+            );
 
 
-        galleryGrid.innerHTML = "";
+        if (!work) {
+            return;
+        }
 
 
-        if (gallery.length === 0) {
+        const guest =
+            invitados.find(
+                item =>
+                    item.id === work.artista
+            );
 
-            galleryGrid.hidden = true;
 
-            galleryPending.hidden = false;
+        guestWorkTitle.textContent =
+            work.titulo ||
+            "Obra invitada";
+
+
+        guestWorkArtist.textContent =
+            guest?.nombre ||
+            "Artista invitada";
+
+
+        guestWorkImage.src =
+            work.imagen || "";
+
+
+        guestWorkImage.alt =
+            work.titulo ||
+            "Obra invitada";
+
+
+        guestWorkTechnique.textContent =
+            work.tecnica || "—";
+
+
+        guestWorkSupport.textContent =
+            work.soporte || "—";
+
+
+        guestWorkDimensions.textContent =
+            work.dimensiones || "—";
+
+
+        guestWorkYear.textContent =
+            work.anio || "—";
+
+
+        guestWorkDescription.textContent =
+            work.descripcion ||
+            "Descripción próximamente.";
+
+
+        renderGuestInterpretations(
+            work.interpretaciones
+        );
+
+
+        guestWorkModal.hidden =
+            false;
+
+
+        guestWorkModal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        document.body.classList.add(
+            "guest-work-modal-open"
+        );
+
+
+        requestAnimationFrame(
+            () => {
+
+                guestWorkModal.classList.add(
+                    "is-open"
+                );
+
+
+                guestWorkModalClose.focus();
+
+            }
+        );
+
+    }
+
+
+    function closeGuestWork() {
+
+        if (
+            guestWorkModal.hidden
+        ) {
 
             return;
 
         }
 
 
-        galleryGrid.hidden = false;
+        guestWorkModal.classList.remove(
+            "is-open"
+        );
 
-        galleryPending.hidden = true;
+
+        guestWorkModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.classList.remove(
+            "guest-work-modal-open"
+        );
+
+
+        window.setTimeout(
+            () => {
+
+                guestWorkModal.hidden =
+                    true;
+
+            },
+            250
+        );
+
+    }
+
+
+    guestWorkModalClose.addEventListener(
+        "click",
+        closeGuestWork
+    );
+
+
+    guestWorkModalBackdrop.addEventListener(
+        "click",
+        closeGuestWork
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Escape" &&
+                !guestWorkModal.hidden
+            ) {
+
+                closeGuestWork();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       INTERPRETACIONES OBRA INVITADA
+    ===================================================== */
+
+    function renderGuestInterpretations(
+        interpretations
+    ) {
+
+        guestWorkInterpretations.innerHTML =
+            "";
+
+
+        if (
+            !Array.isArray(
+                interpretations
+            ) ||
+            interpretations.length === 0
+        ) {
+
+            guestWorkInterpretations.innerHTML = `
+
+                <p class="artwork-no-interpretations">
+                    Interpretaciones próximamente.
+                </p>
+
+            `;
+
+            return;
+
+        }
+
+
+        interpretations.forEach(
+            (interpretation, index) => {
+
+                const card =
+                    document.createElement(
+                        "article"
+                    );
+
+
+                card.className =
+                    "interpretation-card";
+
+
+                card.dataset.type =
+                    interpretation.tipo ||
+                    "ciencia";
+
+
+                const panelId =
+                    `guestInterpretation-${index}`;
+
+
+                card.innerHTML = `
+
+                    <button
+                        type="button"
+                        class="interpretation-card__toggle"
+                        aria-expanded="false"
+                        aria-controls="${panelId}"
+                    >
+
+                        <span class="interpretation-card__number">
+                            ${String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <span class="interpretation-card__title">
+                            ${interpretation.titulo}
+                        </span>
+
+                        <span
+                            class="interpretation-card__icon"
+                            aria-hidden="true"
+                        >
+                            +
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        class="interpretation-card__content"
+                        id="${panelId}"
+                    >
+
+                        <div class="interpretation-card__content-inner">
+
+                            <p>
+                                ${interpretation.texto}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                const toggle =
+                    card.querySelector(
+                        ".interpretation-card__toggle"
+                    );
+
+
+                toggle.addEventListener(
+                    "click",
+                    () => {
+
+                        const currentlyOpen =
+                            card.classList.contains(
+                                "is-open"
+                            );
+
+
+                        guestWorkInterpretations
+                            .querySelectorAll(
+                                ".interpretation-card.is-open"
+                            )
+                            .forEach(
+                                openCard => {
+
+                                    openCard.classList.remove(
+                                        "is-open"
+                                    );
+
+
+                                    openCard
+                                        .querySelector(
+                                            ".interpretation-card__toggle"
+                                        )
+                                        .setAttribute(
+                                            "aria-expanded",
+                                            "false"
+                                        );
+
+                                }
+                            );
+
+
+                        if (!currentlyOpen) {
+
+                            card.classList.add(
+                                "is-open"
+                            );
+
+
+                            toggle.setAttribute(
+                                "aria-expanded",
+                                "true"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                guestWorkInterpretations.appendChild(
+                    card
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       05 / MEMORIA VISUAL
+    ===================================================== */
+
+    function renderGallery(
+        exhibition
+    ) {
+
+        const gallery =
+            Array.isArray(
+                exhibition.galeria
+            )
+                ? exhibition.galeria
+                : [];
+
+
+        galleryGrid.innerHTML =
+            "";
+
+
+        if (
+            gallery.length === 0
+        ) {
+
+            galleryGrid.hidden =
+                true;
+
+
+            galleryPending.hidden =
+                false;
+
+
+            return;
+
+        }
+
+
+        galleryGrid.hidden =
+            false;
+
+
+        galleryPending.hidden =
+            true;
 
 
         gallery.forEach(
             (imagePath, index) => {
 
                 const figure =
-                    document.createElement("figure");
+                    document.createElement(
+                        "figure"
+                    );
 
 
                 figure.className =
@@ -552,7 +1441,9 @@ document.addEventListener("DOMContentLoaded", async () => {
        FECHA
     ===================================================== */
 
-    function formatDate(dateString) {
+    function formatDate(
+        dateString
+    ) {
 
         if (!dateString) {
 
@@ -565,7 +1456,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             dateString.split("-");
 
 
-        if (parts.length !== 3) {
+        if (
+            parts.length !== 3
+        ) {
 
             return dateString;
 
@@ -587,7 +1480,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 month: "long",
                 year: "numeric"
             }
-        ).format(parsed);
+        ).format(
+            parsed
+        );
 
     }
 
@@ -596,7 +1491,9 @@ document.addEventListener("DOMContentLoaded", async () => {
        ESTADO
     ===================================================== */
 
-    function getStatusLabel(value) {
+    function getStatusLabel(
+        value
+    ) {
 
         const labels = {
 
@@ -612,7 +1509,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         };
 
 
-        return labels[value] || value;
+        return (
+            labels[value] ||
+            value
+        );
 
     }
 
@@ -625,21 +1525,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (loading) {
 
-            loading.hidden = true;
+            loading.hidden =
+                true;
 
         }
 
 
         if (detail) {
 
-            detail.hidden = true;
+            detail.hidden =
+                true;
 
         }
 
 
         if (error) {
 
-            error.hidden = false;
+            error.hidden =
+                false;
 
         }
 

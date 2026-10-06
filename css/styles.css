@@ -8089,3 +8089,716 @@ section[id] {
     display: block;
     height: 8px;
 }
+
+/* =========================================================
+   24. INVITADOS Y OBRAS INVITADAS
+========================================================= */
+
+
+/* =========================================================
+   INVITADOS
+========================================================= */
+
+.exhibition-guests {
+    padding:
+        120px
+        0
+        140px;
+
+    border-top:
+        1px solid
+        var(--color-border);
+
+    background:
+        #080808;
+}
+
+
+.exhibition-guests__grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 40px;
+}
+
+
+.exhibition-guest-card {
+    min-width: 0;
+}
+
+
+.exhibition-guest-card__image {
+    position: relative;
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio:
+        4 / 5;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            #282828,
+            #111
+        );
+
+    color: white;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.exhibition-guest-card__image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .7s ease;
+}
+
+
+.exhibition-guest-card:hover
+.exhibition-guest-card__image img,
+.exhibition-guest-card.is-open
+.exhibition-guest-card__image img {
+    transform:
+        scale(1.025);
+}
+
+
+.exhibition-guest-card__number {
+    position: absolute;
+
+    top: 16px;
+    left: 16px;
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.38);
+
+    font-size: .55rem;
+}
+
+
+.exhibition-guest-card__action {
+    position: absolute;
+
+    right: 16px;
+    bottom: 16px;
+
+    padding:
+        10px
+        13px;
+
+    background:
+        rgba(5,5,5,.86);
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    color: white;
+
+    font-size: .56rem;
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+}
+
+
+.exhibition-guest-card__image--empty::after {
+    content: "INVITADA";
+
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    color:
+        rgba(255,255,255,.08);
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            2rem,
+            6vw,
+            5rem
+        );
+}
+
+
+.exhibition-guest-card__heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding:
+        20px
+        0;
+}
+
+
+.exhibition-guest-card__heading
+> div
+> span {
+    color:
+        var(--color-gold);
+
+    font-size: .55rem;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+.exhibition-guest-card__heading h3 {
+    margin-top: 7px;
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            1.8rem,
+            3vw,
+            2.8rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.exhibition-guest-card__heading
+> span {
+    flex:
+        0 0 auto;
+
+    padding-top: 3px;
+
+    color:
+        var(--color-gray-dark);
+
+    font-size: .55rem;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+}
+
+
+.exhibition-guest-card__bio {
+    padding:
+        24px
+        0
+        10px;
+
+    border-top:
+        1px solid
+        var(--color-border);
+
+    animation:
+        guestBioAppear
+        .35s
+        ease
+        both;
+}
+
+
+@keyframes guestBioAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.exhibition-guest-card__bio p {
+    max-width: 680px;
+
+    color:
+        #c9c9c9;
+
+    font-family:
+        var(--font-display);
+
+    font-size: 1.15rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   OBRA INVITADA
+========================================================= */
+
+.exhibition-work-card__image--button {
+    width: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+.exhibition-work-card__guest-badge {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    padding:
+        8px
+        10px;
+
+    background:
+        rgba(233,160,45,.92);
+
+    color:
+        #050505;
+
+    font-size: .5rem;
+
+    font-weight: 800;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+
+.exhibition-work-card--guest
+.exhibition-work-card__image {
+    outline:
+        1px solid
+        rgba(233,160,45,.22);
+
+    outline-offset:
+        -1px;
+}
+
+
+.exhibition-work-card__title-button {
+    padding: 0;
+
+    border: 0;
+
+    background: none;
+
+    color: white;
+
+    font: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color .25s ease;
+}
+
+
+.exhibition-work-card__title-button:hover {
+    color:
+        var(--color-gold);
+}
+
+
+/* =========================================================
+   MODAL OBRA INVITADA
+========================================================= */
+
+body.guest-work-modal-open {
+    overflow: hidden;
+}
+
+
+.guest-work-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    transition:
+        opacity .25s ease;
+}
+
+
+.guest-work-modal.is-open {
+    opacity: 1;
+}
+
+
+.guest-work-modal__backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    background:
+        rgba(0,0,0,.82);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    cursor: pointer;
+}
+
+
+.guest-work-modal__panel {
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            1180px,
+            100%
+        );
+
+    max-height:
+        calc(
+            100svh
+            - 60px
+        );
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, .82fr)
+        minmax(0, 1.18fr);
+
+    overflow: auto;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    background:
+        #0b0b0b;
+
+    box-shadow:
+        0
+        35px
+        120px
+        rgba(0,0,0,.65);
+
+    transform:
+        translateY(18px)
+        scale(.985);
+
+    transition:
+        transform
+        .3s
+        cubic-bezier(.2,.7,.2,1);
+}
+
+
+.guest-work-modal.is-open
+.guest-work-modal__panel {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+.guest-work-modal__close {
+    position: sticky;
+
+    top: 15px;
+
+    grid-column:
+        1 / -1;
+
+    justify-self: end;
+
+    width: 44px;
+    height: 44px;
+
+    margin:
+        15px
+        15px
+        -59px
+        0;
+
+    display: grid;
+
+    place-items: center;
+
+    z-index: 8;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    border-radius: 50%;
+
+    background:
+        rgba(5,5,5,.78);
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+
+.guest-work-modal__visual {
+    position: relative;
+
+    min-height: 100%;
+
+    padding:
+        80px
+        45px
+        45px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #242424,
+            #111 55%,
+            #090909
+        );
+}
+
+
+.guest-work-modal__visual img {
+    width: auto;
+
+    max-width: 100%;
+
+    max-height: 72svh;
+
+    object-fit: contain;
+
+    box-shadow:
+        0
+        30px
+        80px
+        rgba(0,0,0,.45);
+}
+
+
+.guest-work-modal__badge {
+    position: absolute;
+
+    left: 20px;
+    bottom: 20px;
+
+    padding:
+        9px
+        12px;
+
+    background:
+        var(--color-gold);
+
+    color:
+        #050505;
+
+    font-size: .52rem;
+
+    font-weight: 800;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+
+.guest-work-modal__content {
+    padding:
+        85px
+        clamp(
+            30px,
+            5vw,
+            70px
+        )
+        70px;
+}
+
+
+.guest-work-modal__content h2 {
+    margin-top: 8px;
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            3.2rem,
+            6vw,
+            6rem
+        );
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    letter-spacing: -.045em;
+}
+
+
+.guest-work-modal__artist {
+    margin-top: 18px;
+
+    color:
+        var(--color-gold);
+
+    font-size: .68rem;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+
+.guest-work-modal__technical {
+    margin-top: 45px;
+
+    border-top:
+        1px solid
+        var(--color-border);
+}
+
+
+.guest-work-modal__technical
+> div {
+    display: grid;
+
+    grid-template-columns:
+        130px
+        1fr;
+
+    gap: 20px;
+
+    padding:
+        13px
+        0;
+
+    border-bottom:
+        1px solid
+        var(--color-border);
+}
+
+
+.guest-work-modal__technical dt {
+    color:
+        var(--color-gray-dark);
+
+    font-size: .58rem;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+}
+
+
+.guest-work-modal__technical dd {
+    color:
+        #e5e5e5;
+
+    font-size: .72rem;
+}
+
+
+.guest-work-modal__description,
+.guest-work-modal__interpretations {
+    padding-top:
+        45px;
+}
+
+
+.guest-work-modal__description p {
+    color:
+        #d0d0d0;
+
+    font-family:
+        var(--font-display);
+
+    font-size: 1.2rem;
+
+    line-height: 1.7;
+}

@@ -36,14 +36,15 @@
         rel="stylesheet"
     >
 
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/animations.css">
-<link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
 
 <body>
+
 
 <!-- =====================================================
      HEADER
@@ -128,7 +129,10 @@
     <div class="mobile-menu__glow mobile-menu__glow--two"></div>
 
 
-    <nav class="mobile-menu__nav">
+    <nav
+        class="mobile-menu__nav"
+        aria-label="Navegación móvil"
+    >
 
         <a href="index.html" class="mobile-menu__link">
             <span class="mobile-menu__number">01</span>
@@ -164,8 +168,15 @@
 
 
     <div class="mobile-menu__footer">
-        <p>Asociación Cultural</p>
-        <span>Arte · Cultura · Comunidad</span>
+
+        <p>
+            Asociación Cultural
+        </p>
+
+        <span>
+            Arte · Cultura · Comunidad
+        </span>
+
     </div>
 
 </div>
@@ -236,7 +247,9 @@
 >
 
 
-    <!-- HERO -->
+    <!-- =================================================
+         HERO
+    ================================================== -->
 
     <section class="exhibition-detail-hero">
 
@@ -253,6 +266,7 @@
             src="assets/decoracion/pincelada-04.png"
             alt=""
             class="exhibition-detail-hero__brush"
+            aria-hidden="true"
         >
 
 
@@ -288,18 +302,41 @@
                 <div class="exhibition-detail-hero__meta">
 
                     <div>
-                        <span>Fecha</span>
-                        <strong id="exhibitionDate">—</strong>
+
+                        <span>
+                            Fecha
+                        </span>
+
+                        <strong id="exhibitionDate">
+                            —
+                        </strong>
+
                     </div>
 
-                    <div>
-                        <span>Lugar</span>
-                        <strong id="exhibitionPlace">—</strong>
-                    </div>
 
                     <div>
-                        <span>Ciudad</span>
-                        <strong id="exhibitionCity">—</strong>
+
+                        <span>
+                            Lugar
+                        </span>
+
+                        <strong id="exhibitionPlace">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Ciudad
+                        </span>
+
+                        <strong id="exhibitionCity">
+                            —
+                        </strong>
+
                     </div>
 
                 </div>
@@ -311,7 +348,9 @@
     </section>
 
 
-    <!-- INTRODUCCIÓN -->
+    <!-- =================================================
+         01 / LA EXPOSICIÓN
+    ================================================== -->
 
     <section class="exhibition-intro">
 
@@ -328,6 +367,7 @@
                     La exposición
                 </span>
 
+
                 <h2>
                     Lo que el cerebro calla,
                     <em>el lienzo lo grita</em>
@@ -337,9 +377,7 @@
 
 
             <p id="exhibitionDescription">
-                Una muestra que reúne distintas
-                miradas y expresiones artísticas
-                de nuestra comunidad.
+                —
             </p>
 
         </div>
@@ -347,7 +385,9 @@
     </section>
 
 
-    <!-- ARTISTAS -->
+    <!-- =================================================
+         02 / PARTICIPANTES
+    ================================================== -->
 
     <section class="exhibition-artists">
 
@@ -366,7 +406,8 @@
                     </span>
 
                     <h2>
-                        Artistas
+                        Miembros
+                        <em>participantes</em>
                     </h2>
 
                 </div>
@@ -392,7 +433,60 @@
     </section>
 
 
-    <!-- OBRAS -->
+    <!-- =================================================
+         03 / INVITADOS
+    ================================================== -->
+
+    <section
+        class="exhibition-guests"
+        id="exhibitionGuestsSection"
+    >
+
+        <div class="container">
+
+            <div class="exhibition-section-heading">
+
+                <div>
+
+                    <span class="exhibition-section-number">
+                        03
+                    </span>
+
+                    <span class="eyebrow">
+                        Invitados
+                    </span>
+
+                    <h2>
+                        Artistas
+                        <em>invitados</em>
+                    </h2>
+
+                </div>
+
+
+                <span
+                    class="exhibition-section-count"
+                    id="exhibitionGuestsCount"
+                >
+                    0
+                </span>
+
+            </div>
+
+
+            <div
+                class="exhibition-guests__grid"
+                id="exhibitionGuestsGrid"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         04 / SELECCIÓN
+    ================================================== -->
 
     <section class="exhibition-works">
 
@@ -403,7 +497,7 @@
                 <div>
 
                     <span class="exhibition-section-number">
-                        03
+                        04
                     </span>
 
                     <span class="eyebrow">
@@ -441,8 +535,12 @@
                     class="button"
                     id="viewExhibitionCatalog"
                 >
-                    Ver en catálogo
-                    <span>→</span>
+                    Ver catálogo de la asociación
+
+                    <span>
+                        →
+                    </span>
+
                 </a>
 
             </div>
@@ -452,7 +550,9 @@
     </section>
 
 
-    <!-- GALERÍA -->
+    <!-- =================================================
+         05 / MEMORIA VISUAL
+    ================================================== -->
 
     <section
         class="exhibition-gallery"
@@ -466,7 +566,7 @@
                 <div>
 
                     <span class="exhibition-section-number">
-                        04
+                        05
                     </span>
 
                     <span class="eyebrow">
@@ -494,7 +594,9 @@
                 hidden
             >
 
-                <span>Próximamente</span>
+                <span>
+                    Próximamente
+                </span>
 
                 <p>
                     Las fotografías de esta exposición
@@ -509,7 +611,9 @@
     </section>
 
 
-    <!-- FINAL -->
+    <!-- =================================================
+         FINAL
+    ================================================== -->
 
     <section class="exhibition-detail-footer">
 
@@ -541,8 +645,170 @@
 
 </main>
 
+
 <!-- =====================================================
-     FOOTER GLOBAL
+     MODAL / FICHA OBRA INVITADA
+====================================================== -->
+
+<div
+    class="guest-work-modal"
+    id="guestWorkModal"
+    aria-hidden="true"
+    hidden
+>
+
+    <button
+        class="guest-work-modal__backdrop"
+        id="guestWorkModalBackdrop"
+        type="button"
+        aria-label="Cerrar ficha"
+    ></button>
+
+
+    <article
+        class="guest-work-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="guestWorkTitle"
+    >
+
+        <button
+            class="guest-work-modal__close"
+            id="guestWorkModalClose"
+            type="button"
+            aria-label="Cerrar"
+        >
+            ×
+        </button>
+
+
+        <div class="guest-work-modal__visual">
+
+            <img
+                id="guestWorkImage"
+                src=""
+                alt=""
+            >
+
+
+            <span class="guest-work-modal__badge">
+                Obra invitada
+            </span>
+
+        </div>
+
+
+        <div class="guest-work-modal__content">
+
+            <span class="eyebrow">
+                Artista invitada
+            </span>
+
+
+            <h2 id="guestWorkTitle">
+                —
+            </h2>
+
+
+            <p
+                class="guest-work-modal__artist"
+                id="guestWorkArtist"
+            >
+                —
+            </p>
+
+
+            <dl class="guest-work-modal__technical">
+
+                <div>
+
+                    <dt>
+                        Técnica
+                    </dt>
+
+                    <dd id="guestWorkTechnique">
+                        —
+                    </dd>
+
+                </div>
+
+
+                <div>
+
+                    <dt>
+                        Soporte
+                    </dt>
+
+                    <dd id="guestWorkSupport">
+                        —
+                    </dd>
+
+                </div>
+
+
+                <div>
+
+                    <dt>
+                        Dimensiones
+                    </dt>
+
+                    <dd id="guestWorkDimensions">
+                        —
+                    </dd>
+
+                </div>
+
+
+                <div>
+
+                    <dt>
+                        Año
+                    </dt>
+
+                    <dd id="guestWorkYear">
+                        —
+                    </dd>
+
+                </div>
+
+            </dl>
+
+
+            <section class="guest-work-modal__description">
+
+                <span class="artwork-small-title">
+                    Sobre la obra
+                </span>
+
+                <p id="guestWorkDescription">
+                    —
+                </p>
+
+            </section>
+
+
+            <section class="guest-work-modal__interpretations">
+
+                <span class="artwork-small-title">
+                    Interpretaciones
+                </span>
+
+                <div
+                    class="artwork-interpretations__list"
+                    id="guestWorkInterpretations"
+                ></div>
+
+            </section>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
 ====================================================== -->
 
 <footer class="site-footer">
@@ -577,7 +843,6 @@
             </div>
 
 
-
             <div class="site-footer__phrase">
 
                 <p>
@@ -587,9 +852,7 @@
 
             </div>
 
-
         </div>
-
 
 
         <div class="site-footer__navigation">
@@ -616,7 +879,6 @@
             </div>
 
 
-
             <div>
 
                 <span class="site-footer__label">
@@ -634,7 +896,6 @@
             </div>
 
 
-
             <div>
 
                 <span class="site-footer__label">
@@ -642,26 +903,28 @@
                 </span>
 
                 <a
-                        href="https://www.instagram.com/coloresenelviento.arte/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Instagram
+                    href="https://www.instagram.com/coloresenelviento.arte/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
                 </a>
 
                 <a
-                        href="https://www.facebook.com/coloresenelviento.arte"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Facebook
+                    href="https://www.facebook.com/coloresenelviento.arte"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Facebook
+                </a>
+
+                <a href="mailto:coloresenelviento5@gmail.com">
+                    Correo
                 </a>
 
             </div>
 
-
         </div>
-
 
 
         <div class="site-footer__bottom">
@@ -672,11 +935,9 @@
                 Colores en el viento
             </span>
 
-
             <span>
                 Asociación Cultural · Ica, Perú
             </span>
-
 
             <a href="index.html">
                 Volver al inicio ↑
@@ -684,10 +945,10 @@
 
         </div>
 
-
     </div>
 
 </footer>
+
 
 <script src="js/main.js"></script>
 <script src="js/exposicion.js"></script>
