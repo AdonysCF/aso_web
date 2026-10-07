@@ -136,10 +136,6 @@ document.addEventListener("DOMContentLoaded", async () => {
        se creó para las obras invitadas.
     */
 
-    const workModalBadge =
-        workModal.querySelector(
-            ".guest-work-modal__badge"
-        );
 
     const workModalEyebrow =
         workModal.querySelector(
@@ -1036,9 +1032,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                             ${String(displayIndex).padStart(2, "0")}
                         </span>
 
-                        <span class="exhibition-work-card__guest-badge">
-                            Obra invitada
-                        </span>
 
                         <span class="exhibition-work-card__view">
                             Ver ficha ↗
@@ -1246,37 +1239,33 @@ document.addEventListener("DOMContentLoaded", async () => {
            OBRA OFICIAL
         ================================================= */
 
-        if (isOfficial) {
+            if (isOfficial) {
 
-            work =
-                obras.find(
-                    item =>
-                        item.id === workId
-                );
-
-
-            if (!work) {
-
-                return;
-
-            }
+        work =
+            obras.find(
+                item =>
+                    item.id === workId
+            );
 
 
-            author =
-                artistas.find(
-                    item =>
-                        item.id === work.artista
-                );
+        if (!work) {
 
-
-            workModalBadge.textContent =
-                "Obra de la asociación";
-
-
-            workModalEyebrow.textContent =
-                "Artista participante";
+            return;
 
         }
+
+
+        author =
+            artistas.find(
+                item =>
+                    item.id === work.artista
+            );
+
+
+        workModalEyebrow.hidden =
+            true;
+
+    }
 
 
         /* =================================================
@@ -1306,8 +1295,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 );
 
 
-            workModalBadge.textContent =
-                "Obra invitada";
+            workModalEyebrow.hidden =
+                false;
 
 
             workModalEyebrow.textContent =

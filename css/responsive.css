@@ -2411,15 +2411,6 @@
             15px;
     }
 
-
-    .exhibition-guests__grid {
-        grid-template-columns:
-            1fr;
-
-        gap: 55px;
-    }
-
-
     .exhibition-guest-card__image {
         aspect-ratio:
             4 / 5;
@@ -2441,11 +2432,10 @@
 
     .exhibition-guest-card__heading h3 {
         font-size:
-            clamp(
-                2.2rem,
-                10vw,
-                3.2rem
-            );
+            1.35rem;
+
+        line-height:
+            1.1;
     }
 
 
@@ -2500,11 +2490,17 @@
 
         display: block;
 
+        padding-top:
+            66px;
+
         border: 0;
 
         border-top:
             1px solid
             rgba(255,255,255,.12);
+
+        background:
+            #0b0b0b;
 
         transform:
             translateY(25px);
@@ -2527,9 +2523,12 @@
                 + 12px
             );
 
-        right: 12px;
+        right:
+            18px;
 
         margin: 0;
+
+        z-index: 20;
     }
 
 
@@ -2537,7 +2536,7 @@
         min-height: auto;
 
         padding:
-            75px
+            20px
             22px
             55px;
     }
