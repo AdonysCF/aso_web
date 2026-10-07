@@ -39,5 +39,87 @@
         "exposiciones": [
             "expo-001"
         ]
+    },
+    {
+        "id": "obra-invitada-002",
+        "titulo": "Al encuentro de los Apus",
+        "artista": "invitado-002",
+        "imagen": "assets/obras-invitadas/obra-invitada-002.webp",
+        "tecnica": "Carboncillo",
+        "soporte": "Cartón",
+        "dimensiones": "0.68 x 0.85 m",
+        "anio": "2017 (XXVII)",
+        "descripcion": "Esta obra cobra sentido al observar cómo los elementos de la cultura material —cerámica y sombreros— se dirigen hacia la presencia divina de las montañas, en una suerte de peregrinaje simbólico o diálogo entre el pasado y lo sagrado. No hay cuerpos, pero hay identidad en movimiento. Todo peregrina hacia los Apus.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Es el cerebro simbólico. El sombrero es una extensión del self, una prótesis de la identidad cultural. Los peces en el cielo son la memoria implícita que nada por encima de lo consciente."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Frente a la deslocalización digital, la obra propone el arraigo. Los Apus son servidores ancestrales, montañas que guardan información. Peregrinar hacia ellos es reconectarse a una nube orgánica, no virtual."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "Los objetos vacíos hablan de ausencia por migración y violencia estructural. Pero no es una ausencia de derrota: es una procesión. La cultura resiste caminando hacia lo sagrado, encontrando protección en los Apus."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es la búsqueda de sentido de Viktor Frankl en clave andina. ¿Hacia dónde camina mi historia? El bienestar no es olvidar el origen, es llevar tu cántaro y tu sombrero al encuentro con lo que te trasciende. Espiritualidad andina como recurso terapéutico."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Nuestra labor ética es no folclorizar, sino comprender. Esta obra nos exige una psicología con Apus, con cerámica, con sombrero. Una psicología que peregrina con el pueblo, no por encima de él."
+            }
+        ],
+        "exposiciones": [
+            "expo-001"
+        ]
+    },
+    {
+        "id": "obra-invitada-003",
+        "titulo": "Arquitectura de un silencio tenso",
+        "artista": "invitado-002",
+        "imagen": "assets/obras-invitadas/obra-invitada-003.webp",
+        "tecnica": "Lápiz grafito",
+        "soporte": "Cartón",
+        "dimensiones": "0.38 x 0.33 m",
+        "anio": "2025 (XXV)",
+        "descripcion": "Esta obra captura perfectamente la dualidad: la coexistencia de la quietud del bodegón con la vibración dinámica de la estructura geométrica que lo atraviesa. Es el silencio de la casa que de pronto es cortado por una idea. Lo doméstico y lo mental conviven en el mismo plano, sin poder evitarse.",
+        "interpretaciones": [
+            {
+                "tipo": "ciencia",
+                "titulo": "Ciencia y neurociencia",
+                "texto": "Es la representación visual de un pensamiento intrusivo. El bodegón es la actividad por defecto del cerebro, la calma. La estructura geométrica es la activación de la red de alerta, una idea que entra, corta y reorganiza todo lo que veíamos como normal. Cognición y percepción no son neutras, se interfieren."
+            },
+            {
+                "tipo": "tecnologia",
+                "titulo": "Tecnología y psicología digital",
+                "texto": "Es el glitch. La realidad analógica —la tetera, la fruta— es atravesada por una interfaz digital, por líneas que parecen una malla 3D o un error de renderizado. Habla de cómo la vida digital fragmenta nuestra vida cotidiana. Vivimos en dos capas a la vez."
+            },
+            {
+                "tipo": "violencia",
+                "titulo": "Violencia y prevención",
+                "texto": "La violencia no siempre es un golpe. A veces es una línea que rompe la tranquilidad del hogar. Esta obra muestra cómo un evento externo tensa el espacio seguro. Prevenir es aprender a ver esas líneas antes de que corten la tetera."
+            },
+            {
+                "tipo": "bienestar",
+                "titulo": "Psicoterapia y bienestar",
+                "texto": "Es el proceso de disociación y reintegración. En terapia, a veces vemos nuestra vida cotidiana fragmentada, cortada por traumas o ansiedades. El objetivo no es quitar las líneas, sino aprender a ver el bodegón completo a pesar de los cortes. Integrar la geometría tensa dentro del silencio."
+            },
+            {
+                "tipo": "etica",
+                "titulo": "Ética y desafíos sociales",
+                "texto": "Como sociedad, hemos normalizado el bodegón roto. Vemos la papaya partida y no nos asombra. La tarea ética del psicólogo es señalar la estructura que está cortando la realidad y preguntar: ¿quién puso esa línea ahí? ¿A quién le sirve que veamos el mundo fragmentado?"
+            }
+        ],
+        "exposiciones": [
+            "expo-001"
+        ]
     }
 ]

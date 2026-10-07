@@ -2,13 +2,13 @@
     {
         "id": "expo-001",
         "slug": "lo-que-el-cerebro-calla-y-el-lienzo-grita",
-        "nombre": "DEL CABLE A LA RAÍZ",
+        "nombre": "Lo que el cerebro calla y el lienzo grita",
         "fecha": "2026-10-09",
         "anio": 2026,
         "lugar": "Hotel Huascaran de Huaraz",
         "ciudad": "Carhuaz",
         "estado": "proxima",
-        "descripcion": "Las 25 obras funcionan como un grito visual de aquello que el cerebro silencia. El lienzo se convierte en el espacio donde se expresa la violencia internalizada, la dependencia tecnológica y el proceso de sanación, abordando ciencia, tecnología, bienestar y ética desde el arte.",
+        "descripcion": "Las 27 obras funcionan como un grito visual de aquello que el cerebro silencia. El lienzo se convierte en el espacio donde se expresa la violencia internalizada, la dependencia tecnológica y el proceso de sanación, abordando ciencia, tecnología, bienestar y ética desde el arte.",
         "portada": "assets/exposiciones/expo-001/portada.webp",
         "galeria": [],
         "obras": [
@@ -43,11 +43,14 @@
             "artista-003",
             "artista-004"
         ],
-                "invitados": [
-            "invitado-001"
+        "invitados": [
+            "invitado-001",
+            "invitado-002"
         ],
         "obras_invitadas": [
-            "obra-invitada-001"
+            "obra-invitada-001",
+            "obra-invitada-002",
+            "obra-invitada-003"
         ]
     }
 ]

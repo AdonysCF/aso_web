@@ -3,7 +3,13 @@
         "id": "invitado-001",
         "nombre": "Irma Cadillo Gonzales",
         "foto": "assets/invitados/invitado-001.webp",
-        "biografia": "",
+        "instagram": "",
+        "facebook": ""
+    },
+    {
+        "id": "invitado-002",
+        "nombre": "Analio Santa Trinidad",
+        "foto": "assets/invitados/invitado-002.webp",
         "instagram": "",
         "facebook": ""
     }
